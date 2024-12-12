@@ -14,7 +14,6 @@ import ShortsCard from '@/components/content/card/ShortsCard';
 import ContentPlaceholder from '@/components/content/ContentPlaceholder';
 import Tag, { SkipNavTag } from '@/components/content/Tag';
 import StyledInput from '@/components/form/StyledInput';
-import Layout from '@/components/layout/Layout';
 import Seo from '@/components/Seo';
 import SortListbox, { SortOption } from '@/components/SortListbox';
 
@@ -99,13 +98,12 @@ export default function ShortsPage({
   //#endregion  //*======== Tag ===========
 
   return (
-    <Layout>
+    <>
       <Seo
         templateTitle='Shorts'
         description="Short article that's not long enough to be a blog post, 
         usually comes from my personal notes."
       />
-
       <main>
         <section className={clsx(isLoaded && 'fade-in-start')}>
           <div className='layout py-12'>
@@ -171,7 +169,7 @@ export default function ShortsPage({
           </div>
         </section>
       </main>
-    </Layout>
+    </>
   );
 }
 

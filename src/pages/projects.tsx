@@ -8,7 +8,6 @@ import useLoaded from '@/hooks/useLoaded';
 
 import Accent from '@/components/Accent';
 import ProjectCard from '@/components/content/projects/ProjectCard';
-import Layout from '@/components/layout/Layout';
 import Seo from '@/components/Seo';
 
 export default function ProjectsPage({
@@ -17,12 +16,11 @@ export default function ProjectsPage({
   const isLoaded = useLoaded();
 
   return (
-    <Layout>
+    <>
       <Seo
         templateTitle='Projects'
-        description="Showcase of my projects on front-end development that I'm proud of."
+        description='Showcase of my personal projects and experience.'
       />
-
       <main>
         <section className={clsx(isLoaded && 'fade-in-start')}>
           <div className='layout py-12'>
@@ -44,7 +42,7 @@ export default function ProjectsPage({
           </div>
         </section>
       </main>
-    </Layout>
+    </>
   );
 }
 

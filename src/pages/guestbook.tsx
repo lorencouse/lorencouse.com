@@ -2,18 +2,16 @@ import * as React from 'react';
 
 import Accent from '@/components/Accent';
 import Comment from '@/components/content/Comment';
-import Layout from '@/components/layout/Layout';
 import CustomLink from '@/components/links/CustomLink';
 import Seo from '@/components/Seo';
 
 export default function GuestbookPage() {
   return (
-    <Layout>
+    <>
       <Seo
         templateTitle='Guestbook'
         description='Leave whatever you like to say—message, appreciation, suggestions.'
       />
-
       <main>
         <section className=''>
           <div className='layout py-20'>
@@ -33,6 +31,6 @@ export default function GuestbookPage() {
           </div>
         </section>
       </main>
-    </Layout>
+    </>
   );
 }

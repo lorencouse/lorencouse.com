@@ -16,7 +16,6 @@ import SubscribeCard from '@/components/content/blog/SubscribeCard';
 import ContentPlaceholder from '@/components/content/ContentPlaceholder';
 import Tag, { SkipNavTag } from '@/components/content/Tag';
 import StyledInput from '@/components/form/StyledInput';
-import Layout from '@/components/layout/Layout';
 import Seo from '@/components/Seo';
 import SortListbox, { SortOption } from '@/components/SortListbox';
 
@@ -118,12 +117,11 @@ export default function IndexPage({
   //#endregion  //*======== Tag ===========
 
   return (
-    <Layout>
+    <>
       <Seo
         templateTitle='Blog'
         description='Thoughts, mental models, and tutorials about front-end development. Rebuild your mental model so front-end development can be predictable.'
       />
-
       <main>
         <section className={clsx(isLoaded && 'fade-in-start')}>
           <div className='layout py-12'>
@@ -198,7 +196,7 @@ export default function IndexPage({
           </div>
         </section>
       </main>
-    </Layout>
+    </>
   );
 }
 

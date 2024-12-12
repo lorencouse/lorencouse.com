@@ -20,13 +20,9 @@ export default function SubscribeCard({
         <Accent>{title ?? 'Join to the newsletter list'}</Accent>
       </h3>
       <p className='mt-2 text-gray-700 dark:text-gray-300'>
-        {description ??
-          "Don't miss out 😉. Get an email whenever I post, no spam."}
+        {description ?? 'Get monthly emails about my latest projects, no spam.'}
       </p>
-      <ButtonLink
-        className='mt-2'
-        href='https://theodorusclarence.substack.com'
-      >
+      <ButtonLink className='mt-2' href='https://lorencouse.substack.com'>
         Subscribe Now
       </ButtonLink>
     </div>

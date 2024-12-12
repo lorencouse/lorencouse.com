@@ -7,7 +7,6 @@ import useLoaded from '@/hooks/useLoaded';
 import Accent from '@/components/Accent';
 import ThemeButton from '@/components/buttons/ThemeButton';
 import ColorSwatch from '@/components/ColorSwatch';
-import Layout from '@/components/layout/Layout';
 import Seo from '@/components/Seo';
 
 export default function DesignPage() {
@@ -15,9 +14,8 @@ export default function DesignPage() {
   const isLoaded = useLoaded();
 
   return (
-    <Layout>
+    <>
       <Seo templateTitle='Design' />
-
       <main>
         <section className={clsx(isLoaded && 'fade-in-start')}>
           <div className='layout py-12'>
@@ -26,7 +24,7 @@ export default function DesignPage() {
             </h1>
 
             <p data-fade='1' className='mt-2 text-gray-600 dark:text-gray-300'>
-              theodorusclarence.com color palette
+              LorenCouse.com color palette
             </p>
 
             <div
@@ -54,7 +52,7 @@ export default function DesignPage() {
           </div>
         </section>
       </main>
-    </Layout>
+    </>
   );
 }
 
@@ -71,22 +69,22 @@ const THEME_COLORS = [
   },
   {
     title: 'Primary 200',
-    subTitle: '#dbff00',
+    subTitle: '#28DCBE',
     colorClassName: 'bg-primary-200',
   },
   {
     title: 'Primary 300',
-    subTitle: '#00e887',
+    subTitle: '#08BEDC',
     colorClassName: 'bg-primary-300',
   },
   {
     title: 'Primary 400',
-    subTitle: '#00e0f3',
+    subTitle: '#0173D7',
     colorClassName: 'bg-primary-400',
   },
   {
     title: 'Primary 500',
-    subTitle: '#00bfff',
+    subTitle: '#193C5F',
     colorClassName: 'bg-primary-500',
   },
   {

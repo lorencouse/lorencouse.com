@@ -6,7 +6,6 @@ import * as React from 'react';
 import { pickContentMeta } from '@/lib/contentMeta';
 import { getContentMeta } from '@/lib/requests/content-meta';
 
-import Layout from '@/components/layout/Layout';
 import UnstyledLink from '@/components/links/UnstyledLink';
 import Seo from '@/components/Seo';
 import Table from '@/components/table/Table';
@@ -226,12 +225,11 @@ export default function StatisticsPage() {
   //#endregion  //*======== Statistic Cards ===========
 
   return (
-    <Layout>
+    <>
       <Seo
         templateTitle='Statistics'
         description='Metadata statistics of theodorusclarence.com blogs, projects and libraries.'
       />
-
       <main>
         <section className=''>
           <div className='layout py-12'>
@@ -309,6 +307,6 @@ export default function StatisticsPage() {
           </div>
         </section>
       </main>
-    </Layout>
+    </>
   );
 }

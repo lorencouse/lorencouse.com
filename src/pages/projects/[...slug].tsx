@@ -16,8 +16,7 @@ import MDXComponents from '@/components/content/MDXComponents';
 import TableOfContents, {
   HeadingScrollSpy,
 } from '@/components/content/TableOfContents';
-import CloudinaryImg from '@/components/images/CloudinaryImg';
-import Layout from '@/components/layout/Layout';
+import CustomImg from '@/components/images/CustomImg';
 import CustomLink from '@/components/links/CustomLink';
 import Seo from '@/components/Seo';
 
@@ -55,7 +54,7 @@ export default function SingleProjectPage({ code, frontmatter }: ProjectType) {
   //#endregion  //*======== Scrollspy ===========
 
   return (
-    <Layout>
+    <>
       <Seo
         templateTitle={frontmatter.title}
         description={frontmatter.description}
@@ -65,7 +64,7 @@ export default function SingleProjectPage({ code, frontmatter }: ProjectType) {
       <main>
         <section className=''>
           <div className='layout'>
-            <CloudinaryImg
+            <CustomImg
               publicId={`theodorusclarence/${frontmatter.banner}`}
               alt={frontmatter.title}
               width={1440}
@@ -190,7 +189,7 @@ export default function SingleProjectPage({ code, frontmatter }: ProjectType) {
           </div>
         </section>
       </main>
-    </Layout>
+    </>
   );
 }
 

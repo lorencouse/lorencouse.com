@@ -14,9 +14,7 @@ import useLoaded from '@/hooks/useLoaded';
 
 import Accent from '@/components/Accent';
 import BlogCard from '@/components/content/blog/BlogCard';
-import ShortsCard from '@/components/content/card/ShortsCard';
 import ProjectCard from '@/components/content/projects/ProjectCard';
-import Layout from '@/components/layout/Layout';
 import ButtonLink from '@/components/links/ButtonLink';
 import CustomLink from '@/components/links/CustomLink';
 import UnstyledLink from '@/components/links/UnstyledLink';
@@ -25,22 +23,19 @@ import TC from '@/components/TC';
 import Tooltip from '@/components/Tooltip';
 
 export default function IndexPage({
-  featuredPosts,
   featuredProjects,
-  featuredShorts,
   introPosts,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  const populatedPosts = useInjectContentMeta('blog', featuredPosts);
   const populatedIntro = useInjectContentMeta('blog', introPosts);
   const populatedProjects = useInjectContentMeta('projects', featuredProjects);
-  const populatedShorts = useInjectContentMeta('library', featuredShorts);
+  // const populatedPosts = useInjectContentMeta('blog', featuredPosts);
+  // const populatedShorts = useInjectContentMeta('library', featuredShorts);
 
   const isLoaded = useLoaded();
 
   return (
-    <Layout>
+    <>
       <Seo />
-
       <main>
         <section
           className={clsx(
@@ -56,7 +51,7 @@ export default function IndexPage({
               className='mt-1 text-3xl md:text-5xl 2xl:text-6xl'
               data-fade='2'
             >
-              You can call me <Accent>Clarence</Accent>
+              My name's <Accent>Loren</Accent>
             </h1>
             <p
               className='mt-2 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-3 text-sm md:text-base 2xl:text-lg'
@@ -65,10 +60,8 @@ export default function IndexPage({
                 trackEvent('Social Link: Dimension', { type: 'link' });
               }}
             >
-              Front-end Engineer at{' '}
-              <CustomLink href='https://dimension.dev/?ref=theodorusclarence.com'>
-                Dimension
-              </CustomLink>
+              Founder at{' '}
+              <CustomLink href='https://www.maleq.org'>Male Q</CustomLink>
             </p>
             <p
               className={clsx(
@@ -77,7 +70,7 @@ export default function IndexPage({
               )}
               data-fade='3'
             >
-              I work with React Ecosystem, and write to teach people how to
+              I work with the React Ecosystem, and write to teach people how to
               rebuild and redefine fundamental concepts through mental models.
             </p>
 
@@ -125,7 +118,7 @@ export default function IndexPage({
                 <span>Resume</span>
               </UnstyledLink>
               <UnstyledLink
-                href='https://twitter.com/th_clarence'
+                href='https://twitter.com/lorencouse'
                 className={clsx(
                   'inline-flex items-center gap-1 text-sm font-medium md:text-base',
                   'group text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white',
@@ -137,7 +130,7 @@ export default function IndexPage({
                 }}
               >
                 <SiX className='shrink-0 transition-colors group-hover:text-black dark:group-hover:text-white' />
-                <span>@th_clarence</span>
+                <span>@lorencouse</span>
               </UnstyledLink>
               <UnstyledLink
                 href='https://clarence.link/bsky'
@@ -152,10 +145,10 @@ export default function IndexPage({
                 }}
               >
                 <SiBluesky className='shrink-0 transition-colors group-hover:text-[#0285FF]' />
-                <span>@theodorusclarence.com</span>
+                <span>@lorencouse.com</span>
               </UnstyledLink>
               <UnstyledLink
-                href='https://github.com/theodorusclarence'
+                href='https://github.com/lorencouse'
                 className={clsx(
                   'inline-flex items-center gap-1 text-sm font-medium md:text-base',
                   'text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white',
@@ -167,7 +160,7 @@ export default function IndexPage({
                 }}
               >
                 <SiGithub className='shrink-0' />
-                <span>theodorusclarence</span>
+                <span>lorencouse</span>
               </UnstyledLink>
             </div>
           </article>
@@ -260,7 +253,7 @@ export default function IndexPage({
           )}
         </InView>
 
-        <InView triggerOnce rootMargin='-40% 0px'>
+        {/* <InView triggerOnce rootMargin='-40% 0px'>
           {({ ref, inView }) => (
             <section
               ref={ref}
@@ -291,7 +284,7 @@ export default function IndexPage({
               </article>
             </section>
           )}
-        </InView>
+        </InView> */}
 
         <InView triggerOnce rootMargin='-40% 0px'>
           {({ ref, inView }) => (
@@ -329,7 +322,7 @@ export default function IndexPage({
           )}
         </InView>
 
-        <InView triggerOnce rootMargin='-40% 0px'>
+        {/* <InView triggerOnce rootMargin='-40% 0px'>
           {({ ref, inView }) => (
             <section
               ref={ref}
@@ -364,9 +357,9 @@ export default function IndexPage({
               </article>
             </section>
           )}
-        </InView>
+        </InView> */}
       </main>
-    </Layout>
+    </>
   );
 }
 
@@ -375,30 +368,30 @@ export async function getStaticProps() {
 
   const blogs = await getAllFilesFrontmatter('blog');
   const projects = await getAllFilesFrontmatter('projects');
-  const shorts = await getAllFilesFrontmatter('library');
+  // const shorts = await getAllFilesFrontmatter('library');
 
-  const featuredPosts = getFeatured(blogs, [
-    'gradient-border-is-hard',
-    'advanced-react-patterns',
-    'fully-reusable-components',
-    'react-core-concept-rendering-state',
-    'nextjs-auth-hoc',
-    'nextjs-fetch-method',
-  ]);
+  // const featuredPosts = getFeatured(blogs, [
+  //   'gradient-border-is-hard',
+  //   'advanced-react-patterns',
+  //   'fully-reusable-components',
+  //   'react-core-concept-rendering-state',
+  //   'nextjs-auth-hoc',
+  //   'nextjs-fetch-method',
+  // ]);
+  // const featuredShorts = getFeatured(shorts, [
+  //   'react/absolute-import',
+  //   'auth-context',
+  //   'mac/zsh',
+  //   'react/jsx-one-parent',
+  //   'styling/margin-usage',
+  //   'uncategorized/search-removal',
+  // ]);
+
   const featuredProjects = getFeatured(projects, [
     'hexcape',
     'notiolink',
     'ppdbsumsel',
   ]);
-  const featuredShorts = getFeatured(shorts, [
-    'react/absolute-import',
-    'auth-context',
-    'mac/zsh',
-    'react/jsx-one-parent',
-    'styling/margin-usage',
-    'uncategorized/search-removal',
-  ]);
-
   const introPosts = getFeatured(blogs, [
     'btb-flex-mental-model',
     'nextjs-fetch-method',
@@ -406,9 +399,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      featuredPosts,
       featuredProjects,
-      featuredShorts,
       introPosts,
     },
   };

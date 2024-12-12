@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import * as React from 'react';
 
-import CloudinaryImg from '@/components/images/CloudinaryImg';
+import CustomImg from '@/components/images/CustomImg';
 import UnstyledLink from '@/components/links/UnstyledLink';
 import TechIcons, { TechListType } from '@/components/TechIcons';
 
@@ -36,7 +36,7 @@ export default function ProjectCard({ project, className }: ProjectCardProps) {
           <TechIcons techs={project.techs.split(',') as Array<TechListType>} />
         </div>
 
-        <CloudinaryImg
+        <CustomImg
           className='pointer-events-none mt-3 w-full'
           publicId={`theodorusclarence/${project.banner}`}
           alt={project.title}

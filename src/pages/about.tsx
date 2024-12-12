@@ -5,8 +5,7 @@ import { trackEvent } from '@/lib/analytics';
 import useLoaded from '@/hooks/useLoaded';
 
 import Accent from '@/components/Accent';
-import CloudinaryImg from '@/components/images/CloudinaryImg';
-import Layout from '@/components/layout/Layout';
+import CustomImg from '@/components/images/CustomImg';
 import CustomLink from '@/components/links/CustomLink';
 import Seo from '@/components/Seo';
 import TechStack from '@/components/TechStack';
@@ -16,35 +15,34 @@ export default function AboutPage() {
   const isLoaded = useLoaded();
 
   return (
-    <Layout>
+    <>
       <Seo
         templateTitle='About'
-        description='Clarence is a front-end developer that started learning in May 2020. He write blogs about his approach and mental model on understanding topics in front-end development.'
+        description='Loren is a front-end developer that started learning in September 2020. He writes blogs about his approach and mental models on understanding topics in front-end development.'
       />
-
       <main>
         <section className={clsx(isLoaded && 'fade-in-start')}>
           <div className='layout pt-20'>
             <h2 data-fade='0'>About</h2>
             <h1 className='mt-1' data-fade='1'>
-              <Accent>Theodorus Clarence</Accent>
+              <Accent>Loren Couse</Accent>
             </h1>
             <div className='mt-4' data-fade='2'>
-              <CloudinaryImg
+              <CustomImg
                 className='float-right ml-6 w-40 md:w-72'
-                publicId='theodorusclarence/about/self-3-cropped_cyfuvn.jpg'
+                publicId='/images/Loren-Couse-Web-Developer-tan.png'
                 width='1500'
-                height='1695'
-                alt='Photo of me looking really professional and definitely can impress your boss'
+                height='1500'
+                alt='Photo of me looking really professional and can definitely impress your boss'
                 preview={false}
                 title=' '
               />
               <article className='prose dark:prose-invert'>
                 <p data-fade='3'>
-                  Hello! I'm Clarence. I started learning web development in May
-                  2020, which is the start of the pandemic. I have nothing much
-                  to do so I decided to learn web development from a udemy
-                  course, then started watching a bunch of{' '}
+                  Hello! I'm Loren. I started learning web development in
+                  September 2021, which is the start of the pandemic. I had
+                  nothing much to do so I decided to learn web development from
+                  a udemy course, then started watching a bunch of{' '}
                   <CustomLink href='/blog/youtube-list'>
                     youtube videos
                   </CustomLink>{' '}
@@ -76,7 +74,7 @@ export default function AboutPage() {
                       onClick={() =>
                         trackEvent('Now: Dimension', { type: 'link' })
                       }
-                      href='https://dimension.dev?ref=theodorusclarence.com'
+                      href='https://dimension.dev?ref=lorencouse.com'
                     >
                       Dimension
                     </CustomLink>{' '}
@@ -88,7 +86,7 @@ export default function AboutPage() {
                       onClick={() =>
                         trackEvent('Now: LogRocket', { type: 'link' })
                       }
-                      href='https://blog.logrocket.com/author/theodorusclarence/'
+                      href='https://blog.logrocket.com/author/lorencouse/'
                     >
                       LogRocket
                     </CustomLink>
@@ -142,21 +140,21 @@ export default function AboutPage() {
         <section id='uses'>
           <div className='layout mt-16'>
             <h2>Uses</h2>
-            <CloudinaryImg
+            <CustomImg
               className='mt-8'
-              publicId='theodorusclarence/about/setup-oct-2024-light-2.jpg'
+              publicId='lorencouse/about/setup-oct-2024-light-2.jpg'
               width={1500}
               height={843}
               alt='Photo of my desk setup'
             />
             <article className='prose mt-4 dark:prose-invert'>
               <ul>
-                <li>MacBook Pro (14" M3 Pro 2023, 36GB, 1TB)</li>
+                <li>MacBook Air (13" M1 2020, 16GB, 1TB)</li>
                 <li>LG UltraFine™ 4K 32 Inch LG (32UN880-B)</li>
                 <li>Keychron K2v2</li>
                 <li>Logitech MX Master 3s</li>
                 <li>Kindle Paperwhite (10th Generation)</li>
-                <li>Nintendo Switch OLED</li>
+                <li>Nintendo Switch Original</li>
                 <li>Stramm Bruno Standing Desk 160x80</li>
                 <li>Pexio Jervis Ergonomic Chair</li>
                 <li>Press Play Desk Shelf</li>
@@ -167,6 +165,6 @@ export default function AboutPage() {
           </div>
         </section>
       </main>
-    </Layout>
+    </>
   );
 }

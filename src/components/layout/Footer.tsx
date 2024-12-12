@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { FiMail } from 'react-icons/fi';
 import { IconType } from 'react-icons/lib';
-import { SiBluesky, SiGithub, SiLinkedin, SiX } from 'react-icons/si';
+import { SiGithub, SiInstagram, SiLinkedin, SiYoutube } from 'react-icons/si';
 
 import { trackEvent } from '@/lib/analytics';
 import useCopyToClipboard from '@/hooks/useCopyToClipboard';
@@ -22,12 +22,12 @@ export default function Footer() {
         {spotifyFlag && <Spotify className='mt-8' />}
 
         <p className='mt-12 font-medium text-gray-600 dark:text-gray-300'>
-          Reach me out
+          Reach me at
         </p>
         <SocialLinks />
 
         <p className='mt-8 text-sm text-gray-600 dark:text-gray-300'>
-          © Theodorus Clarence {new Date().getFullYear()}
+          Loren Couse - {new Date().getFullYear()}
         </p>
       </main>
     </footer>
@@ -72,14 +72,14 @@ function SocialLinks() {
                 ? 'Click the mail logo to copy'
                 : 'Copied to clipboard 🥳'}
               <Accent className='inline-block font-medium'>
-                me@theodorusclarence.com
+                contact@lorencouse.com
               </Accent>
             </div>
           }
         >
           <button
             onClick={() => {
-              copy('me@theodorusclarence.com').then(() => {
+              copy('contact@lorencouse.com').then(() => {
                 setCopyStatus('copied');
                 setTimeout(() => setCopyStatus('idle'), 1500);
               });
@@ -114,7 +114,7 @@ function SocialLinks() {
 const footerLinks: { href: string; text: string; tooltip: React.ReactNode }[] =
   [
     {
-      href: 'https://github.com/theodorusclarence/theodorusclarence.com',
+      href: 'https://github.com/lorencouse',
       text: 'Source Code',
       tooltip: (
         <>
@@ -125,27 +125,7 @@ const footerLinks: { href: string; text: string; tooltip: React.ReactNode }[] =
     {
       href: '/design',
       text: 'Design',
-      tooltip: 'theodorusclarence.com color palette',
-    },
-    {
-      href: 'https://clarence.link/docs',
-      text: 'Docs',
-      tooltip: 'Personal documentation about my best practices on development',
-    },
-    {
-      href: 'https://clarence.link/booknotes',
-      text: 'Book Notes',
-      tooltip: 'Note collection of books that I read',
-    },
-    {
-      href: 'https://clarence.link/starters',
-      text: 'Starter Templates',
-      tooltip: 'Starter that I build and use throughout my projects',
-    },
-    {
-      href: 'https://clarence.link/um',
-      text: 'Analytics',
-      tooltip: 'theodorusclarence.com views and visitors analytics',
+      tooltip: 'lorencouse.com color palette',
     },
     {
       href: '/statistics',
@@ -164,9 +144,9 @@ const footerLinks: { href: string; text: string; tooltip: React.ReactNode }[] =
       tooltip: 'Get an email whenever I post, no spam',
     },
     {
-      href: 'https://theodorusclarence.com/rss.xml',
+      href: 'https://lorencouse.com/rss.xml',
       text: 'RSS',
-      tooltip: 'Add theodorusclarence.com blog to your feeds',
+      tooltip: 'Add lorencouse.com blog to your feeds',
     },
   ];
 
@@ -178,7 +158,7 @@ type Social = {
 };
 const socials: Social[] = [
   {
-    href: 'https://clarence.link/github',
+    href: 'https://github.com/lorencouse',
     icon: SiGithub,
     id: 'Github',
     text: (
@@ -188,7 +168,7 @@ const socials: Social[] = [
     ),
   },
   {
-    href: 'https://clarence.link/linkedin',
+    href: 'https://www.linkedin.com/in/loren-couse/',
     icon: SiLinkedin,
     id: 'Linkedin',
     text: (
@@ -198,20 +178,24 @@ const socials: Social[] = [
     ),
   },
   {
-    href: 'https://clarence.link/twt',
-    icon: SiX,
-    id: 'X',
+    href: 'https://www.instagram.com/cousethemouse/',
+    icon: SiInstagram,
+    id: 'Instagram',
     text: (
       <>
-        I post updates, tips, insight, and sometimes do some talk. Follow me on{' '}
-        <Accent className='font-medium'>X</Accent>!
+        My life and travels on{' '}
+        <Accent className='font-medium'>Instagram</Accent>
       </>
     ),
   },
   {
-    href: 'https://clarence.link/bsky',
-    icon: SiBluesky,
-    id: 'Bluesky',
-    text: <>Trying out Bluesky! Will be posting the same update as X.</>,
+    href: 'https://www.youtube.com/@loodanlive/videos',
+    icon: SiYoutube,
+    id: 'Youtube',
+    text: (
+      <>
+        Follow me on <Accent className='font-medium'>YouTube</Accent>!
+      </>
+    ),
   },
 ];

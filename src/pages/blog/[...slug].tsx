@@ -19,7 +19,6 @@ import useInjectContentMeta from '@/hooks/useInjectContentMeta';
 import useScrollSpy from '@/hooks/useScrollspy';
 
 import Accent from '@/components/Accent';
-import CarbonAds from '@/components/CarbonAds';
 import BlogCard from '@/components/content/blog/BlogCard';
 import SubscribeCard from '@/components/content/blog/SubscribeCard';
 import Comment from '@/components/content/Comment';
@@ -29,8 +28,7 @@ import ReloadDevtool from '@/components/content/ReloadDevtool';
 import TableOfContents, {
   HeadingScrollSpy,
 } from '@/components/content/TableOfContents';
-import CloudinaryImg from '@/components/images/CloudinaryImg';
-import Layout from '@/components/layout/Layout';
+import CustomImg from '@/components/images/CustomImg';
 import CustomLink from '@/components/links/CustomLink';
 import ShareTweetButton from '@/components/links/ShareTweetButton';
 import UnstyledLink from '@/components/links/UnstyledLink';
@@ -56,9 +54,9 @@ export default function SingleBlogPage({
   );
 
   //#region  //*=========== Link Constants ===========
-  const COMMIT_HISTORY_LINK = `https://github.com/theodorusclarence/theodorusclarence.com/commits/main/src/contents/blog/${frontmatter.slug}.mdx`;
-  const GITHUB_EDIT_LINK = `https://github.com/theodorusclarence/theodorusclarence.com/blob/main/src/contents/blog/${frontmatter.slug}.mdx`;
-  const OG_BANNER_LINK = `https://res.cloudinary.com/theodorusclarence/image/upload/f_auto,g_auto,c_fill,ar_4:5,w_1200/theodorusclarence/banner/${frontmatter.banner}`;
+  const COMMIT_HISTORY_LINK = `https://github.com/lorencouse/lorencouse.com/commits/main/src/contents/blog/${frontmatter.slug}.mdx`;
+  const GITHUB_EDIT_LINK = `https://github.com/lorencouse/lorencouse.com/blob/main/src/contents/blog/${frontmatter.slug}.mdx`;
+  const OG_BANNER_LINK = `https://res.cloudinary.com/lorencouse/image/upload/f_auto,g_auto,c_fill,ar_4:5,w_1200/lorencouse/banner/${frontmatter.banner}`;
   //#endregion  //*======== Link Constants ===========
 
   //#region  //*=========== Blog Language ===========
@@ -96,7 +94,7 @@ export default function SingleBlogPage({
   //#endregion  //*======== Scrollspy ===========
 
   return (
-    <Layout>
+    <>
       <Seo
         templateTitle={frontmatter.title}
         description={frontmatter.description}
@@ -114,8 +112,8 @@ export default function SingleBlogPage({
         <section className=''>
           <div className='layout'>
             <div className='pb-4 dark:border-gray-600'>
-              <CloudinaryImg
-                publicId={`theodorusclarence/banner/${frontmatter.banner}`}
+              <CustomImg
+                publicId={`lorencouse/banner/${frontmatter.banner}`}
                 alt={`Photo from unsplash: ${frontmatter.banner}`}
                 width={1200}
                 height={(1200 * 2) / 5}
@@ -159,7 +157,7 @@ export default function SingleBlogPage({
                     tipChildren={
                       <>
                         {meta.devtoViews.toLocaleString()} views on{' '}
-                        <CustomLink href='https://dev.to/theodorusclarence'>
+                        <CustomLink href='https://dev.to/lorencouse'>
                           dev.to
                         </CustomLink>
                       </>
@@ -222,11 +220,9 @@ export default function SingleBlogPage({
 
             <ShareTweetButton
               className='mt-12'
-              url={`https://theodorusclarence.com/blog/${frontmatter.slug}`}
+              url={`https://lorencouse.com/blog/${frontmatter.slug}`}
               title={frontmatter.title}
             />
-
-            <CarbonAds className='mt-8' />
 
             <figure className='mt-12'>
               <Comment key={frontmatter.slug} />
@@ -263,7 +259,7 @@ export default function SingleBlogPage({
           </div>
         </section>
       </main>
-    </Layout>
+    </>
   );
 }
 export const getStaticPaths: GetStaticPaths = async () => {

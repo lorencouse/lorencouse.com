@@ -1,7 +1,6 @@
 import { ColumnDef } from '@tanstack/react-table';
 import * as React from 'react';
 
-import Layout from '@/components/layout/Layout';
 import Seo from '@/components/Seo';
 import Table from '@/components/table/Table';
 
@@ -30,7 +29,7 @@ export default function TablePage() {
   //#endregion  //*======== Table Definition ===========
 
   return (
-    <Layout>
+    <>
       <Seo templateTitle='Table' />
 
       <main>
@@ -40,7 +39,7 @@ export default function TablePage() {
           </div>
         </section>
       </main>
-    </Layout>
+    </>
   );
 }
 

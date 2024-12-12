@@ -5,7 +5,7 @@ import { HiOutlineClock, HiOutlineEye } from 'react-icons/hi';
 
 import Accent from '@/components/Accent';
 import Tag from '@/components/content/Tag';
-import CloudinaryImg from '@/components/images/CloudinaryImg';
+import CustomImg from '@/components/images/CustomImg';
 import UnstyledLink from '@/components/links/UnstyledLink';
 
 import { BlogFrontmatter, InjectedMeta } from '@/types/frontmatters';
@@ -38,7 +38,7 @@ export default function BlogCard({
         href={`/blog/${post.slug}`}
       >
         <div className='relative'>
-          <CloudinaryImg
+          <CustomImg
             noStyle
             className='pointer-events-none overflow-hidden rounded-t-md'
             publicId={`theodorusclarence/banner/${post.banner}`}

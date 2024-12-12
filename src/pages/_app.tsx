@@ -16,6 +16,8 @@ import '@/styles/nprogress.css';
 
 import { getFromLocalStorage } from '@/lib/helper.client';
 
+import Layout from '@/components/layout/Layout';
+
 import { blockDomainMeta } from '@/constants/env';
 
 Router.events.on('routeChangeStart', nProgress.start);
@@ -29,8 +31,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     // Don't increment views if not on main domain
     if (
       window.location.host !==
-        (process.env.NEXT_PUBLIC_BLOCK_DOMAIN_WHITELIST ||
-          'theodorusclarence.com') &&
+        (process.env.NEXT_PUBLIC_BLOCK_DOMAIN_WHITELIST || 'lorencouse.com') &&
       blockDomainMeta
     ) {
       if (getFromLocalStorage('incrementMetaFlag') !== 'false') {
@@ -46,7 +47,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider attribute='class' defaultTheme='dark' enableSystem={false}>
       <QueryClientProvider client={queryClient}>
-        <Component {...pageProps} />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
         <ReactQueryDevtools />
       </QueryClientProvider>
     </ThemeProvider>

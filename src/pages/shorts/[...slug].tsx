@@ -16,7 +16,6 @@ import TableOfContents, {
   HeadingScrollSpy,
 } from '@/components/content/TableOfContents';
 import Tag from '@/components/content/Tag';
-import Layout from '@/components/layout/Layout';
 import CustomLink from '@/components/links/CustomLink';
 import Seo from '@/components/Seo';
 
@@ -54,12 +53,11 @@ export default function SingleShortPage({ code, frontmatter }: LibraryType) {
   //#endregion  //*======== Scrollspy ===========
 
   return (
-    <Layout>
+    <>
       <Seo
         templateTitle={frontmatter.title}
         description={frontmatter.description}
       />
-
       <main>
         <section className=''>
           <div className='layout'>
@@ -130,7 +128,7 @@ export default function SingleShortPage({ code, frontmatter }: LibraryType) {
           </div>
         </section>
       </main>
-    </Layout>
+    </>
   );
 }
 
