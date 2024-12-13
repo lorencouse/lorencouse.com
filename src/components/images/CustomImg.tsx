@@ -79,20 +79,20 @@ export default function CustomImg({
             background-size: 100%;
           }
         `}</style>
-        <div className='absolute left-0 top-0'>
-          <Image
-            width={
-              resizedToMaxWidth ? Math.min(+width, RESIZE_MAX_WIDTH) : width
-            }
-            height={
-              resizedToMaxWidth ? (RESIZE_MAX_WIDTH * +height) / +width : height
-            }
-            unoptimized
-            src={url}
-            alt={alt}
-            title={title || alt}
-          />
-        </div>
+<div className='absolute left-0 top-0'>
+  <Image
+    width={
+      resizedToMaxWidth ? Math.min(+width, RESIZE_MAX_WIDTH) : +width
+    }
+    height={
+      resizedToMaxWidth ? (RESIZE_MAX_WIDTH * +height) / +width : +height
+    }
+    unoptimized
+    src={url}
+    alt={alt}
+    title={title || alt}
+  />
+</div>
       </div>
       {/* {isOpen && (
         <Lightbox  mainSrc={url} onCloseRequest={() => setIsOpen(false)} />

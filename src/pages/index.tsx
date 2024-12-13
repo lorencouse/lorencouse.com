@@ -21,13 +21,12 @@ import Seo from '@/components/Seo';
 import TC from '@/components/TC';
 import Tooltip from '@/components/Tooltip';
 
-import BlogCard from '@/../_old/content/blog/BlogCard';
+import BlogCard from '@/components/blog/BlogCard';
 
 export default function IndexPage({
-  featuredProjects,
-  introPosts,
+  featuredProjects
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  const populatedIntro = useInjectContentMeta('blog', introPosts);
+  // const populatedIntro = useInjectContentMeta('blog', introPosts);
   const populatedProjects = useInjectContentMeta('projects', featuredProjects);
   // const populatedPosts = useInjectContentMeta('blog', featuredPosts);
   // const populatedShorts = useInjectContentMeta('library', featuredShorts);
@@ -234,7 +233,7 @@ export default function IndexPage({
                 </div>
                 <div className='h-full w-full'>
                   <ul className='relative h-full'>
-                    <BlogCard
+                    {/* <BlogCard
                       className={clsx(
                         'absolute max-w-[350px] transform-gpu',
                         'top-1/2 translate-y-[-55%] md:translate-y-[-50%] lg:translate-y-[-60%]',
@@ -247,7 +246,7 @@ export default function IndexPage({
                     <BlogCard
                       className='mx-auto max-w-[350px]'
                       post={populatedIntro[0]}
-                    />
+                    /> */}
                   </ul>
                 </div>
               </article>
@@ -394,15 +393,14 @@ export async function getStaticProps() {
     'notiolink',
     'ppdbsumsel',
   ]);
-  const introPosts = getFeatured(blogs, [
-    'btb-flex-mental-model',
-    'nextjs-fetch-method',
-  ]);
+  // const introPosts = getFeatured(blogs, [
+  //   'btb-flex-mental-model',
+  //   'nextjs-fetch-method',
+  // ]);
 
   return {
     props: {
-      featuredProjects,
-      introPosts,
+      featuredProjects
     },
   };
 }

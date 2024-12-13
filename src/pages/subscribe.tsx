@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import Accent from '@/components/Accent';
-import SubscribeCard from '@/../_old/content/blog/SubscribeCard';
+import SubscribeCard from '@/components/blog/SubscribeCard';
 import Seo from '@/components/Seo';
 
 export default function SubscribePage() {

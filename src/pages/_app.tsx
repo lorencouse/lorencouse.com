@@ -42,7 +42,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     }
   }, []);
 
-  useRemoteRefresh();
+  // useRemoteRefresh();
 
   return (
     <ThemeProvider attribute='class' defaultTheme='dark' enableSystem={false}>

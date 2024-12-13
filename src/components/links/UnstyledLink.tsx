@@ -23,23 +23,21 @@ export default function UnstyledLink({
 
   if (!isNewTab) {
     return (
-      <Link href={href}>
-        <a {...rest} className={className}>
-          {children}
-        </a>
+      <Link href={href} className={className} {...rest}>
+        {children}
       </Link>
     );
   }
 
   return (
-    <a
+    <Link
       target='_blank'
       rel='noopener noreferrer'
       href={href}
-      {...rest}
       className={clsx(className, 'cursor-newtab')}
+      {...rest}
     >
       {children}
-    </a>
+    </Link>
   );
 }

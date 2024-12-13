@@ -19,8 +19,8 @@ import useInjectContentMeta from '@/hooks/useInjectContentMeta';
 import useScrollSpy from '@/hooks/useScrollspy';
 
 import Accent from '@/components/Accent';
-import BlogCard from '@/../_old/content/blog/BlogCard';
-import SubscribeCard from '@/../_old/content/blog/SubscribeCard';
+import BlogCard from '@/components/blog/BlogCard';
+import SubscribeCard from '@/components/blog/SubscribeCard';
 import Comment from '@/components/content/Comment';
 import LikeButton from '@/components/content/LikeButton';
 import MDXComponents from '@/components/content/MDXComponents';
