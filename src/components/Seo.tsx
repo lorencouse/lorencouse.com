@@ -4,10 +4,10 @@ import { useRouter } from 'next/router';
 import { openGraph } from '@/lib/helper.client';
 
 const defaultMeta = {
-  title: 'Loren Couse',
+  title: 'Lorén Couse',
   siteName: 'lorencouse.com',
   description:
-    'An online portfolio and blog by Loren Couse. Showcase of my projects, and some of my thoughts about website development.',
+    'An online portfolio and blog by Lorén Couse. Showcase of my projects, and some of my thoughts about website development.',
   url: 'https://lorencouse.com',
   image: 'https://lorencouse.com/favicon/large-og.jpg',
   type: 'website',
@@ -62,7 +62,7 @@ export default function Seo(props: SeoProps) {
       <meta name='image' property='og:image' content={meta.image} />
       {/* Twitter */}
       <meta name='twitter:card' content='summary_large_image' />
-      <meta name='twitter:site' content='@th_clarence' />
+      <meta name='twitter:site' content='@lorencouse' />
       <meta name='twitter:title' content={meta.title} />
       <meta name='twitter:description' content={meta.description} />
       <meta name='twitter:image' content={meta.image} />
@@ -74,7 +74,7 @@ export default function Seo(props: SeoProps) {
             property='og:publish_date'
             content={meta.date}
           />
-          <meta name='author' property='article:author' content='Loren Couse' />
+          <meta name='author' property='article:author' content='Lorén Couse' />
         </>
       )}
       {meta.isBlog && (
@@ -90,7 +90,7 @@ export default function Seo(props: SeoProps) {
               author: [
                 {
                   '@type': 'Person',
-                  name: 'Loren Couse',
+                  name: 'Lorén Couse',
                 },
               ],
               image: meta.image,

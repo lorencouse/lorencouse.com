@@ -3,7 +3,7 @@ import { InferGetStaticPropsType } from 'next';
 import * as React from 'react';
 import { IoArrowDownOutline } from 'react-icons/io5';
 import { IoNewspaperSharp } from 'react-icons/io5';
-import { SiBluesky, SiGithub, SiX } from 'react-icons/si';
+import { SiGithub, SiInstagram, SiLinkedin } from 'react-icons/si';
 import { InView } from 'react-intersection-observer';
 
 import { trackEvent } from '@/lib/analytics';
@@ -51,7 +51,7 @@ export default function IndexPage({
               className='mt-1 text-3xl md:text-5xl 2xl:text-6xl'
               data-fade='2'
             >
-              My name's <Accent>Loren</Accent>
+              My name's <Accent>Lorén</Accent>
             </h1>
             <p
               className='mt-2 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-3 text-sm md:text-base 2xl:text-lg'
@@ -70,8 +70,9 @@ export default function IndexPage({
               )}
               data-fade='3'
             >
-              I work with the React Ecosystem, and write to teach people how to
-              rebuild and redefine fundamental concepts through mental models.
+              I am an entrepreneur working in the React Ecosystem. My strength
+              is building tools and solving problems with React and Next.js. I
+              am also a big fan of TypeScript and TailwindCSS.
             </p>
 
             <p
@@ -94,7 +95,7 @@ export default function IndexPage({
                     'opacity-75 transition duration-1000 group-hover:opacity-100 group-hover:duration-200'
                   )}
                 />
-                <ButtonLink href='#intro'>Read the blog</ButtonLink>
+                <ButtonLink href='#intro'>Read my blog</ButtonLink>
               </div>
               <ButtonLink href='/about'>Learn more about me</ButtonLink>
             </div>
@@ -103,7 +104,7 @@ export default function IndexPage({
               className='mt-4 flex flex-wrap gap-4 gap-y-2 md:mt-8'
             >
               <UnstyledLink
-                href='https://clarence.link/cv'
+                href='/resume'
                 className={clsx(
                   'inline-flex items-center gap-1 text-sm font-medium md:text-base',
                   'text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white',
@@ -115,10 +116,10 @@ export default function IndexPage({
                 }}
               >
                 <IoNewspaperSharp className='shrink-0' />
-                <span>Resume</span>
+                <span>Resumé</span>
               </UnstyledLink>
               <UnstyledLink
-                href='https://twitter.com/lorencouse'
+                href='https://linkedin.com/in/loren-couse'
                 className={clsx(
                   'inline-flex items-center gap-1 text-sm font-medium md:text-base',
                   'group text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white',
@@ -126,26 +127,11 @@ export default function IndexPage({
                   'transition-colors'
                 )}
                 onClick={() => {
-                  trackEvent('Social Link: Twitter', { type: 'link' });
+                  trackEvent('Social Link: LinkedIn', { type: 'link' });
                 }}
               >
-                <SiX className='shrink-0 transition-colors group-hover:text-black dark:group-hover:text-white' />
-                <span>@lorencouse</span>
-              </UnstyledLink>
-              <UnstyledLink
-                href='https://clarence.link/bsky'
-                className={clsx(
-                  'inline-flex items-center gap-1 text-sm font-medium md:text-base',
-                  'group text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white',
-                  'focus:outline-none focus-visible:ring focus-visible:ring-primary-300',
-                  'transition-colors'
-                )}
-                onClick={() => {
-                  trackEvent('Social Link: Bluesky', { type: 'link' });
-                }}
-              >
-                <SiBluesky className='shrink-0 transition-colors group-hover:text-[#0285FF]' />
-                <span>@lorencouse.com</span>
+                <SiLinkedin className='shrink-0 transition-colors group-hover:text-black dark:group-hover:text-white' />
+                <span>@loren-couse</span>
               </UnstyledLink>
               <UnstyledLink
                 href='https://github.com/lorencouse'
@@ -161,6 +147,21 @@ export default function IndexPage({
               >
                 <SiGithub className='shrink-0' />
                 <span>lorencouse</span>
+              </UnstyledLink>
+              <UnstyledLink
+                href='https://clarence.link/bsky'
+                className={clsx(
+                  'inline-flex items-center gap-1 text-sm font-medium md:text-base',
+                  'group text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white',
+                  'focus:outline-none focus-visible:ring focus-visible:ring-primary-300',
+                  'transition-colors'
+                )}
+                onClick={() => {
+                  trackEvent('Social Link: Bluesky', { type: 'link' });
+                }}
+              >
+                <SiInstagram className='shrink-0 transition-colors group-hover:text-[#0285FF]' />
+                <span>@cousethemouse</span>
               </UnstyledLink>
             </div>
           </article>
@@ -201,7 +202,7 @@ export default function IndexPage({
                 <div className='mt-8 h-full w-full md:mt-0'>
                   <h2 className='text-4xl md:text-6xl'>
                     <Accent className='inline decoration-clone leading-snug dark:leading-none'>
-                      Rebuild your mental model
+                      Let's Build Something Great
                     </Accent>
                   </h2>
                   <div className='mt-4 text-base text-gray-600 dark:text-gray-300 md:text-lg'>

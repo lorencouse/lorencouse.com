@@ -1,10 +1,10 @@
 import clsx from 'clsx';
 import * as React from 'react';
 import {
+  SiCloudflare,
   SiNextdotjs,
-  SiPrisma,
   SiReact,
-  SiReactquery,
+  SiSupabase,
   SiTailwindcss,
   SiTypescript,
 } from 'react-icons/si';
@@ -38,8 +38,12 @@ const stacks = [
     tooltip: (
       <>
         <CustomLink href='https://nextjs.org'>Next.js</CustomLink>, currently my
-        go-to framework because of the static generation, dynamic paths, and
-        built-in API. <em>ps: I like pages folder better than the new one.</em>
+        go-to framework thanks to its static generation, dynamic paths, and
+        superior SEO.{' '}
+        <em>
+          Did I mention? I am really loving the new App router and server-side
+          functions.
+        </em>
       </>
     ),
   },
@@ -61,11 +65,8 @@ const stacks = [
         <CustomLink href='https://www.typescriptlang.org/'>
           TypeScript
         </CustomLink>
-        , can't live without it! Check out my{' '}
-        <CustomLink href='https://github.com/theodorusclarence/ts-nextjs-tailwind-starter'>
-          starter template
-        </CustomLink>{' '}
-        using Next.js, Tailwind CSS, and TypeScript.
+        , has made me love web development! Its built in type checking has been
+        a game changer for my projects' debugging and stability.
       </>
     ),
   },
@@ -85,26 +86,24 @@ const stacks = [
     ),
   },
   {
-    id: 'react-query',
-    icon: SiReactquery,
+    id: 'cloudflare',
+    icon: SiCloudflare,
     tooltip: (
       <>
-        <CustomLink href='https://tanstack.com/'>TanStack Query</CustomLink>,
-        great react hooks for data fetching and caching. I maintain most of my
-        API fetch (get, post, put, delete) in this library.
+        <CustomLink href='https://cloudflare.com/'>Cloudflare</CustomLink>, my
+        go-to hosting service and global CDN. Super fast, scalable, and
+        affordable.
       </>
     ),
   },
   {
-    id: 'prisma',
-    icon: SiPrisma,
+    id: 'supabase',
+    icon: SiSupabase,
     tooltip: (
       <>
-        <CustomLink href='https://www.prisma.io/?via=clarence'>
-          Prisma
-        </CustomLink>
-        , great and simple ORM. A little bit of documentation and you're good to
-        go.
+        <CustomLink href='https://www.supabase.com'>Supabase</CustomLink>, great
+        and simple all-in-one PostgreSQL database, plus easy to set up user
+        auth.
       </>
     ),
   },

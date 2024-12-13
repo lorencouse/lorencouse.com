@@ -18,18 +18,18 @@ export default function AboutPage() {
     <>
       <Seo
         templateTitle='About'
-        description='Loren is a front-end developer that started learning in September 2020. He writes blogs about his approach and mental models on understanding topics in front-end development.'
+        description='Lorén is a front-end developer that started learning in September 2021. He writes blogs about his approach and mental models on understanding topics in front-end development.'
       />
       <main>
         <section className={clsx(isLoaded && 'fade-in-start')}>
           <div className='layout pt-20'>
             <h2 data-fade='0'>About</h2>
             <h1 className='mt-1' data-fade='1'>
-              <Accent>Loren Couse</Accent>
+              <Accent>Lorén Couse</Accent>
             </h1>
             <div className='mt-4' data-fade='2'>
               <CustomImg
-                className='float-right ml-6 w-40 md:w-72'
+                className='float-right ml-6 w-40 md:w-72 rounded-full'
                 publicId='/images/Loren-Couse-Web-Developer-tan.png'
                 width='1500'
                 height='1500'
@@ -69,27 +69,23 @@ export default function AboutPage() {
               <article className='prose mt-2 dark:prose-invert' data-fade='7'>
                 <ul>
                   <li>
-                    I'm a full-stack engineer at{' '}
+                    I am the founder and full-stack engineer at{' '}
                     <CustomLink
-                      onClick={() =>
-                        trackEvent('Now: Dimension', { type: 'link' })
-                      }
-                      href='https://dimension.dev?ref=lorencouse.com'
+                      onClick={() => trackEvent('Now: MaleQ', { type: 'link' })}
+                      href='https://www.maleq.org'
                     >
-                      Dimension
-                    </CustomLink>{' '}
-                    while working remotely from Jakarta, Indonesia
+                      MaleQ
+                    </CustomLink>
                   </li>
                   <li>
-                    I'm a technical writer for{' '}
+                    I'm a start up mentor at Taiwan's{' '}
                     <CustomLink
-                      onClick={() =>
-                        trackEvent('Now: LogRocket', { type: 'link' })
-                      }
-                      href='https://blog.logrocket.com/author/lorencouse/'
+                      onClick={() => trackEvent('Now: Dakuo', { type: 'link' })}
+                      href='https://dakuo.koda.net.tw/teams.html'
                     >
-                      LogRocket
-                    </CustomLink>
+                      Dakuo
+                    </CustomLink>{' '}
+                    incubator hub.
                   </li>
                   <li>
                     I'm a mentor! I do revision-style mentorship (
@@ -129,9 +125,8 @@ export default function AboutPage() {
             <h2>Contact</h2>
             <article className='prose mt-4 dark:prose-invert'>
               <p>
-                Do contact me if you need my opinion about web development,
-                especially frontend works. I’ll be happy to help! (find my email
-                in the footer)
+                Feel free to contact me about my projects, current work, or web
+                development consultations. I’m happy to help.
               </p>
             </article>
           </div>
@@ -139,27 +134,27 @@ export default function AboutPage() {
 
         <section id='uses'>
           <div className='layout mt-16'>
-            <h2>Uses</h2>
+            <h2>My Desk</h2>
             <CustomImg
               className='mt-8'
-              publicId='lorencouse/about/setup-oct-2024-light-2.jpg'
-              width={1500}
-              height={843}
+              publicId='/images/about/loren-couse-desk.jpg'
+              width={1279}
+              height={913}
               alt='Photo of my desk setup'
             />
             <article className='prose mt-4 dark:prose-invert'>
               <ul>
                 <li>MacBook Air (13" M1 2020, 16GB, 1TB)</li>
-                <li>LG UltraFine™ 4K 32 Inch LG (32UN880-B)</li>
-                <li>Keychron K2v2</li>
-                <li>Logitech MX Master 3s</li>
+                <li>Asus 24 Inch Monitor (VZ249HE)</li>
+                <li>Logitech G610 Mechanical Keyboard</li>
+                <li>Asus MM511 Mouse</li>
+                <li>Google Nest Speaker</li>
+                <li>Kindle Fire Smart Display</li>
+                <li>Neat Bumblebee II - Professional Condenser Mic</li>
                 <li>Kindle Paperwhite (10th Generation)</li>
                 <li>Nintendo Switch Original</li>
-                <li>Stramm Bruno Standing Desk 160x80</li>
-                <li>Pexio Jervis Ergonomic Chair</li>
-                <li>Press Play Desk Shelf</li>
-                <li>Mi Computer Monitor Light Bar</li>
-                <li>Creative Pebble V3</li>
+                <li>Apple iPhone 15 Pro Max</li>
+                <li>Beats Fit Pro Buds</li>
               </ul>
             </article>
           </div>
