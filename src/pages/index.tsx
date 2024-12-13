@@ -51,7 +51,7 @@ export default function IndexPage({
               className='mt-1 text-3xl md:text-5xl 2xl:text-6xl'
               data-fade='2'
             >
-              My name's <Accent>Lorén</Accent>
+              My name is <Accent>Lorén</Accent>
             </h1>
             <p
               className='mt-2 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-3 text-sm md:text-base 2xl:text-lg'
@@ -61,7 +61,7 @@ export default function IndexPage({
               }}
             >
               Founder at{' '}
-              <CustomLink href='https://www.maleq.org'>Male Q</CustomLink>
+              <CustomLink href='https://www.maleq.org'>MaleQ</CustomLink>
             </p>
             <p
               className={clsx(
@@ -79,7 +79,7 @@ export default function IndexPage({
               className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
               data-fade='4'
             >
-              Don't forget to sign my{' '}
+              First time here? Don't forget to sign my{' '}
               <CustomLink href='/guestbook'>guestbook</CustomLink>!
             </p>
             <div

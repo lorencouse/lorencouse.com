@@ -17,13 +17,13 @@ export default function AboutPage() {
   return (
     <>
       <Seo
-        templateTitle='About'
+        templateTitle='Resume'
         description='Lorén is a front-end developer that started learning in September 2021. He writes blogs about his approach and mental models on understanding topics in front-end development.'
       />
       <main>
         <section className={clsx(isLoaded && 'fade-in-start')}>
           <div className='layout pt-20'>
-            <h2 data-fade='0'>About</h2>
+            <h2 data-fade='0'>Resume</h2>
             <h1 className='mt-1' data-fade='1'>
               <Accent>Lorén Couse</Accent>
             </h1>
@@ -39,7 +39,7 @@ export default function AboutPage() {
               />
               <article className='prose dark:prose-invert'>
                 <p data-fade='3'>
-                  Hello! I'm Lorén. I started my web development journey in
+                  Hello! I'm Loren. I started my web development journey in
                   July, 2012, launching my first web site,{' '}
                   <CustomLink href='https://www.maleq.org'>
                     MaleQ.org
