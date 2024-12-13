@@ -11,8 +11,8 @@ import useLoaded from '@/hooks/useLoaded';
 
 import Accent from '@/components/Accent';
 import Button from '@/components/buttons/Button';
-import BlogCard from '@/components/content/blog/BlogCard';
-import SubscribeCard from '@/components/content/blog/SubscribeCard';
+import BlogCard from '@/../_old/content/blog/BlogCard';
+import SubscribeCard from '@/../_old/content/blog/SubscribeCard';
 import ContentPlaceholder from '@/components/content/ContentPlaceholder';
 import Tag, { SkipNavTag } from '@/components/content/Tag';
 import StyledInput from '@/components/form/StyledInput';

@@ -1,41 +1,14 @@
-const path = require('path');
-
-const withRemoteRefresh = require('next-remote-refresh')({
-  paths: [path.resolve(__dirname, 'src', 'contents')],
-});
-
-/**
- * @type {import('next').NextConfig}
- */
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-  eslint: {
-    dirs: ['src'],
+  // The appDir experimental feature is not compatible with static exports
+  experimental: {
+    appDir: true, // Remove this
   },
-  images: {
-    domains: [
-      // Spotify Album
-      'i.scdn.co',
-    ],
-  },
-  // async redirects() {
-  //   return [
-  //     {
-  //       source: '/library/absolute-import',
-  //       destination: '/shorts/react/absolute-import',
-  //       permanent: true,
-  //     },
-  //     {
-  //       source: '/library',
-  //       destination: '/shorts',
-  //       permanent: true,
-  //     },
-  //     {
-  //       source: '/library/:slug',
-  //       destination: '/shorts/:slug',
-  //       permanent: true,
-  //     },
-  //   ];
-  // },
-};
 
-module.exports = withRemoteRefresh(nextConfig);
+  // Keep these settings
+  output: 'export',
+  images: {
+    unoptimized: true,
+    domains: ['lorencouse.com'],
+  },
+};

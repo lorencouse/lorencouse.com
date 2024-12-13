@@ -1,9 +1,9 @@
 import clsx from 'clsx';
 import Image from 'next/image';
 import * as React from 'react';
-import Lightbox from 'react-image-lightbox';
+// import Lightbox from 'yet-another-react-lightbox';
 
-import 'react-image-lightbox/style.css';
+// import 'react-image-lightbox/style.css';
 
 type CloudinaryImgType = {
   publicId: string;
@@ -94,9 +94,9 @@ export default function CustomImg({
           />
         </div>
       </div>
-      {isOpen && (
-        <Lightbox mainSrc={url} onCloseRequest={() => setIsOpen(false)} />
-      )}
+      {/* {isOpen && (
+        <Lightbox  mainSrc={url} onCloseRequest={() => setIsOpen(false)} />
+      )} */}
     </figure>
   );
 }

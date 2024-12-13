@@ -13,7 +13,6 @@ import useInjectContentMeta from '@/hooks/useInjectContentMeta';
 import useLoaded from '@/hooks/useLoaded';
 
 import Accent from '@/components/Accent';
-import BlogCard from '@/components/content/blog/BlogCard';
 import ProjectCard from '@/components/content/projects/ProjectCard';
 import ButtonLink from '@/components/links/ButtonLink';
 import CustomLink from '@/components/links/CustomLink';
@@ -21,6 +20,8 @@ import UnstyledLink from '@/components/links/UnstyledLink';
 import Seo from '@/components/Seo';
 import TC from '@/components/TC';
 import Tooltip from '@/components/Tooltip';
+
+import BlogCard from '@/../_old/content/blog/BlogCard';
 
 export default function IndexPage({
   featuredProjects,

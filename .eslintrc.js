@@ -4,7 +4,12 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  plugins: ['@typescript-eslint', 'simple-import-sort', 'unused-imports'],
+  plugins: [
+    '@typescript-eslint',
+    'simple-import-sort',
+    'unused-imports',
+    'eslint-plugin-next-on-pages',
+  ],
   extends: [
     'eslint:recommended',
     'next',
@@ -12,6 +17,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:@tanstack/eslint-plugin-query/recommended',
     'prettier',
+    'plugin:eslint-plugin-next-on-pages/recommended',
   ],
   rules: {
     'no-unused-vars': 'off',
