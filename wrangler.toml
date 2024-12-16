@@ -8,6 +8,3 @@ node_version = "20"
 [build.environment]
 NODE_VERSION = "20"
 
-[site]
-bucket = ".next/static"
-entry-point = "."
