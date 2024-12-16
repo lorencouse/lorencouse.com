@@ -13,7 +13,7 @@ import useLoaded from '@/hooks/useLoaded';
 
 import Accent from '@/components/Accent';
 import ProjectCard from '@/components/content/projects/ProjectCard';
-import Headshot from '@/components/headshot';
+import Headshot from '@/components/Headshot';
 import ButtonLink from '@/components/links/ButtonLink';
 import CustomLink from '@/components/links/CustomLink';
 import UnstyledLink from '@/components/links/UnstyledLink';
@@ -70,9 +70,10 @@ export default function IndexPage({
                   )}
                   data-fade='3'
                 >
-                  I am an entrepreneur working in the React Ecosystem. My
-                  strength is building tools and solving problems with React and
-                  Next.js. I am also a big fan of TypeScript and TailwindCSS.
+                  I am a freelance entrepreneur working in the React Ecosystem.
+                  My strength is building tools and solving problems with React
+                  and Next.js. I am also a big fan of TypeScript and
+                  TailwindCSS.
                 </p>
 
                 <p
