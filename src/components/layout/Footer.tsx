@@ -7,11 +7,10 @@ import { trackEvent } from '@/lib/analytics';
 import useCopyToClipboard from '@/hooks/useCopyToClipboard';
 
 import Accent from '@/components/Accent';
-import Spotify from '@/components/layout/Spotify';
 import UnstyledLink from '@/components/links/UnstyledLink';
 import Tooltip from '@/components/Tooltip';
 
-import { spotifyFlag } from '@/constants/env';
+import TechStack from '../TechStack';
 
 export default function Footer() {
   return (
@@ -19,12 +18,20 @@ export default function Footer() {
       <main className='layout flex flex-col items-center border-t pt-6 dark:border-gray-600'>
         <FooterLinks />
 
-        {spotifyFlag && <Spotify className='mt-8' />}
-
-        <p className='mt-12 font-medium text-gray-600 dark:text-gray-300'>
-          Reach me at
-        </p>
-        <SocialLinks />
+        <div className='flex flex-row justify-between w-full max-w-4xl mt-6'>
+          <div className='socials items-center gap-4 flex-wrap align-middle'>
+            <p className='font-medium text-gray-600 dark:text-gray-300 text-center'>
+              Reach me at:
+            </p>
+            <SocialLinks />
+          </div>
+          <div className='build-with items-center gap-4 flex-wrap align-middle'>
+            <p className='font-medium text-gray-600 dark:text-gray-300 text-center'>
+              This site is built with:
+            </p>
+            <TechStack />
+          </div>
+        </div>
 
         <p className='mt-8 text-sm text-gray-600 dark:text-gray-300'>
           Loren Couse - {new Date().getFullYear()}
@@ -114,22 +121,13 @@ function SocialLinks() {
 const footerLinks: { href: string; text: string; tooltip: React.ReactNode }[] =
   [
     {
-      href: 'https://github.com/lorencouse',
-      text: 'Source Code',
-      tooltip: (
-        <>
-          This website is <strong>open source</strong>!
-        </>
-      ),
-    },
-    {
       href: '/design',
       text: 'Design',
       tooltip: 'lorencouse.com color palette',
     },
     {
       href: '/statistics',
-      text: 'Statistics',
+      text: 'Stats',
       tooltip: 'Blog, Projects, and Library Statistics',
     },
     {

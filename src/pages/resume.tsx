@@ -28,15 +28,6 @@ export default function AboutPage() {
               <Accent>Lorén Couse</Accent>
             </h1>
             <div className='mt-4' data-fade='2'>
-              <CustomImg
-                className='float-right ml-6 w-40 md:w-72 rounded-full'
-                publicId='/images/Loren-Couse-Web-Developer-tan.png'
-                width='1500'
-                height='1500'
-                alt='Photo of me looking really professional and can definitely impress your boss'
-                preview={false}
-                title=' '
-              />
               <article className='prose dark:prose-invert'>
                 <p data-fade='3'>
                   Hello! I'm Loren. I started my web development journey in

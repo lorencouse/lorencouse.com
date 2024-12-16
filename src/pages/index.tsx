@@ -1,27 +1,28 @@
-import * as React from 'react';
-
-import { InferGetStaticPropsType } from 'next';
 import clsx from 'clsx';
+import { InferGetStaticPropsType } from 'next';
+import * as React from 'react';
 import { IoArrowDownOutline, IoNewspaperSharp } from 'react-icons/io5';
 import { SiGithub, SiInstagram, SiLinkedin } from 'react-icons/si';
 import { InView } from 'react-intersection-observer';
 
+import { trackEvent } from '@/lib/analytics';
+import { getAllFilesFrontmatter, getFeatured } from '@/lib/mdx.server';
+import { generateRss } from '@/lib/rss';
+import useInjectContentMeta from '@/hooks/useInjectContentMeta';
+import useLoaded from '@/hooks/useLoaded';
+
 import Accent from '@/components/Accent';
 import ProjectCard from '@/components/content/projects/ProjectCard';
+import Headshot from '@/components/headshot';
 import ButtonLink from '@/components/links/ButtonLink';
 import CustomLink from '@/components/links/CustomLink';
 import UnstyledLink from '@/components/links/UnstyledLink';
 import Seo from '@/components/Seo';
 import TC from '@/components/TC';
 import Tooltip from '@/components/Tooltip';
-import useInjectContentMeta from '@/hooks/useInjectContentMeta';
-import useLoaded from '@/hooks/useLoaded';
-import { trackEvent } from '@/lib/analytics';
-import { getAllFilesFrontmatter, getFeatured } from '@/lib/mdx.server';
-import { generateRss } from '@/lib/rss';
 
 export default function IndexPage({
-  featuredProjects
+  featuredProjects,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   // const populatedIntro = useInjectContentMeta('blog', introPosts);
   const populatedProjects = useInjectContentMeta('projects', featuredProjects);
@@ -36,130 +37,137 @@ export default function IndexPage({
       <main>
         <section
           className={clsx(
-            'min-h-main -mt-20 mb-20 flex flex-col justify-center',
-            isLoaded && 'fade-in-start'
+            'min-h-main mb-20 flex flex-col justify-center',
+            isLoaded && 'fade-in-start',
           )}
         >
           <article className='layout'>
-            <h2 className='text-2xl md:text-4xl 2xl:text-5xl' data-fade='1'>
-              Hi!
-            </h2>
-            <h1
-              className='mt-1 text-3xl md:text-5xl 2xl:text-6xl'
-              data-fade='2'
-            >
-              My name is <Accent>Lorén</Accent>
-            </h1>
-            <p
-              className='mt-2 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-3 text-sm md:text-base 2xl:text-lg'
-              data-fade='2'
-              onClick={() => {
-                trackEvent('Social Link: Dimension', { type: 'link' });
-              }}
-            >
-              Founder at{' '}
-              <CustomLink href='https://www.maleq.org'>MaleQ</CustomLink>
-            </p>
-            <p
-              className={clsx(
-                'mt-4 max-w-4xl text-gray-700 dark:text-gray-200 md:mt-6',
-                'md:text-lg 2xl:text-xl'
-              )}
-              data-fade='3'
-            >
-              I am an entrepreneur working in the React Ecosystem. My strength
-              is building tools and solving problems with React and Next.js. I
-              am also a big fan of TypeScript and TailwindCSS.
-            </p>
-
-            <p
-              className='mt-3 max-w-4xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
-              data-fade='4'
-            >
-              First time here? Don't forget to sign my{' '}
-              <CustomLink href='/guestbook'>guestbook</CustomLink>!
-            </p>
-            <div
-              data-fade='5'
-              className='mt-8 flex flex-wrap gap-4 md:!text-lg'
-            >
-              <div className='group relative'>
-                <div
+            <div className='flex flex-row justify-between flex-wrap-reverse gap-8 items-center'>
+              <div className='intro-text'>
+                <h2 className='text-2xl md:text-4xl 2xl:text-5xl' data-fade='1'>
+                  Hi!
+                </h2>
+                <h1
+                  className='mt-1 text-3xl md:text-5xl 2xl:text-6xl'
+                  data-fade='2'
+                >
+                  My name is <Accent>Lorén</Accent>
+                </h1>
+                <p
+                  className='mt-2 max-w-xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-3 text-sm md:text-base 2xl:text-lg'
+                  data-fade='2'
+                  onClick={() => {
+                    trackEvent('Social Link: Dimension', { type: 'link' });
+                  }}
+                >
+                  Founder at{' '}
+                  <CustomLink href='https://www.maleq.org'>MaleQ</CustomLink>
+                </p>
+                <p
                   className={clsx(
-                    'absolute -inset-0.5 animate-tilt rounded blur',
-                    'bg-gradient-to-r from-primary-300 to-primary-400',
-                    'dark:from-primary-200 dark:via-primary-300',
-                    'opacity-75 transition duration-1000 group-hover:opacity-100 group-hover:duration-200'
+                    'mt-4 max-w-xl text-gray-700 dark:text-gray-200 md:mt-6',
+                    'md:text-lg 2xl:text-xl',
                   )}
-                />
-                <ButtonLink href='#intro'>Read my blog</ButtonLink>
+                  data-fade='3'
+                >
+                  I am an entrepreneur working in the React Ecosystem. My
+                  strength is building tools and solving problems with React and
+                  Next.js. I am also a big fan of TypeScript and TailwindCSS.
+                </p>
+
+                <p
+                  className='mt-3 max-w-xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
+                  data-fade='4'
+                >
+                  First time here? Don't forget to sign my{' '}
+                  <CustomLink href='/guestbook'>guestbook</CustomLink>!
+                </p>
+                <div
+                  data-fade='5'
+                  className='mt-8 flex flex-wrap gap-4 md:!text-lg'
+                >
+                  <div className='group relative'>
+                    <div
+                      className={clsx(
+                        'absolute -inset-0.5 animate-tilt rounded blur',
+                        'bg-gradient-to-r from-primary-300 to-primary-400',
+                        'dark:from-primary-200 dark:via-primary-300',
+                        'opacity-75 transition duration-1000 group-hover:opacity-100 group-hover:duration-200',
+                      )}
+                    />
+                    <ButtonLink href='#intro'>Read my blog</ButtonLink>
+                  </div>
+                  <ButtonLink href='/about'>Learn more about me</ButtonLink>
+                </div>
+                <div
+                  data-fade='6'
+                  className='mt-4 flex flex-wrap gap-4 gap-y-2 md:mt-8'
+                >
+                  <UnstyledLink
+                    href='/resume'
+                    className={clsx(
+                      'inline-flex items-center gap-1 text-sm font-medium md:text-base',
+                      'text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white',
+                      'focus:outline-none focus-visible:ring focus-visible:ring-primary-300',
+                      'transition-colors',
+                    )}
+                    onClick={() => {
+                      trackEvent('Social Link: Resume', { type: 'link' });
+                    }}
+                  >
+                    <IoNewspaperSharp className='shrink-0' />
+                    <span>Resumé</span>
+                  </UnstyledLink>
+                  <UnstyledLink
+                    href='https://linkedin.com/in/loren-couse'
+                    className={clsx(
+                      'inline-flex items-center gap-1 text-sm font-medium md:text-base',
+                      'group text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white',
+                      'focus:outline-none focus-visible:ring focus-visible:ring-primary-300',
+                      'transition-colors',
+                    )}
+                    onClick={() => {
+                      trackEvent('Social Link: LinkedIn', { type: 'link' });
+                    }}
+                  >
+                    <SiLinkedin className='shrink-0 transition-colors group-hover:text-black dark:group-hover:text-white' />
+                    <span>@loren-couse</span>
+                  </UnstyledLink>
+                  <UnstyledLink
+                    href='https://github.com/lorencouse'
+                    className={clsx(
+                      'inline-flex items-center gap-1 text-sm font-medium md:text-base',
+                      'text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white',
+                      'focus:outline-none focus-visible:ring focus-visible:ring-primary-300',
+                      'transition-colors',
+                    )}
+                    onClick={() => {
+                      trackEvent('Social Link: Github', { type: 'link' });
+                    }}
+                  >
+                    <SiGithub className='shrink-0' />
+                    <span>lorencouse</span>
+                  </UnstyledLink>
+                  <UnstyledLink
+                    href='https://clarence.link/bsky'
+                    className={clsx(
+                      'inline-flex items-center gap-1 text-sm font-medium md:text-base',
+                      'group text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white',
+                      'focus:outline-none focus-visible:ring focus-visible:ring-primary-300',
+                      'transition-colors',
+                    )}
+                    onClick={() => {
+                      trackEvent('Social Link: Bluesky', { type: 'link' });
+                    }}
+                  >
+                    <SiInstagram className='shrink-0 transition-colors group-hover:text-[#0285FF]' />
+                    <span>@cousethemouse</span>
+                  </UnstyledLink>
+                </div>
               </div>
-              <ButtonLink href='/about'>Learn more about me</ButtonLink>
-            </div>
-            <div
-              data-fade='6'
-              className='mt-4 flex flex-wrap gap-4 gap-y-2 md:mt-8'
-            >
-              <UnstyledLink
-                href='/resume'
-                className={clsx(
-                  'inline-flex items-center gap-1 text-sm font-medium md:text-base',
-                  'text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white',
-                  'focus:outline-none focus-visible:ring focus-visible:ring-primary-300',
-                  'transition-colors'
-                )}
-                onClick={() => {
-                  trackEvent('Social Link: Resume', { type: 'link' });
-                }}
-              >
-                <IoNewspaperSharp className='shrink-0' />
-                <span>Resumé</span>
-              </UnstyledLink>
-              <UnstyledLink
-                href='https://linkedin.com/in/loren-couse'
-                className={clsx(
-                  'inline-flex items-center gap-1 text-sm font-medium md:text-base',
-                  'group text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white',
-                  'focus:outline-none focus-visible:ring focus-visible:ring-primary-300',
-                  'transition-colors'
-                )}
-                onClick={() => {
-                  trackEvent('Social Link: LinkedIn', { type: 'link' });
-                }}
-              >
-                <SiLinkedin className='shrink-0 transition-colors group-hover:text-black dark:group-hover:text-white' />
-                <span>@loren-couse</span>
-              </UnstyledLink>
-              <UnstyledLink
-                href='https://github.com/lorencouse'
-                className={clsx(
-                  'inline-flex items-center gap-1 text-sm font-medium md:text-base',
-                  'text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white',
-                  'focus:outline-none focus-visible:ring focus-visible:ring-primary-300',
-                  'transition-colors'
-                )}
-                onClick={() => {
-                  trackEvent('Social Link: Github', { type: 'link' });
-                }}
-              >
-                <SiGithub className='shrink-0' />
-                <span>lorencouse</span>
-              </UnstyledLink>
-              <UnstyledLink
-                href='https://clarence.link/bsky'
-                className={clsx(
-                  'inline-flex items-center gap-1 text-sm font-medium md:text-base',
-                  'group text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white',
-                  'focus:outline-none focus-visible:ring focus-visible:ring-primary-300',
-                  'transition-colors'
-                )}
-                onClick={() => {
-                  trackEvent('Social Link: Bluesky', { type: 'link' });
-                }}
-              >
-                <SiInstagram className='shrink-0 transition-colors group-hover:text-[#0285FF]' />
-                <span>@cousethemouse</span>
-              </UnstyledLink>
+              <div className='intro-image'>
+                <Headshot />
+              </div>
             </div>
           </article>
           <UnstyledLink
@@ -167,7 +175,7 @@ export default function IndexPage({
             className={clsx(
               'absolute bottom-2 left-1/2 -translate-x-1/2 md:bottom-10',
               'cursor-pointer rounded-md transition-colors',
-              'hover:text-primary-300 focus-visible:text-primary-300'
+              'hover:text-primary-300 focus-visible:text-primary-300',
             )}
           >
             <IoArrowDownOutline className='h-8 w-8 animate-bounce md:h-10 md:w-10' />
@@ -177,7 +185,7 @@ export default function IndexPage({
               'absolute bottom-0 right-6',
               'translate-y-[37%] transform-gpu',
               'w-[calc(100%-3rem)] md:w-[600px] 2xl:w-[900px]',
-              'z-[-1] opacity-70 dark:opacity-30'
+              'z-[-1] opacity-70 dark:opacity-30',
             )}
           />
         </section>
@@ -192,7 +200,7 @@ export default function IndexPage({
               <article
                 className={clsx(
                   'layout flex flex-col-reverse items-center md:flex-row md:justify-start',
-                  'md:gap-4'
+                  'md:gap-4',
                 )}
                 data-fade='0'
               >
@@ -364,7 +372,7 @@ export default function IndexPage({
 export async function getStaticProps() {
   generateRss();
 
-const projects = await getAllFilesFrontmatter('projects');
+  const projects = await getAllFilesFrontmatter('projects');
   // const shorts = await getAllFilesFrontmatter('library');
 
   // const featuredPosts = getFeatured(blogs, [
@@ -396,7 +404,7 @@ const projects = await getAllFilesFrontmatter('projects');
 
   return {
     props: {
-      featuredProjects
+      featuredProjects,
     },
   };
 }

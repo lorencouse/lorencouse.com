@@ -107,7 +107,7 @@ export default function AboutPage() {
                         }
                         href='/seo-consulting'
                       >
-                        Book↗
+                        Book Now↗
                       </CustomLink>
                     </Tooltip>
                     )
@@ -116,7 +116,7 @@ export default function AboutPage() {
               </article>
 
               <h3 className='mt-12' data-fade='8'>
-                Tech Stack
+                My Tech Stack
               </h3>
               <figure className='mt-2' data-fade='9'>
                 <TechStack />

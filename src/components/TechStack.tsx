@@ -20,9 +20,9 @@ export default function TechStack() {
           <tech.icon
             key={tech.id}
             className={clsx(
-              'h-8 w-8 md:h-10 md:w-10',
+              'h-6 w-6 mt-2 align-middle',
               'text-gray-600 hover:text-primary-300 dark:text-gray-200 dark:hover:text-primary-300',
-              'transition-colors'
+              'transition-colors',
             )}
           />
         </Tooltip>
