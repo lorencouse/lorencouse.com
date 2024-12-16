@@ -35,7 +35,7 @@ export default function CustomImg({
   aspect,
   ...rest
 }: CloudinaryImgType) {
-  const [isOpen, setIsOpen] = React.useState<boolean>(false);
+const [_isOpen, setIsOpen] = React.useState<boolean>(false);
 
   const url = publicId;
 

@@ -1,16 +1,10 @@
-import clsx from 'clsx';
-import { InferGetStaticPropsType } from 'next';
 import * as React from 'react';
-import { IoArrowDownOutline } from 'react-icons/io5';
-import { IoNewspaperSharp } from 'react-icons/io5';
+
+import { InferGetStaticPropsType } from 'next';
+import clsx from 'clsx';
+import { IoArrowDownOutline, IoNewspaperSharp } from 'react-icons/io5';
 import { SiGithub, SiInstagram, SiLinkedin } from 'react-icons/si';
 import { InView } from 'react-intersection-observer';
-
-import { trackEvent } from '@/lib/analytics';
-import { getAllFilesFrontmatter, getFeatured } from '@/lib/mdx.server';
-import { generateRss } from '@/lib/rss';
-import useInjectContentMeta from '@/hooks/useInjectContentMeta';
-import useLoaded from '@/hooks/useLoaded';
 
 import Accent from '@/components/Accent';
 import ProjectCard from '@/components/content/projects/ProjectCard';
@@ -20,8 +14,11 @@ import UnstyledLink from '@/components/links/UnstyledLink';
 import Seo from '@/components/Seo';
 import TC from '@/components/TC';
 import Tooltip from '@/components/Tooltip';
-
-import BlogCard from '@/components/blog/BlogCard';
+import useInjectContentMeta from '@/hooks/useInjectContentMeta';
+import useLoaded from '@/hooks/useLoaded';
+import { trackEvent } from '@/lib/analytics';
+import { getAllFilesFrontmatter, getFeatured } from '@/lib/mdx.server';
+import { generateRss } from '@/lib/rss';
 
 export default function IndexPage({
   featuredProjects
@@ -367,8 +364,7 @@ export default function IndexPage({
 export async function getStaticProps() {
   generateRss();
 
-  const blogs = await getAllFilesFrontmatter('blog');
-  const projects = await getAllFilesFrontmatter('projects');
+const projects = await getAllFilesFrontmatter('projects');
   // const shorts = await getAllFilesFrontmatter('library');
 
   // const featuredPosts = getFeatured(blogs, [

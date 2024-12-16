@@ -1,4 +1,4 @@
-import format from 'date-fns/format';
+import { format as formatDate } from 'date-fns';
 import fs from 'fs';
 
 import { getAllFilesFrontmatter } from '@/lib/mdx.server';
@@ -17,7 +17,7 @@ export async function getRssXml() {
       <description>${cdata(description)}</description>
       <link>${blogUrl}/${slug}</link>
       <guid>${blogUrl}/${slug}</guid>
-      <pubDate>${format(
+    <pubDate>${formatDate(
         new Date(lastUpdated ?? publishedAt),
         'yyyy-MM-dd'
       )}</pubDate>
