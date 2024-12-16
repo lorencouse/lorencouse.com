@@ -14,11 +14,11 @@ import useLoaded from '@/hooks/useLoaded';
 import Accent from '@/components/Accent';
 import ProjectCard from '@/components/content/projects/ProjectCard';
 import Headshot from '@/components/Headshot';
+import LC from '@/components/LC';
 import ButtonLink from '@/components/links/ButtonLink';
 import CustomLink from '@/components/links/CustomLink';
 import UnstyledLink from '@/components/links/UnstyledLink';
 import Seo from '@/components/Seo';
-import TC from '@/components/TC';
 import Tooltip from '@/components/Tooltip';
 
 export default function IndexPage({
@@ -181,14 +181,14 @@ export default function IndexPage({
           >
             <IoArrowDownOutline className='h-8 w-8 animate-bounce md:h-10 md:w-10' />
           </UnstyledLink>
-          <TC
+          {/* <LC
             className={clsx(
               'absolute bottom-0 right-6',
               'translate-y-[37%] transform-gpu',
               'w-[calc(100%-3rem)] md:w-[600px] 2xl:w-[900px]',
               'z-[-1] opacity-70 dark:opacity-30',
             )}
-          />
+          /> */}
         </section>
 
         <InView triggerOnce rootMargin='-40% 0px'>
@@ -205,7 +205,7 @@ export default function IndexPage({
                 )}
                 data-fade='0'
               >
-                <div className='mt-8 h-full w-full md:mt-0'>
+                <div className='mt-8 max-w-2xl md:mt-0'>
                   <h2 className='text-4xl md:text-6xl'>
                     <Accent className='inline decoration-clone leading-snug dark:leading-none'>
                       Let's Build Something Great
@@ -236,24 +236,15 @@ export default function IndexPage({
                     . In my blog, I'm sharing how I approach something and how
                     my mental model affect my learning about a certain topic.
                   </div>
-                </div>
-                <div className='h-full w-full'>
-                  <ul className='relative h-full'>
-                    {/* <BlogCard
-                      className={clsx(
-                        'absolute max-w-[350px] transform-gpu',
-                        'top-1/2 translate-y-[-55%] md:translate-y-[-50%] lg:translate-y-[-60%]',
-                        'left-1/2 -translate-x-1/2 md:translate-x-[-50%] lg:translate-x-[-30%]',
-                        'rotate-3 md:rotate-6 lg:rotate-12',
-                        'pointer-events-none md:pointer-events-auto'
-                      )}
-                      post={populatedIntro[1]}
-                    />
-                    <BlogCard
-                      className='mx-auto max-w-[350px]'
-                      post={populatedIntro[0]}
-                    /> */}
-                  </ul>
+                  <LC
+                    className={clsx(
+                      'absolute -bottom-20 right-0',
+                      'translate-y-[37%] transform-gpu',
+                      'w-[calc(100%-3rem)] md:w-[600px] 2xl:w-[900px]',
+                      'z-[-1] opacity-70 dark:opacity-30', // Changed z-10 to z-[-1]
+                      'pointer-events-none', // Added pointer-events-none
+                    )}
+                  />
                 </div>
               </article>
             </section>

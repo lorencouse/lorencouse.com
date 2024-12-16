@@ -52,8 +52,9 @@ const stacks = [
     icon: SiReact,
     tooltip: (
       <>
-        <CustomLink href='https://reactjs.org/'>React</CustomLink>, underlying
-        library of Next.js. I love the declarative approach and the ecosystem.
+        <CustomLink href='https://reactjs.org/'>React</CustomLink>, acting as
+        the underlying library of Next.js. I love the declarative approach and
+        the rich ecosystem.
       </>
     ),
   },
@@ -66,7 +67,7 @@ const stacks = [
           TypeScript
         </CustomLink>
         , has made me love web development! Its built in type checking has been
-        a game changer for my projects' debugging and stability.
+        a game changer for my debugging and stability.
       </>
     ),
   },
@@ -75,9 +76,8 @@ const stacks = [
     icon: SiTailwindcss,
     tooltip: (
       <>
-        <CustomLink href='https://tailwindcss.com/'>Tailwind CSS</CustomLink> is
-        awesome, I have never achieved this much reusability. Make sure you get
-        the{' '}
+        <CustomLink href='https://tailwindcss.com/'>Tailwind CSS</CustomLink>{' '}
+        makes styling and responsive design a breeze. I use it with the{' '}
         <CustomLink href='https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss'>
           extension
         </CustomLink>
@@ -103,7 +103,7 @@ const stacks = [
       <>
         <CustomLink href='https://www.supabase.com'>Supabase</CustomLink>, great
         and simple all-in-one PostgreSQL database, plus easy to set up user
-        auth.
+        authentication.
       </>
     ),
   },
