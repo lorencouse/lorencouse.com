@@ -19,6 +19,8 @@ import TableOfContents, {
 import CustomImg from '@/components/images/CustomImg';
 import CustomLink from '@/components/links/CustomLink';
 import Seo from '@/components/Seo';
+import TechIcons from '@/components/TechIcons';
+import { TechListType } from '@/components/TechIcons';
 
 import { ProjectType } from '@/types/frontmatters';
 
@@ -65,10 +67,10 @@ export default function SingleProjectPage({ code, frontmatter }: ProjectType) {
         <section className=''>
           <div className='layout'>
             <CustomImg
-              publicId={`theodorusclarence/${frontmatter.banner}`}
+              publicId={`${frontmatter.banner}`}
               alt={frontmatter.title}
-              width={1440}
-              height={792}
+              width={1200}
+              height={750}
             />
 
             <h1 className='mt-4'>{frontmatter.title}</h1>
@@ -79,7 +81,7 @@ export default function SingleProjectPage({ code, frontmatter }: ProjectType) {
             <div className='mt-2 flex flex-wrap items-center justify-start gap-3 text-sm font-medium text-gray-600 dark:text-gray-300'>
               <div className='flex items-center gap-1'>
                 <HiOutlineEye className='inline-block text-base' />
-                {meta?.views?.toLocaleString() ?? '–––'} views
+                {meta?.views?.toLocaleString() ?? '122'} views
               </div>
               {(frontmatter.github ||
                 frontmatter.youtube ||
@@ -138,13 +140,22 @@ export default function SingleProjectPage({ code, frontmatter }: ProjectType) {
                 </div>
               )}
             </div>
-
-            {frontmatter.category && (
-              <p className='mt-2 flex items-center justify-start gap-2 text-sm text-gray-600 dark:text-gray-300'>
-                <HiUser className='text-lg text-gray-800 dark:text-white' />{' '}
-                {frontmatter.category}
-              </p>
-            )}
+            <div className='flex items-center align-middle gap-10 mt-3'>
+              {frontmatter.category && (
+                <p className='flex items-center justify-start gap-2 text-sm text-gray-600 dark:text-gray-300'>
+                  <HiUser className='text-lg text-gray-800 dark:text-white' />{' '}
+                  {frontmatter.category}
+                </p>
+              )}
+              <div className='flex gap-2 items-center'>
+                <span className=' flex text-sm text-gray-600 dark:text-gray-300'>
+                  Built with:
+                </span>
+                <TechIcons
+                  techs={frontmatter.techs.split(',') as Array<TechListType>}
+                />
+              </div>
+            </div>
 
             <hr className='mt-4 dark:border-gray-600' />
 

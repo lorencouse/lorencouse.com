@@ -15,7 +15,7 @@ const MDXComponents = {
   Image,
   pre: Pre,
   // code: CustomCode,
-  CloudinaryImg: CustomImg,
+  CustomImg,
   LiteYouTubeEmbed,
   SplitImage,
   Split,

@@ -21,7 +21,7 @@ export default function ProjectCard({ project, className }: ProjectCardProps) {
         'transition duration-100',
         'motion-reduce:hover:scale-100',
         'animate-shadow',
-        className
+        className,
       )}
     >
       <UnstyledLink
@@ -38,7 +38,7 @@ export default function ProjectCard({ project, className }: ProjectCardProps) {
 
         <CustomImg
           className='pointer-events-none mt-3 w-full'
-          publicId={`theodorusclarence/${project.banner}`}
+          publicId={`${project.banner}`}
           alt={project.title}
           width={1440}
           height={792}

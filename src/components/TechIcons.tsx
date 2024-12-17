@@ -2,12 +2,13 @@ import clsx from 'clsx';
 import * as React from 'react';
 import { IoLogoVercel } from 'react-icons/io5';
 import {
+  SiCloudflare,
+  SiCloudflarepages,
   SiFirebase,
   SiGit,
   SiGoogleanalytics,
   SiJavascript,
   SiMarkdown,
-  SiMongodb,
   SiNextdotjs,
   SiNodedotjs,
   SiNotion,
@@ -15,9 +16,11 @@ import {
   SiReact,
   SiRedux,
   SiSass,
+  SiSupabase,
   SiSwift,
   SiTailwindcss,
   SiTypescript,
+  SiWordpress,
 } from 'react-icons/si';
 
 import Tooltip from '@/components/Tooltip';
@@ -30,7 +33,7 @@ export type TechIconsProps = {
 
 export default function TechIcons({ className, techs }: TechIconsProps) {
   return (
-    <ul className={clsx(className, 'flex gap-2')}>
+    <ul className={clsx(className, 'flex gap-2 items-center align-middle')}>
       {techs.map((tech) => {
         if (!techList[tech]) return;
 
@@ -38,7 +41,7 @@ export default function TechIcons({ className, techs }: TechIconsProps) {
 
         return (
           <Tooltip key={current.name} tipChildren={<p>{current.name}</p>}>
-            <li className='text-xl text-gray-700 dark:text-gray-200'>
+            <li className='text-lg text-gray-700 dark:text-gray-200'>
               <current.icon />
             </li>
           </Tooltip>
@@ -81,10 +84,6 @@ const techList = {
     icon: SiFirebase,
     name: 'Firebase',
   },
-  mongodb: {
-    icon: SiMongodb,
-    name: 'MongoDB',
-  },
   swr: {
     icon: IoLogoVercel,
     name: 'SWR',
@@ -116,5 +115,22 @@ const techList = {
   swift: {
     icon: SiSwift,
     name: 'Swift',
+  },
+  supabase: {
+    icon: SiSupabase,
+    name: 'Supabase',
+  },
+
+  wordpress: {
+    icon: SiWordpress,
+    name: 'WordPress',
+  },
+  cloudflare: {
+    icon: SiCloudflare,
+    name: 'Cloudflare',
+  },
+  cloudflarepages: {
+    icon: SiCloudflarepages,
+    name: 'Cloudflare Pages',
   },
 };

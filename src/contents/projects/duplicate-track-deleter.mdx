@@ -1,17 +1,17 @@
 ---
-title: 'Notiolink'
-description: 'Self-hostable branded link shortener built with Next.js & Notion API'
+title: 'Duplicate Track Deleter'
+description: 'A MacOS utility made with SiftUI for identifying and deleting duplicate audio tracks.'
 category: 'Personal Project'
 publishedAt: '2022-07-23'
-techs: 'nextjs,tailwindcss,notion'
-banner: 'projects/notiolink/notiolink_bjtkm5.png'
-github: 'https://github.com/theodorusclarence/notiolink'
-link: 'https://notiolink.thcl.dev'
+techs: 'swift,swiftui,macos'
+banner: 'projects/dtd/dtd_bjtkm5.png'
+github: 'https://github.com//images/dtd'
+link: 'https://dtd.thcl.dev'
 ---
 
 > ## Short Explanation
 
-Notiolink is a self-hostable link shortener built with Next.js & Notion API. It's a simple and easy-to-deploy shortener that's using Notion as a CMS.
+Duplicate Track Deleter is a MacOS utility made with SwiftUI for cleaning up your digital audio library. Support for the most populate audio files, including MP3, AAC, & WAV.
 
 Some features including:
 
@@ -34,7 +34,7 @@ I did this project originally for my personal use. Shortening links is easier fo
   </div>
 </blockquote>
 
-Notiolink is a full-stack application built using Next.js and Notion API. I chose notion because of the easy-to-use UI. All links are served as a table inside the notion and can be edited whenever you want.
+dtd is a full-stack application built using Next.js and Notion API. I chose notion because of the easy-to-use UI. All links are served as a table inside the notion and can be edited whenever you want.
 
 > ## Features
 
@@ -42,9 +42,9 @@ Notiolink is a full-stack application built using Next.js and Notion API. I chos
 
 All links are customizable via notion
 
-<CloudinaryImg
+<CustomImg
   mdx
-  publicId='theodorusclarence/projects/notiolink/notion-table_br6ebb'
+  publicId='/images/projects/dtd/notion-table_br6ebb'
   alt='notion-table'
   width={1339}
   height={875}
@@ -54,9 +54,9 @@ All links are customizable via notion
 
 You can easily configure it on the notion database
 
-<CloudinaryImg
+<CustomImg
   mdx
-  publicId='theodorusclarence/projects/notiolink/linktree_kbtwts'
+  publicId='/images/projects/dtd/linktree_kbtwts'
   alt='linktree'
   width={605}
   height={706}
@@ -68,9 +68,9 @@ Route: `/new`
 
 You can add link straight from the website for easy access, don't worry **this is protected with login page** so no one will mess with your links
 
-<CloudinaryImg
+<CustomImg
   mdx
-  publicId='theodorusclarence/projects/notiolink/shorten-new-link_tkinse'
+  publicId='/images/projects/dtd/shorten-new-link_tkinse'
   alt='shorten-new-link'
   width={632}
   height={567}
@@ -80,9 +80,9 @@ You can add link straight from the website for easy access, don't worry **this i
 
 You can see the statistics with `/:slug/detail` route
 
-<CloudinaryImg
+<CustomImg
   mdx
-  publicId='theodorusclarence/projects/notiolink/link-details-and-count_ae7x2e'
+  publicId='/images/projects/dtd/link-details-and-count_ae7x2e'
   alt='link-details-and-count'
   width={682}
   height={672}
@@ -92,9 +92,9 @@ You can see the statistics with `/:slug/detail` route
 
 Every category will be made into a standalone tree on `/c/:category` route
 
-<CloudinaryImg
+<CustomImg
   mdx
-  publicId='theodorusclarence/projects/notiolink/categorized-tree_aeottm'
+  publicId='/images/projects/dtd/categorized-tree_aeottm'
   alt='categorized-tree'
   width={567}
   height={563}
@@ -109,9 +109,9 @@ Themes you can choose
 <SplitImage>
   <Split>
     <div className='not-prose space-y-2'>
-      <CloudinaryImg
+      <CustomImg
         mdx
-        publicId='theodorusclarence/projects/notiolink/theme-dark_sspfwt'
+        publicId='/images/projects/dtd/theme-dark_sspfwt'
         alt='theme-dark'
         width={648}
         height={622}
@@ -119,9 +119,9 @@ Themes you can choose
       <p className='text-center text-sm font-medium'>Dark</p>
     </div>
     <div className='not-prose space-y-2'>
-      <CloudinaryImg
+      <CustomImg
         mdx
-        publicId='theodorusclarence/projects/notiolink/theme-street_nx7i4f'
+        publicId='/images/projects/dtd/theme-street_nx7i4f'
         alt='theme-street'
         width={648}
         height={622}
@@ -129,9 +129,9 @@ Themes you can choose
       <p className='text-center text-sm font-medium'>Street</p>
     </div>
     <div className='not-prose space-y-2'>
-      <CloudinaryImg
+      <CustomImg
         mdx
-        publicId='theodorusclarence/projects/notiolink/theme-milky_z60zsu'
+        publicId='/images/projects/dtd/theme-milky_z60zsu'
         alt='theme-milky'
         width={648}
         height={622}
@@ -141,9 +141,9 @@ Themes you can choose
   </Split>
   <Split>
     <div className='not-prose space-y-2'>
-      <CloudinaryImg
+      <CustomImg
         mdx
-        publicId='theodorusclarence/projects/notiolink/theme-light_pmkjnq'
+        publicId='/images/projects/dtd/theme-light_pmkjnq'
         alt='theme-light'
         width={648}
         height={622}
@@ -151,9 +151,9 @@ Themes you can choose
       <p className='text-center text-sm font-medium'>Light</p>
     </div>
     <div className='not-prose space-y-2'>
-      <CloudinaryImg
+      <CustomImg
         mdx
-        publicId='theodorusclarence/projects/notiolink/theme-monokai_ndz8rx'
+        publicId='/images/projects/dtd/theme-monokai_ndz8rx'
         alt='theme-monokai'
         width={648}
         height={622}
@@ -171,23 +171,23 @@ I aim for this project to be easy to fork and deploy. Therefore, every configura
 
 ### Installation Guide
 
-I made an [installation guide](https://www.notion.so/Notiolink-Installation-Guide-3d038711cd5141109f56137d0195aad0) that is easy for people to follow. Even non-developers can do it too!
+I made an [installation guide](https://www.notion.so/dtd-Installation-Guide-3d038711cd5141109f56137d0195aad0) that is easy for people to follow. Even non-developers can do it too!
 
-<CloudinaryImg
+<CustomImg
   mdx
-  publicId='theodorusclarence/projects/notiolink/notiolink-installation-guide_hcgett'
-  alt='notiolink-installation-guide'
+  publicId='/images/projects/dtd/dtd-installation-guide_hcgett'
+  alt='dtd-installation-guide'
   width={785}
   height={645}
 />
 
 ### Launching on ProductHunt
 
-I launched the app on [ProductHunt](https://www.producthunt.com/products/notiolink), and the review is quite positive!
+I launched the app on [ProductHunt](https://www.producthunt.com/products/dtd), and the review is quite positive!
 
-<CloudinaryImg
+<CustomImg
   mdx
-  publicId='theodorusclarence/projects/notiolink/producthunt_boyaq5'
+  publicId='/images/projects/dtd/producthunt_boyaq5'
   alt='producthunt'
   width={449}
   height={344}
@@ -201,4 +201,4 @@ Optimizing the repository so it is fairly customizable is hard. I created some f
 
 Deploy one of your own!
 
-<GithubCard repo='theodorusclarence/notiolink' />
+<GithubCard repo='/images/dtd' />

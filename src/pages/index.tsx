@@ -385,9 +385,9 @@ export async function getStaticProps() {
   // ]);
 
   const featuredProjects = getFeatured(projects, [
-    'hexcape',
-    'notiolink',
-    'ppdbsumsel',
+    'aireio',
+    'canker-core',
+    'foldy-friends',
   ]);
   // const introPosts = getFeatured(blogs, [
   //   'btb-flex-mental-model',

@@ -29,7 +29,7 @@ export default function BlogCard({
         'transition duration-100',
         'motion-reduce:hover:scale-100',
         'animate-shadow',
-        className
+        className,
       )}
       onClick={onClick}
     >
@@ -41,7 +41,7 @@ export default function BlogCard({
           <CustomImg
             noStyle
             className='pointer-events-none overflow-hidden rounded-t-md'
-            publicId={`theodorusclarence/banner/${post.banner}`}
+            publicId={`${post.banner}`}
             alt='Photo taken from unsplash'
             width={1200}
             height={(1200 * 2) / 5}
@@ -51,7 +51,7 @@ export default function BlogCard({
           <div
             className={clsx(
               'absolute bottom-0 w-full px-4 py-2',
-              'mt-2 flex flex-wrap justify-end gap-x-2 gap-y-1 text-sm text-black dark:text-gray-100'
+              'mt-2 flex flex-wrap justify-end gap-x-2 gap-y-1 text-sm text-black dark:text-gray-100',
             )}
           >
             {post.tags.split(',').map((tag) => (
@@ -81,7 +81,7 @@ export default function BlogCard({
             <span className='font-bold text-gray-800 dark:text-gray-100'>
               {format(
                 new Date(post.lastUpdated ?? post.publishedAt),
-                'MMMM dd, yyyy'
+                'MMMM dd, yyyy',
               )}
             </span>
           </p>
