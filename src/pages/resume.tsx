@@ -1,15 +1,13 @@
 import clsx from 'clsx';
 import * as React from 'react';
 
-import { trackEvent } from '@/lib/analytics';
 import useLoaded from '@/hooks/useLoaded';
 
 import Accent from '@/components/Accent';
 import CustomImg from '@/components/images/CustomImg';
-import CustomLink from '@/components/links/CustomLink';
+import ExperienceBlock from '@/components/resume/ExperienceBlock';
 import Seo from '@/components/Seo';
 import TechStack from '@/components/TechStack';
-import Tooltip from '@/components/Tooltip';
 
 export default function AboutPage() {
   const isLoaded = useLoaded();
@@ -23,93 +21,43 @@ export default function AboutPage() {
       <main>
         <section className={clsx(isLoaded && 'fade-in-start')}>
           <div className='layout pt-20'>
-            <h2 data-fade='0'>Resume</h2>
-            <h1 className='mt-1' data-fade='1'>
+            <h1 className='mt-1' data-fade='0'>
               <Accent>Lorén Couse</Accent>
             </h1>
-            <div className='mt-4' data-fade='2'>
-              <article className='prose dark:prose-invert'>
-                <p data-fade='3'>
-                  Hello! I'm Loren. I started my web development journey in
-                  July, 2012, launching my first web site,{' '}
-                  <CustomLink href='https://www.maleq.org'>
-                    MaleQ.org
-                  </CustomLink>
-                  . What started as a hobby project and personal blog has grown
-                  into a full-business which I have been running for the last 12
-                  years.
-                </p>
-                <p data-fade='4'>
-                  In 2021, I decided to take my web development skills to the
-                  next level and started learning front-end development. I
-                  finished my web development bootcamp at{' '}
-                  <CustomLink href='https://www.appbrewery.com/p/the-complete-web-development-course'>
-                    The App Brewery
-                  </CustomLink>{' '}
-                  in 2022, and have been building{' '}
-                  <CustomLink href='/projects'>projects</CustomLink> ever since.
-                </p>
-                <p data-fade='5'>
-                  This site is a showcase of my projects, and personal life. I
-                  will continue to share my work and insights on web development
-                  here. Feel free to reach out to me if you have any questions
-                  or need help with your own projects. Together we can build
-                  something great!
-                </p>
-              </article>
-              <h3 className='h4 mt-4' data-fade='6'>
-                What I'm up to?
-              </h3>
-              <article className='prose mt-2 dark:prose-invert' data-fade='7'>
-                <ul>
-                  <li>
-                    I am the founder and full-stack engineer at{' '}
-                    <CustomLink
-                      onClick={() => trackEvent('Now: MaleQ', { type: 'link' })}
-                      href='https://www.maleq.org'
-                    >
-                      MaleQ
-                    </CustomLink>
-                  </li>
-                  <li>
-                    I'm a start up mentor at Taiwan's{' '}
-                    <CustomLink
-                      onClick={() => trackEvent('Now: Dakuo', { type: 'link' })}
-                      href='https://dakuo.koda.net.tw/teams.html'
-                    >
-                      Dakuo
-                    </CustomLink>{' '}
-                    incubator hub.
-                  </li>
-                  <li>
-                    I'm an SEO consultant (
-                    <Tooltip
-                      tipChildren={
-                        <p>
-                          I offer consulting services for SEO and content
-                          strategy. I can help you with your website's ranking,
-                          and help you build a better online presence.
-                        </p>
-                      }
-                    >
-                      <CustomLink
-                        onClick={() =>
-                          trackEvent('Now: Mentor Thread', { type: 'link' })
-                        }
-                        href='/seo-consulting'
-                      >
-                        Book↗
-                      </CustomLink>
-                    </Tooltip>
-                    )
-                  </li>
-                </ul>
-              </article>
+            <div className=' mt-4' data-fade='1'>
+              <div className='experience columns-1 md:columns-2 gap-6'>
+                <div className='work-history break-inside-avoid'>
+                  <h2 data-fade='2'>
+                    <span className='text-primary-300'>Exp</span>erience
+                  </h2>
+                  <article
+                    className='prose dark:prose-invert my-4'
+                    data-fade='3'
+                  >
+                    {workHistory.map((work, index) => (
+                      <ExperienceBlock key={index} {...work} />
+                    ))}
+                  </article>
+                </div>
+                <div className='education-history break-inside-avoid'>
+                  <h2 data-fade='2'>
+                    <span className='text-primary-300'>Edu</span>cation
+                  </h2>
+                  <article
+                    className='prose dark:prose-invert my-4'
+                    data-fade='3'
+                  >
+                    {educationHistory.map((education, index) => (
+                      <ExperienceBlock key={index} {...education} />
+                    ))}
+                  </article>
+                </div>
+              </div>
 
-              <h3 className='mt-12' data-fade='8'>
+              <h3 className='mt-12' data-fade='4'>
                 Tech Stack
               </h3>
-              <figure className='mt-2' data-fade='9'>
+              <figure className='mt-2' data-fade='5'>
                 <TechStack />
               </figure>
             </div>
@@ -159,3 +107,38 @@ export default function AboutPage() {
     </>
   );
 }
+
+type ExperienceProps = {
+  year: string;
+  location: string;
+  locationLink: string;
+  role: string;
+  description: string;
+};
+
+const educationHistory: ExperienceProps[] = [
+  {
+    year: '2010-2013',
+    location: 'University of Massachusetts Boston',
+    locationLink: 'https://www.umb.edu/',
+    role: 'Bachelor of Arts - Minor in Computer Science',
+    description: 'test',
+  },
+  {
+    year: '2016-2018',
+    location: 'National Taiwan Cheng Kung University',
+    locationLink: 'https://www.ncku.edu.tw/',
+    role: 'Master of Business Administration - Information Technology',
+    description: 'test',
+  },
+];
+
+const workHistory: ExperienceProps[] = [
+  {
+    year: '2011-Present',
+    location: 'MaleQ LLC',
+    locationLink: 'https://www.maleq.org/',
+    role: 'Founder and Lead Developer',
+    description: 'test',
+  },
+];

@@ -120,7 +120,7 @@ export default function IndexPage({
                     <span>Resumé</span>
                   </UnstyledLink>
                   <UnstyledLink
-                    href='https://linkedin.com/in/loren-couse'
+                    href='https://linkedin.com/in/lorencouse'
                     className={clsx(
                       'inline-flex items-center gap-1 text-sm font-medium md:text-base',
                       'group text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white',
@@ -132,7 +132,7 @@ export default function IndexPage({
                     }}
                   >
                     <SiLinkedin className='shrink-0 transition-colors group-hover:text-black dark:group-hover:text-white' />
-                    <span>@loren-couse</span>
+                    <span>@lorencouse</span>
                   </UnstyledLink>
                   <UnstyledLink
                     href='https://github.com/lorencouse'

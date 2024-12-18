@@ -166,7 +166,7 @@ const socials: Social[] = [
     ),
   },
   {
-    href: 'https://www.linkedin.com/in/loren-couse/',
+    href: 'https://www.linkedin.com/in/lorencouse/',
     icon: SiLinkedin,
     id: 'Linkedin',
     text: (
