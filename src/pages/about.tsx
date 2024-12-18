@@ -7,6 +7,7 @@ import useLoaded from '@/hooks/useLoaded';
 import Accent from '@/components/Accent';
 import CustomImg from '@/components/images/CustomImg';
 import CustomLink from '@/components/links/CustomLink';
+import SocialLinks from '@/components/links/SocialLinks';
 import Seo from '@/components/Seo';
 import TechStack from '@/components/TechStack';
 import Tooltip from '@/components/Tooltip';
@@ -22,7 +23,7 @@ export default function AboutPage() {
       />
       <main>
         <section className={clsx(isLoaded && 'fade-in-start')}>
-          <div className='layout pt-20'>
+          <div className='layout pt-12'>
             <h2 data-fade='0'>About</h2>
             <h1 className='mt-1' data-fade='1'>
               <Accent>Lorén Couse</Accent>
@@ -129,6 +130,10 @@ export default function AboutPage() {
           <div className='layout mt-16'>
             <h2>Contact</h2>
             <article className='prose mt-4 dark:prose-invert'>
+              <div className='flex flex-row items-center gap-x-4'>
+                <p className='font-bold'>Reach me at:</p>
+                <SocialLinks />
+              </div>
               <p>
                 Feel free to contact me about my projects, current work, or web
                 development consultations. I’m happy to help.

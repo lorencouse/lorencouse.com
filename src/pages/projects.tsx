@@ -28,7 +28,7 @@ export default function ProjectsPage({
               <Accent>Projects</Accent>
             </h1>
             <p data-fade='1' className='mt-2 text-gray-600 dark:text-gray-300'>
-              Showcase of my works on frontend development.
+              A showcase of my personal projects and experience.
             </p>
 
             <ul

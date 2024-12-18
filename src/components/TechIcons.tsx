@@ -4,16 +4,19 @@ import { IoLogoVercel } from 'react-icons/io5';
 import {
   SiCloudflare,
   SiCloudflarepages,
+  SiCpanel,
   SiFirebase,
   SiGit,
   SiGoogleanalytics,
   SiJavascript,
+  SiMariadb,
   SiMarkdown,
   SiNextdotjs,
   SiNodedotjs,
   SiNotion,
   SiPrettier,
   SiReact,
+  SiRedis,
   SiRedux,
   SiSass,
   SiSupabase,
@@ -132,5 +135,17 @@ const techList = {
   cloudflarepages: {
     icon: SiCloudflarepages,
     name: 'Cloudflare Pages',
+  },
+  mariadb: {
+    icon: SiMariadb,
+    name: 'MariaDB',
+  },
+  cpanel: {
+    icon: SiCpanel,
+    name: 'cPanel',
+  },
+  redis: {
+    icon: SiRedis,
+    name: 'Redis',
   },
 };

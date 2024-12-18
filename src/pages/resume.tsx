@@ -20,9 +20,9 @@ export default function AboutPage() {
       />
       <main>
         <section className={clsx(isLoaded && 'fade-in-start')}>
-          <div className='layout pt-20'>
-            <h1 className='mt-1'>
-              <Accent>Lorén Couse</Accent>
+          <div className='layout pt-12 '>
+            <h1 className='text-3xl md:text-5xl'>
+              <Accent>Resumé</Accent>
             </h1>
             <div className=' mt-4'>
               <div className='experience columns-1 md:columns-2 gap-6'>
@@ -111,14 +111,6 @@ type ExperienceProps = {
 
 const educationHistory: ExperienceProps[] = [
   {
-    year: '2010-2013',
-    location: 'University of Massachusetts Boston',
-    locationLink: 'https://www.umb.edu/',
-    role: 'Bachelor of Arts - Minor in Computer Science',
-    description: 'Java, C++, Python, SQL\nWeb Development\nData Structures',
-    img: '/images/resume/umass-boston.png',
-  },
-  {
     year: '2016-2018',
     location: 'National Taiwan Cheng Kung University',
     locationLink: 'https://www.ncku.edu.tw/',
@@ -126,13 +118,21 @@ const educationHistory: ExperienceProps[] = [
     description: 'Line 1\nLine 2\nLine 3',
     img: '/images/resume/ncku-logo.jpeg',
   },
+  {
+    year: '2010-2013',
+    location: 'University of Massachusetts Boston',
+    locationLink: 'https://www.umb.edu/',
+    role: 'Bachelor of Arts - Minor in Computer Science',
+    description: 'Java, C++, Python, SQL\nWeb Development\nData Structures',
+    img: '/images/resume/umass-boston.png',
+  },
 ];
 
 const workHistory: ExperienceProps[] = [
   {
     year: '2011-Present',
     location: 'MaleQ LLC',
-    locationLink: 'https://www.maleq.org/',
+    locationLink: '/projects/maleq/',
     role: 'Founder and Lead Developer',
     description: 'First line\nSecond line\nThird line',
     img: '/images/resume/mq-logo-2.png',
