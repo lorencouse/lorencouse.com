@@ -5,7 +5,7 @@ import * as React from 'react';
 
 // import 'react-image-lightbox/style.css';
 
-type CloudinaryImgType = {
+type CustomImgType = {
   publicId: string;
   height: string | number;
   width: string | number;
@@ -34,8 +34,8 @@ export default function CustomImg({
   style,
   aspect,
   ...rest
-}: CloudinaryImgType) {
-const [_isOpen, setIsOpen] = React.useState<boolean>(false);
+}: CustomImgType) {
+  const [_isOpen, setIsOpen] = React.useState<boolean>(false);
 
   const url = publicId;
 
@@ -79,20 +79,22 @@ const [_isOpen, setIsOpen] = React.useState<boolean>(false);
             background-size: 100%;
           }
         `}</style>
-<div className='absolute left-0 top-0'>
-  <Image
-    width={
-      resizedToMaxWidth ? Math.min(+width, RESIZE_MAX_WIDTH) : +width
-    }
-    height={
-      resizedToMaxWidth ? (RESIZE_MAX_WIDTH * +height) / +width : +height
-    }
-    unoptimized
-    src={url}
-    alt={alt}
-    title={title || alt}
-  />
-</div>
+        <div className='absolute left-0 top-0'>
+          <Image
+            width={
+              resizedToMaxWidth ? Math.min(+width, RESIZE_MAX_WIDTH) : +width
+            }
+            height={
+              resizedToMaxWidth
+                ? (RESIZE_MAX_WIDTH * +height) / +width
+                : +height
+            }
+            unoptimized
+            src={url}
+            alt={alt}
+            title={title || alt}
+          />
+        </div>
       </div>
       {/* {isOpen && (
         <Lightbox  mainSrc={url} onCloseRequest={() => setIsOpen(false)} />

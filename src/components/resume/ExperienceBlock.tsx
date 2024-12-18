@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 import CustomLink from '../links/CustomLink';
@@ -8,15 +9,19 @@ const ExperienceBlock = ({
   locationLink,
   role,
   description,
+  img,
 }: {
   year: string;
   location: string;
   locationLink: string;
   role: string;
   description: string;
+  img: string;
 }) => {
+  const descriptionLines = description.split('\n');
+
   return (
-    <div className='border-l border-b border-gray-200 py-3'>
+    <div className='border-l border-b border-gray-200 py-3 mt-6'>
       <div className='experience-header'>
         <span className='year rounded-full border bg-white dark:bg-black border-primary-300 text-xs font-bold px-2 py-1 -ml-3 bg-color-background'>
           {year}
@@ -27,8 +32,27 @@ const ExperienceBlock = ({
         </CustomLink>
       </div>
       <div className='experience-content mx-4 -my-2'>
-        <h3 className='text-lg font-bold'>{role}</h3>
-        <p className='text-sm'>{description}</p>
+        <div className='role-name flex flex-row'>
+          <div>
+            <Image
+              height={30}
+              width={30}
+              src={img}
+              alt={location}
+              className='rounded-sm'
+            />
+          </div>
+          <h3 className='text-lg font-bold pt-1 pl-3'>{role}</h3>
+        </div>
+        <div className=''>
+          <ul className='-mt-5'>
+            {descriptionLines.map((line, index) => (
+              <li key={index} className='text-sm'>
+                {line}
+              </li>
+            ))}
+          </ul>
+        </div>{' '}
       </div>
     </div>
   );

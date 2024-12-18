@@ -21,32 +21,26 @@ export default function AboutPage() {
       <main>
         <section className={clsx(isLoaded && 'fade-in-start')}>
           <div className='layout pt-20'>
-            <h1 className='mt-1' data-fade='0'>
+            <h1 className='mt-1'>
               <Accent>Lorén Couse</Accent>
             </h1>
-            <div className=' mt-4' data-fade='1'>
+            <div className=' mt-4'>
               <div className='experience columns-1 md:columns-2 gap-6'>
                 <div className='work-history break-inside-avoid'>
-                  <h2 data-fade='2'>
+                  <h2>
                     <span className='text-primary-300'>Exp</span>erience
                   </h2>
-                  <article
-                    className='prose dark:prose-invert my-4'
-                    data-fade='3'
-                  >
+                  <article className='prose dark:prose-invert '>
                     {workHistory.map((work, index) => (
                       <ExperienceBlock key={index} {...work} />
                     ))}
                   </article>
                 </div>
                 <div className='education-history break-inside-avoid'>
-                  <h2 data-fade='2'>
+                  <h2>
                     <span className='text-primary-300'>Edu</span>cation
                   </h2>
-                  <article
-                    className='prose dark:prose-invert my-4'
-                    data-fade='3'
-                  >
+                  <article className='prose dark:prose-invert '>
                     {educationHistory.map((education, index) => (
                       <ExperienceBlock key={index} {...education} />
                     ))}
@@ -54,10 +48,8 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              <h3 className='mt-12' data-fade='4'>
-                Tech Stack
-              </h3>
-              <figure className='mt-2' data-fade='5'>
+              <h3 className='mt-12'>Tech Stack</h3>
+              <figure className='mt-2'>
                 <TechStack />
               </figure>
             </div>
@@ -114,6 +106,7 @@ type ExperienceProps = {
   locationLink: string;
   role: string;
   description: string;
+  img: string;
 };
 
 const educationHistory: ExperienceProps[] = [
@@ -122,14 +115,16 @@ const educationHistory: ExperienceProps[] = [
     location: 'University of Massachusetts Boston',
     locationLink: 'https://www.umb.edu/',
     role: 'Bachelor of Arts - Minor in Computer Science',
-    description: 'test',
+    description: 'Java, C++, Python, SQL\nWeb Development\nData Structures',
+    img: '/images/resume/umass-boston.png',
   },
   {
     year: '2016-2018',
     location: 'National Taiwan Cheng Kung University',
     locationLink: 'https://www.ncku.edu.tw/',
-    role: 'Master of Business Administration - Information Technology',
-    description: 'test',
+    role: 'MBA - Information Technology',
+    description: 'Line 1\nLine 2\nLine 3',
+    img: '/images/resume/ncku-logo.jpeg',
   },
 ];
 
@@ -139,6 +134,23 @@ const workHistory: ExperienceProps[] = [
     location: 'MaleQ LLC',
     locationLink: 'https://www.maleq.org/',
     role: 'Founder and Lead Developer',
-    description: 'test',
+    description: 'First line\nSecond line\nThird line',
+    img: '/images/resume/mq-logo-2.png',
+  },
+  {
+    year: '2022-2023',
+    location: 'Ernst & Young',
+    locationLink: 'https://www.ey.com/',
+    role: 'Customer Insights Analyst',
+    description: 'Point 1\nPoint 2\nPoint 3',
+    img: '/images/resume/ey-logo.jpg',
+  },
+  {
+    year: '2019-2022',
+    location: 'Dakuo - Digital Innovation Center',
+    locationLink: 'https://dakuo.koda.net.tw/partner.html',
+    role: 'Startup Advisor',
+    description: 'Point 1\nPoint 2\nPoint 3',
+    img: '/images/resume/dakuo-logo.jpeg',
   },
 ];
