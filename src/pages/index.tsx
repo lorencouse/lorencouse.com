@@ -150,7 +150,7 @@ export default function IndexPage({
                     <span>lorencouse</span>
                   </UnstyledLink>
                   <UnstyledLink
-                    href='https://clarence.link/bsky'
+                    href='https://www.instagram.com/cousethemouse/'
                     className={clsx(
                       'inline-flex items-center gap-1 text-sm font-medium md:text-base',
                       'group text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white',
@@ -205,36 +205,53 @@ export default function IndexPage({
                 )}
                 data-fade='0'
               >
-                <div className='mt-8 max-w-2xl md:mt-0'>
+                <div className=' max-w-2xl md:mt-0'>
                   <h2 className='text-4xl md:text-6xl'>
                     <Accent className='inline decoration-clone leading-snug dark:leading-none'>
                       Let's Build Something Great
                     </Accent>
                   </h2>
                   <div className='mt-4 text-base text-gray-600 dark:text-gray-300 md:text-lg'>
+                    I have a 12 year track record building{' '}
+                    <strong>SEO optimized</strong> web applications that
+                    generate{' '}
                     <Tooltip
                       withUnderline
                       tipChildren={
                         <>
-                          A mental model is an explanation of someone's{' '}
-                          <strong>thought process</strong> about how something
-                          works. You can use it as your own guide that you can
-                          test through some cases.
+                          Consistent, organic, SEO traffic with over 5,000
+                          active daily users on MaleQ.org
                         </>
                       }
                     >
-                      <span>Mental model</span>
+                      <span>real traffic</span>
                     </Tooltip>{' '}
-                    will make front-end development more{' '}
+                    , earn{' '}
+                    <Tooltip
+                      withUnderline
+                      tipChildren={
+                        <>
+                          Personal e-commerce bussines with over $650,000 in
+                          sales
+                        </>
+                      }
+                    >
+                      <span>real revenue</span>
+                    </Tooltip>{' '}
+                    , and bring real-world results.
+                    <br />
+                    <br />
+                    My specialty is{' '}
                     <strong className='text-gray-700 dark:text-gray-200'>
-                      predictable
+                      solving problems
                     </strong>{' '}
-                    by seeing how they work{' '}
+                    for my customers and building products that
                     <strong className='text-gray-700 dark:text-gray-200'>
                       fundamentally
-                    </strong>
-                    . In my blog, I'm sharing how I approach something and how
-                    my mental model affect my learning about a certain topic.
+                    </strong>{' '}
+                    improve quality of life. In my blog, I'm sharing how I
+                    approach something and how my mental model affect my
+                    learning about a certain topic.
                   </div>
                   <LC
                     className={clsx(
