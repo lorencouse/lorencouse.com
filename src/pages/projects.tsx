@@ -2,7 +2,6 @@ import clsx from 'clsx';
 import { InferGetStaticPropsType } from 'next';
 import * as React from 'react';
 
-import { sortByDate } from '@/lib/mdx.client';
 import { getAllFilesFrontmatter } from '@/lib/mdx.server';
 import useLoaded from '@/hooks/useLoaded';
 
@@ -19,7 +18,7 @@ export default function ProjectsPage({
     <>
       <Seo
         templateTitle='Projects'
-        description='Showcase of my personal projects and experience.'
+        description='Showcase of my personal projects and work experience.'
       />
       <main>
         <section className={clsx(isLoaded && 'fade-in-start')}>
@@ -47,8 +46,8 @@ export default function ProjectsPage({
 }
 
 export async function getStaticProps() {
-  const files = await getAllFilesFrontmatter('projects');
-  const projects = sortByDate(files);
+  const projects = await getAllFilesFrontmatter('projects');
+  // const projects = sortByDate(files);
 
   return { props: { projects } };
 }

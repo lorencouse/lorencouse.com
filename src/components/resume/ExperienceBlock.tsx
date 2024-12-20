@@ -7,6 +7,7 @@ const ExperienceBlock = ({
   year,
   location,
   locationLink,
+  city,
   role,
   description,
   img,
@@ -14,6 +15,7 @@ const ExperienceBlock = ({
   year: string;
   location: string;
   locationLink: string;
+  city: string;
   role: string;
   description: string;
   img: string;
@@ -22,14 +24,16 @@ const ExperienceBlock = ({
 
   return (
     <div className='border-l border-b border-gray-200 py-3 mt-6'>
-      <div className='experience-header'>
-        <span className='year rounded-full border bg-white dark:bg-black border-primary-300 text-xs font-bold px-2 py-1 -ml-3 bg-color-background'>
+      <div className='experience-header ml-4'>
+        <span className='year rounded-full border bg-white dark:bg-black border-primary-300 text-xs font-bold px-2 py-1 -ml-7 bg-color-background'>
           {year}
         </span>
         <span className='mx-1'>-</span>
         <CustomLink href={locationLink}>
           <span className='location text-sm'>{location}</span>
         </CustomLink>
+        <span className='mx-1'>-</span>
+        <span className='role text-sm '>{city}</span>
       </div>
       <div className='experience-content mx-4 -my-2'>
         <div className='role-name flex flex-row'>

@@ -105,6 +105,7 @@ type ExperienceProps = {
   location: string;
   locationLink: string;
   role: string;
+  city: string;
   description: string;
   img: string;
 };
@@ -114,16 +115,19 @@ const educationHistory: ExperienceProps[] = [
     year: '2016-2018',
     location: 'National Taiwan Cheng Kung University',
     locationLink: 'https://www.ncku.edu.tw/',
+    city: 'Tainan, Taiwan',
     role: 'MBA - Information Technology',
     description: 'Line 1\nLine 2\nLine 3',
     img: '/images/resume/ncku-logo.jpeg',
   },
   {
-    year: '2010-2013',
+    year: '2010-2014',
     location: 'University of Massachusetts Boston',
     locationLink: 'https://www.umb.edu/',
+    city: 'Boston, MA',
     role: 'Bachelor of Arts - Minor in Computer Science',
-    description: 'Java, C++, Python, SQL\nWeb Development\nData Structures',
+    description:
+      'Major in Japanese with 1 year study in Kyoto, Japan\nCS Coursework in Java, C++, Python, SQL Databases\nWeb Development, HTLM, JS, CSS, and Data Structures',
     img: '/images/resume/umass-boston.png',
   },
 ];
@@ -131,26 +135,32 @@ const educationHistory: ExperienceProps[] = [
 const workHistory: ExperienceProps[] = [
   {
     year: '2011-Present',
-    location: 'MaleQ LLC',
+    location: 'MaleQ.com Adult Store',
     locationLink: '/projects/maleq/',
-    role: 'Founder and Lead Developer',
-    description: 'First line\nSecond line\nThird line',
+    city: 'Remote',
+    role: 'Founder & CEO',
+    description:
+      'Drove revenue growth: Built and managed an e-commerce business generating over $850K in sales.\nManaged global team: Led a diverse team of writers and employees across 5 countries, expanding user base to Chinese and Spanish speaking markets.\nOptimized content strategy: Directed SEO-focused content creation, increasing website traffic and organic sales.',
     img: '/images/resume/mq-logo-2.png',
   },
   {
     year: '2022-2023',
     location: 'Ernst & Young',
     locationLink: 'https://www.ey.com/',
-    role: 'Customer Insights Analyst',
-    description: 'Point 1\nPoint 2\nPoint 3',
+    role: 'Market Research Coordinator',
+    city: 'Melbourne, Australia',
+    description:
+      'Conducted research: Analyzed market trends, competitor activities, and industry benchmarks to provide actionable insights for client strategies.\nPrepared reports: Compiled comprehensive presentations and reports highlighting key findings, market opportunities, and strategic recommendations.\nCollaborated with teams: Partnered with cross-functional teams to align research insights with client goals, ensuring data-driven decision-making.',
     img: '/images/resume/ey-logo.jpg',
   },
   {
     year: '2019-2022',
-    location: 'Dakuo - Digital Innovation Center',
+    location: 'Dakuo Digital Innovation Center',
     locationLink: 'https://dakuo.koda.net.tw/partner.html',
+    city: 'Kaohsiung, Taiwan',
     role: 'Startup Advisor',
-    description: 'Point 1\nPoint 2\nPoint 3',
+    description:
+      'Provide strategic guidance on product development strategies, market positioning, and technology trends.\nSet goals and timelines based project targets to meet project and market demands.\nMentorship and Team Building, fostering a culture of innovation, effective leadership, and scalable team structures.\nFundraising and Networking Support to facilitate investor introductions, government grants, and strategic collaborations.',
     img: '/images/resume/dakuo-logo.jpeg',
   },
 ];

@@ -316,11 +316,7 @@ export default function IndexPage({
                 </p>
                 <ul className='mt-4 grid gap-4 sm:grid-cols-2 xl:grid-cols-3'>
                   {populatedProjects.map((project, i) => (
-                    <ProjectCard
-                      key={project.slug}
-                      project={project}
-                      className={clsx(i > 2 && 'hidden sm:block')}
-                    />
+                    <ProjectCard key={project.slug} project={project} />
                   ))}
                 </ul>
                 <ButtonLink
@@ -405,6 +401,9 @@ export async function getStaticProps() {
     'aireio',
     'canker-core',
     'foldy-friends',
+    'maleq',
+    'rise-n-shine',
+    'track-duplicate-deleter',
   ]);
   // const introPosts = getFeatured(blogs, [
   //   'btb-flex-mental-model',
