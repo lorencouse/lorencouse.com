@@ -96,9 +96,9 @@ export default function IndexPage({
                         'opacity-75 transition duration-1000 group-hover:opacity-100 group-hover:duration-200',
                       )}
                     />
-                    <ButtonLink href='#intro'>Read my blog</ButtonLink>
+                    <ButtonLink href='/projects'>See my projects</ButtonLink>
                   </div>
-                  <ButtonLink href='/about'>Learn more about me</ButtonLink>
+                  <ButtonLink href='/about'>More about me</ButtonLink>
                 </div>
                 <div
                   data-fade='6'
@@ -312,7 +312,7 @@ export default function IndexPage({
                   <Accent>Featured Projects</Accent>
                 </h2>
                 <p className='mt-2 text-gray-600 dark:text-gray-300'>
-                  Some projects that I'm proud of
+                  React, Next.js, and SwiftUi applications, all built by me.
                 </p>
                 <ul className='mt-4 grid gap-4 sm:grid-cols-2 xl:grid-cols-3'>
                   {populatedProjects.map((project, i) => (
@@ -330,7 +330,7 @@ export default function IndexPage({
                     trackEvent('Home: See more project', { type: 'navigate' })
                   }
                 >
-                  See more project
+                  See more
                 </ButtonLink>
               </article>
             </section>

@@ -28,15 +28,15 @@ export default function AboutPage() {
             <h1 className='mt-1' data-fade='1'>
               <Accent>Lorén Couse</Accent>
             </h1>
-            <div className='mt-4' data-fade='2'>
+            <div className='md:mt-4 mt-0' data-fade='2'>
               <CustomImg
-                className='float-right ml-6 w-40 md:w-72 rounded-full'
-                publicId='/images/Loren-Couse-Web-Developer-tan.png'
-                width='1500'
-                height='1500'
+                className='float-right ml-6 w-56 md:w-96 rounded-full -mt-14'
+                publicId='/images/loren-couse-blue-500.jpg'
+                width='500'
+                height='500'
                 alt='Photo of me looking really professional and can definitely impress your boss'
                 preview={false}
-                title=' '
+                title='Loren Couse Headshot Blue Background'
               />
               <article className='prose dark:prose-invert'>
                 <p data-fade='3'>

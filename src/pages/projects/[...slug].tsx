@@ -69,8 +69,8 @@ export default function SingleProjectPage({ code, frontmatter }: ProjectType) {
             <CustomImg
               publicId={`${frontmatter.banner}`}
               alt={frontmatter.title}
-              width={1200}
-              height={750}
+              width={1280}
+              height={720}
             />
 
             <h1 className='mt-4'>{frontmatter.title}</h1>
@@ -147,14 +147,10 @@ export default function SingleProjectPage({ code, frontmatter }: ProjectType) {
                   {frontmatter.category}
                 </p>
               )}
-              <div className='flex gap-2 items-center'>
-                <span className=' flex text-sm text-gray-600 dark:text-gray-300'>
-                  Built with:
-                </span>
-                <TechIcons
-                  techs={frontmatter.techs.split(',') as Array<TechListType>}
-                />
-              </div>
+
+              <TechIcons
+                techs={frontmatter.techs.split(',') as Array<TechListType>}
+              />
             </div>
 
             <hr className='mt-4 dark:border-gray-600' />

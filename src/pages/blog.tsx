@@ -1,8 +1,13 @@
-import * as React from 'react';
-
-import { InferGetStaticPropsType } from 'next';
 import clsx from 'clsx';
+import { InferGetStaticPropsType } from 'next';
+import * as React from 'react';
 import { HiCalendar, HiEye } from 'react-icons/hi';
+
+import { getFromSessionStorage } from '@/lib/helper.client';
+import { getTags, sortByDate, sortDateFn } from '@/lib/mdx.client';
+import { getAllFilesFrontmatter } from '@/lib/mdx.server';
+import useInjectContentMeta from '@/hooks/useInjectContentMeta';
+import useLoaded from '@/hooks/useLoaded';
 
 import Accent from '@/components/Accent';
 import BlogCard from '@/components/blog/BlogCard';
@@ -13,11 +18,6 @@ import Tag, { SkipNavTag } from '@/components/content/Tag';
 import StyledInput from '@/components/form/StyledInput';
 import Seo from '@/components/Seo';
 import SortListbox, { SortOption } from '@/components/SortListbox';
-import useInjectContentMeta from '@/hooks/useInjectContentMeta';
-import useLoaded from '@/hooks/useLoaded';
-import { getFromSessionStorage } from '@/lib/helper.client';
-import { getTags, sortByDate, sortDateFn } from '@/lib/mdx.client';
-import { getAllFilesFrontmatter } from '@/lib/mdx.server';
 
 import { BlogFrontmatter, InjectedMeta } from '@/types/frontmatters';
 
@@ -40,7 +40,7 @@ export default function IndexPage({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   /** Lazy init from session storage to preserve preference on revisit */
   const [sortOrder, setSortOrder] = React.useState<SortOption>(
-    () => sortOptions[Number(getFromSessionStorage('blog-sort')) || 0]
+    () => sortOptions[Number(getFromSessionStorage('blog-sort')) || 0],
   );
   const [isEnglish, setIsEnglish] = React.useState<boolean>(true);
   const isLoaded = useLoaded();
@@ -67,7 +67,7 @@ export default function IndexPage({
         search
           .toLowerCase()
           .split(' ')
-          .every((tag) => post.tags.includes(tag))
+          .every((tag) => post.tags.includes(tag)),
     );
 
     if (sortOrder.id === 'date') {
@@ -96,7 +96,7 @@ export default function IndexPage({
         s
           .split(' ')
           .filter((t) => t !== tag)
-          ?.join(' ')
+          ?.join(' '),
       );
     } else {
       // append tag
