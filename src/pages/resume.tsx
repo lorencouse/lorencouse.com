@@ -85,7 +85,7 @@ const educationHistory: ExperienceProps[] = [
     city: 'Tainan, Taiwan',
     role: 'MBA - Information Technology',
     description:
-      'Coursework in IT, cybersecurity, statistics, & data analytics.\nDatabase management systems and IT project management.\nResearch into digital marketing efficacy in e-commerce platforms.',
+      'Coursework in IT, cybersecurity, statistics, & data analytics.\nIT project management and database management systems.\nThesis Research: Efficacy of e-commerce digital marketing methods.',
     img: '/images/resume/ncku-logo.jpeg',
   },
   {
@@ -102,7 +102,7 @@ const educationHistory: ExperienceProps[] = [
 
 const workHistory: ExperienceProps[] = [
   {
-    year: '2011-Present',
+    year: '2011-2024',
     location: 'MaleQ.com Adult Store',
     locationLink: '/projects/maleq/',
     city: 'Remote',
@@ -128,7 +128,7 @@ const workHistory: ExperienceProps[] = [
     city: 'Kaohsiung, Taiwan',
     role: 'Startup Advisor',
     description:
-      'Provide strategic guidance on business development strategies, market positioning, and current trends.\nSet goals and timelines to meet project targets and investor expectations.\nMentored team building, effective leadership, and scalable team structures.\nFacilitated fundraising network events for investor introductions, government grants, and corporate collaborations.',
+      'Provide strategic guidance on business development strategies, market positioning, and current trends.\nSet goals and timelines to meet project targets and investment partner expectations.\nMentored effective leadership, and scalable team structures.\nFacilitated networking events for investor introductions, government grants, and outside corporate collaborations.',
     img: '/images/resume/dakuo-logo.jpeg',
   },
 ];

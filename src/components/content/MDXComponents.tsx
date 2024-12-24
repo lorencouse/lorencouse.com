@@ -10,6 +10,8 @@ import CustomImg from '@/components/images/CustomImg';
 import CustomLink from '@/components/links/CustomLink';
 import TechIcons from '@/components/TechIcons';
 
+import TimeLineBlock from '../blog/TimeLineBlock';
+
 const MDXComponents = {
   a: CustomLink,
   Image,
@@ -23,6 +25,7 @@ const MDXComponents = {
   TweetCard,
   GithubCard,
   Quiz,
+  TimeLineBlock,
 };
 
 export default MDXComponents;

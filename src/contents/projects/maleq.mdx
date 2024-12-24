@@ -10,120 +10,104 @@ link: 'https://www.maleq.org'
 
 > ## Short Explanation
 
-I started MaleQ in 2012 as a passion project. What began as a small gay mens' sexual health and wellness blog grew into a full adult e-commerce platform selling products to markets around the globe.
+I started MaleQ in 2012 as a passion project. What began as a small gay mens' sexual health and wellness blog grew into a full e-commerce platform selling adult products to markets around the globe.
 
 > ## Business Overview
 
-This project objective is to give information about PPDB (Penerimaan Peserta Didik Baru) for local high school in Sumatera Utara. This website should facilitate registration, generating registration proof, and giving announcements about acceptance. This website can also print a test card number for students that are registering by test and their grades. There is also another entry which is using geolocation by calculating the radius from their house to the school location.
+MaleQ (MQ) was founded with the goal to provide answers to those hard to ask questions in the gay community. Growing up in the 90s and early 2000s, there was little comprehensive information online about gay men's sexual health education. I began MQ by composing articles of my experiences, and the knoledge I had gathered, in the hopes to help other gay men to have safe, and satisfying sex lives.
+
+What started as a a small hobby blog quickly gained popularity, with an increase in readership month on month. I quickly found a niche market for lube, condoms, and male sex toys which seamlessly tied with the topics I was covering already. This allowed me to work on MQ full time, expanding it to a successful, revenue generating e-commerce business.
 
 > ## Company Milestones
 
-This project was developed using Create React App for a snappier website and delivering a quick and easy-to-use interface. We decided to use Tailwindcss for this site for a better look and maintainability.
+Over the last 12 years, MQ has slowly expanded to reach a wider audience, and be a more effective and efficient business. Here are some major MaleQ milestones.
 
 Timeline:
 
-- **2012:** MaleQ.org is founded as a personal hobby blog.
-- **2013:** Launched MaleQ product reviews. Began generating revenue with affiliate marketing.
-- **2014:**
-- **2015:** MaleQ WooCommerce store launch. MaleQ LLC is officially incorporated.
-- **2016:** Launched SuperWare adult toy line. Add Asia warehouse for global fulfillment.
-- **2017:** Launched FemaleQ with content and product for female readers.
-- **2018:** Rollout of Chinese Language site. Expansion into Taiwan market.
-- **2019:** Rollout of Spanish Language site. Expansion into Latin American markets.
-- **2020:** Automation of order fulfillment with WooCommerce and partner warehouse APIs
-- **2021:** Mister Q and Miss Q
-- **2022:**
-- **2023:** Automation of content creation with Python scripts using Wordpress and ChatGPT APIs.
+{' '}
 
-<SplitImage>
-  <Split>
-    <CustomImg
-      mdx
-      className='!mb-0'
-      publicId='/images/projects/maleq/prestasi-tesmandiri_zjaaer'
-      alt='prestasi-tesmandiri'
-      width={1440}
-      height={2899}
-    />
-    <CustomImg
-      mdx
-      publicId='/images/projects/maleq/acceptance_tvjpmi'
-      alt='acceptance'
-      width={1280}
-      height={908}
-    />
-  </Split>
-  <Split>
-    <CustomImg
-      mdx
-      className='!mb-0'
-      publicId='/images/projects/maleq/zonasi_djqq65'
-      alt='zonasi'
-      width={1440}
-      height={2537}
-    />
-    <CustomImg
-      mdx
-      publicId='/images/projects/maleq/not-accepted_gxl5qm'
-      alt='not-accepted'
-      width={1280}
-      height={826}
-    />
-  </Split>
-</SplitImage>
+<TimeLineBlock
+  year='2012'
+  description='MaleQ.org is founded as a hobby project - with many great years to come.'
+  img='/images/projects/maleq/mq-old-logo.png'
+  alt='MaleQ original logo'
+/>
+<TimeLineBlock
+  year='2013'
+  description='Began monetization, generating revenue with adult product affiliate sales.'
+/>
+<TimeLineBlock
+  year='2014'
+  description='Introduction of guest writers and expansion of MQ News.'
+/>
+<TimeLineBlock
+  year='2015'
+  description='MaleQ WooCommerce store launched. MaleQ LLC is officially incorporated.'
+  img='/images/projects/maleq/mq-store.jpg'
+  alt='MaleQ Store logo'
+/>
+<TimeLineBlock
+  year='2016'
+  description='Super toy line introduced, and addition of Asia warehouse for global fulfillment.'
+  img='/images/projects/maleq/super-logo.jpg'
+  alt='Super toys logo'
+/>
+<TimeLineBlock
+  year='2017'
+  description='Launch of FemaleQ with content and product for female readers.'
+  img='/images/projects/maleq/miss-q-guides.png'
+  alt='MQ Chinese Language'
+/>
+<TimeLineBlock
+  year='2018'
+  description='Rollout of Chinese Language site. Expansion into Taiwan market.'
+  img='/images/projects/maleq/mr-q-guides-cn.png'
+  alt='MQ Chinese Language'
+/>
+<TimeLineBlock
+  year='2019'
+  description='Rollout of Spanish Language site. Expansion into Latin American markets.'
+  img='/images/projects/maleq/mr-q-es.png'
+  alt='MaleQ Spanish Language'
+/>
+<TimeLineBlock
+  year='2020'
+  description='Automation of order fulfillment with WooCommerce and partner warehouse APIs'
+  img='/images/projects/maleq/woocommerce-logo.png'
+  alt='WooCommerce Logo'
+/>
+<TimeLineBlock
+  year='2021'
+  description='Site design overhaul, with the launch of Mister Q and Miss Q branding.'
+  img='/images/projects/maleq/mr-q.jpg'
+  alt='Mr Q Mascot'
+/>
 
-> ## Spotlight
+<TimeLineBlock
+  year='2022'
+  description='Continued growth and expansion of product lines.'
+/>
+<TimeLineBlock
+  year='2023'
+  description='Automation of content creation with Python scripts using Wordpress and ChatGPT APIs.'
+  img='/images/projects/maleq/chat-gpt-logo.png'
+  alt='ChatGPT Logo'
+/>
+<TimeLineBlock
+  year='2024'
+  description='MaleQ LLC is sold, and starts a new chapter.'
+/>
+
+> ## Company Metrics
 
 ### Form Validation
 
 Validation is a big thing in the registering process, so we try to make it strict so the data that is entered is valid.
 
-### Map API
-
-Using a map is quite challenging as we need to calculate the radius, we try to be as accessible and easy to understand as possible, which is why we decided to make the radius reactive to the map movement. For accessibility the user can also search their location or use the GPS.
-
-<LiteYouTubeEmbed
-  id='ns5CZpU3yII'
-  poster='maxresdefault'
-  title='Map API'
-  noCookie={true}
-/>
-
-### End to End Testing
-
-We use Cypress for an end to end testing, which is integrated with Github CI and Vercel continuous deployment. Cypress is a test runner that allows you to write tests in a human-readable language. This eliminates the tedious workflow of testing for every change and gives us the confidentiality that our code didn't break. This also works we
-
-<LiteYouTubeEmbed
-  id='FX4XHrvWST8'
-  poster='maxresdefault'
-  title='End to end testing demo'
-  noCookie={true}
-/>
-
-### Conventional Commit
-
-In this project, My team and I decided to use conventional commit so the commit message is cleaner and easier to read. I've been using it since, I think it is awesome. Also using Vercel, we can practically backtrack to any deployment of the commit.
-
-We also configured it with husky so the commit message is checked before committing. You can check the setup on my library about [how to configure husky](https:///images.com/library/husky-commitlint-prettier)
-
-<CustomImg
-  mdx
-  publicId='/images/projects/maleq/conventional-commit_e8z1qa'
-  alt='conventional-commit'
-  width={1272}
-  height={525}
-/>
-
-> ## The Problems and How I Deal With It
-
-This is my biggest project with a lot of new technologies for me. It is my first time using React Hook Form, doing testing with cypress, setting up all of the CI/CD, using Google Maps API, also the first time using a convention for the commit message.
-
-But it definitely has been a great learning experience for me. This project strengthens my knowledge about how to build a functional application.
-
-Managing the frontend also has been a great experience, I managed 2 of my team and delegate some issues and features that need to be implemented using Github Issues and Pull Requests
-
-> ## Lessons Learned
-
-I learn a lot from this project, a lot of great libraries that I use, and now I quite understood how reading documentation and actually understanding it is really important.
-
-I am now quite comfortable if I have to learn a new library or stack because I know how to efficiently read documentation now.
+    <Image
+      className='!mb-0'
+      src='/images/projects/maleq/maleq-sales-data.jpg'
+      alt='MaleQ Sales Data'
+      width={800}
+      height={800}
+    />
