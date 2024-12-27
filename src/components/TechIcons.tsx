@@ -34,7 +34,7 @@ export type TechIconsProps = {
 
 export default function TechIcons({ className, techs }: TechIconsProps) {
   return (
-    <div className='flex gap-2'>
+    <div className='flex gap-2 align-middle items-center'>
       <span className='text-sm text-gray-600 dark:text-gray-300'>
         Built with:
       </span>

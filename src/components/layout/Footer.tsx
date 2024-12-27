@@ -6,32 +6,33 @@ import UnstyledLink from '@/components/links/UnstyledLink';
 import Tooltip from '@/components/Tooltip';
 
 import SocialLinks from '../links/SocialLinks';
-import TechStack from '../TechStack';
+import TechIcons from '../TechIcons';
 
 export default function Footer() {
   return (
     <footer className='mt-4 pb-2'>
       <main className='layout flex flex-col items-center border-t pt-6 dark:border-gray-600'>
-        <FooterLinks />
-
-        <div className='flex flex-row justify-between w-full max-w-4xl mt-6'>
-          <div className='socials items-center gap-4 flex-wrap align-middle'>
-            <p className='font-medium text-gray-600 dark:text-gray-300 text-center'>
-              Reach me at:
-            </p>
+        <div className='flex flex-row flex-wrap gap-4 md:justify-between justify-center items-center w-full mt-4'>
+          <FooterLinks />
+          <div className='flex flex-row gap-x-2 items-center justify-center'>
+            <span>Contact: </span>
             <SocialLinks />
           </div>
-          <div className='build-with items-center gap-4 flex-wrap align-middle'>
-            <p className='font-medium text-gray-600 dark:text-gray-300 text-center'>
-              This site is built with:
-            </p>
-            <TechStack />
-          </div>
         </div>
-
-        <p className='mt-8 text-sm text-gray-600 dark:text-gray-300'>
-          Loren Couse - {new Date().getFullYear()}
-        </p>
+        <div className='flex flex-row flex-wrap justify-between items-center w-full mt-2'>
+          <TechIcons
+            techs={[
+              'nextjs',
+              'react',
+              'typescript',
+              'supabase',
+              'cloudflarepages',
+            ]}
+          />
+          <p className='my-2 text-sm text-gray-600 dark:text-gray-300'>
+            Loren Couse - {new Date().getFullYear()}
+          </p>
+        </div>
       </main>
     </footer>
   );

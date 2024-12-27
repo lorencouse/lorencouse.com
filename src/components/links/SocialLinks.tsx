@@ -40,9 +40,9 @@ export default function SocialLinks() {
                 setTimeout(() => setCopyStatus('idle'), 1500);
               });
             }}
-            className='rounded-sm align-middle focus:outline-none focus-visible:ring focus-visible:ring-primary-300'
+            className='rounded-sm align-middle items-center focus:outline-none focus-visible:ring focus-visible:ring-primary-300'
           >
-            <FiMail className='my-auto h-6 w-6 align-middle text-gray-600 transition-colors hover:text-primary-300 dark:text-gray-300 dark:hover:text-primary-300' />
+            <FiMail className='my-auto h-5 w-5 align-middle text-gray-600 transition-colors hover:text-primary-300 dark:text-gray-300 dark:hover:text-primary-300' />
           </button>
         </Tooltip>
       </div>
@@ -59,7 +59,7 @@ export default function SocialLinks() {
               trackEvent(`Footer Link: ${social.id}`, { type: 'link' });
             }}
           >
-            <social.icon className='my-auto h-6 w-6 align-middle text-gray-600 transition-colors hover:text-primary-300 dark:text-gray-300 dark:hover:text-primary-300' />
+            <social.icon className='my-auto h-5 w-5 align-middle text-gray-600 transition-colors hover:text-primary-300 dark:text-gray-300 dark:hover:text-primary-300' />
           </UnstyledLink>
         </Tooltip>
       ))}
