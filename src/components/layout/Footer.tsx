@@ -55,20 +55,14 @@ function FooterLinks() {
       tooltip: 'Blog, Projects, and Library Statistics',
     },
     {
-      href: '/guestbook',
-      text: 'Guestbook',
-      tooltip:
-        'Leave whatever you like to say—message, appreciation, suggestions',
-    },
-    {
       href: '/subscribe',
       text: 'Subscribe',
       tooltip: 'Get an email whenever I post, no spam',
     },
     {
-      href: 'https://lorencouse.com/rss.xml',
-      text: 'RSS',
-      tooltip: 'Add lorencouse.com blog to your feeds',
+      href: '/about',
+      text: 'About',
+      tooltip: 'About me, my work, and my blog',
     },
   ];
   return (
