@@ -24,10 +24,7 @@ import Tooltip from '@/components/Tooltip';
 export default function IndexPage({
   featuredProjects,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  // const populatedIntro = useInjectContentMeta('blog', introPosts);
   const populatedProjects = useInjectContentMeta('projects', featuredProjects);
-  // const populatedPosts = useInjectContentMeta('blog', featuredPosts);
-  // const populatedShorts = useInjectContentMeta('library', featuredShorts);
 
   const isLoaded = useLoaded();
 
@@ -181,14 +178,6 @@ export default function IndexPage({
           >
             <IoArrowDownOutline className='h-8 w-8 animate-bounce md:h-10 md:w-10' />
           </UnstyledLink>
-          {/* <LC
-            className={clsx(
-              'absolute bottom-0 right-6',
-              'translate-y-[37%] transform-gpu',
-              'w-[calc(100%-3rem)] md:w-[600px] 2xl:w-[900px]',
-              'z-[-1] opacity-70 dark:opacity-30',
-            )}
-          /> */}
         </section>
 
         <InView triggerOnce rootMargin='-40% 0px'>
@@ -268,39 +257,6 @@ export default function IndexPage({
           )}
         </InView>
 
-        {/* <InView triggerOnce rootMargin='-40% 0px'>
-          {({ ref, inView }) => (
-            <section
-              ref={ref}
-              className={clsx('py-20', inView && 'fade-in-start')}
-            >
-              <article className='layout' data-fade='0'>
-                <h2 className='text-2xl md:text-4xl' id='blog'>
-                  <Accent>Featured Posts</Accent>
-                </h2>
-                <ul className='mt-4 grid gap-4 sm:grid-cols-2 xl:grid-cols-3'>
-                  {populatedPosts.map((post, i) => (
-                    <BlogCard
-                      key={post.slug}
-                      post={post}
-                      className={clsx(i > 2 && 'hidden sm:block')}
-                    />
-                  ))}
-                </ul>
-                <ButtonLink
-                  className='mt-4'
-                  href='/blog'
-                  onClick={() =>
-                    trackEvent('Home: See more post', { type: 'navigate' })
-                  }
-                >
-                  See more post
-                </ButtonLink>
-              </article>
-            </section>
-          )}
-        </InView> */}
-
         <InView triggerOnce rootMargin='-40% 0px'>
           {({ ref, inView }) => (
             <section
@@ -332,43 +288,6 @@ export default function IndexPage({
             </section>
           )}
         </InView>
-
-        {/* <InView triggerOnce rootMargin='-40% 0px'>
-          {({ ref, inView }) => (
-            <section
-              ref={ref}
-              className={clsx('py-20', inView && 'fade-in-start')}
-            >
-              <article className='layout' data-fade='0'>
-                <h2 className='text-2xl md:text-4xl' id='library'>
-                  <Accent>Shorts</Accent>
-                </h2>
-                <p className='mt-2 text-gray-600 dark:text-gray-300'>
-                  Short article that's not long enough to be a blog post,
-                  usually comes from my personal notes.
-                </p>
-                <ul className='mt-4 grid gap-4 sm:grid-cols-2 xl:grid-cols-3'>
-                  {populatedShorts.map((short, i) => (
-                    <ShortsCard
-                      key={short.slug}
-                      short={short}
-                      className={clsx(i > 2 && 'hidden sm:block')}
-                    />
-                  ))}
-                </ul>
-                <ButtonLink
-                  className='mt-4'
-                  href='/shorts'
-                  onClick={() =>
-                    trackEvent('Home: See more shorts', { type: 'navigate' })
-                  }
-                >
-                  See more shorts
-                </ButtonLink>
-              </article>
-            </section>
-          )}
-        </InView> */}
       </main>
     </>
   );
@@ -378,24 +297,6 @@ export async function getStaticProps() {
   generateRss();
 
   const projects = await getAllFilesFrontmatter('projects');
-  // const shorts = await getAllFilesFrontmatter('library');
-
-  // const featuredPosts = getFeatured(blogs, [
-  //   'gradient-border-is-hard',
-  //   'advanced-react-patterns',
-  //   'fully-reusable-components',
-  //   'react-core-concept-rendering-state',
-  //   'nextjs-auth-hoc',
-  //   'nextjs-fetch-method',
-  // ]);
-  // const featuredShorts = getFeatured(shorts, [
-  //   'react/absolute-import',
-  //   'auth-context',
-  //   'mac/zsh',
-  //   'react/jsx-one-parent',
-  //   'styling/margin-usage',
-  //   'uncategorized/search-removal',
-  // ]);
 
   const featuredProjects = getFeatured(projects, [
     'aireio',
@@ -405,10 +306,6 @@ export async function getStaticProps() {
     'rise-n-shine',
     'track-duplicate-deleter',
   ]);
-  // const introPosts = getFeatured(blogs, [
-  //   'btb-flex-mental-model',
-  //   'nextjs-fetch-method',
-  // ]);
 
   return {
     props: {

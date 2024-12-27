@@ -5,11 +5,11 @@ import { openGraph } from '@/lib/helper.client';
 
 const defaultMeta = {
   title: 'Lorén Couse',
-  siteName: 'lorencouse.com',
+  siteName: 'Lorén Couse',
   description:
     'An online portfolio and blog by Lorén Couse. Showcase of my projects, and some of my thoughts about website development.',
-  url: 'https://lorencouse.com',
-  image: 'https://lorencouse.com/favicon/large-og.jpg',
+  url: 'https://www.lorencouse.com',
+  image: 'https://www.lorencouse.com/favicon/large-og.jpg',
   type: 'website',
   robots: 'follow, index',
 };

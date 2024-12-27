@@ -11,55 +11,74 @@ youtube: 'https://www.youtube.com/watch?v=oxaDSU1uNPc'
 
 > ## Short Explanation
 
-Aireio is web app that is designed to make finding a remote work space easy. Each city .
+Aireio is react web app for finding remote work spaces in cities around the globe. Cities are initially compiled using the Google Places API, with rich place data added via the Open Street Map API. Users are then able to self report details on each workspace, including amenities such as power outlets, wifi, seating, and workspace comfort. This data is then compiled into a 'Deskability' score to help users choose a work space that is right for them.
 
 > ## Project Goals
 
-As a team of board game lovers, we want to bring our love of board games to the next level by using innovative technologies such as QR codes, image recognition, ARKit, RealityKit, and SceneKit.
+As someone who is constantly traveling for work, I often find myself in need of a quiet place to work. Whether I'm in a new city or just looking for a change of scenery, I want to be able to easily find a remote work space that meets my needs. That's why I created aireio. My goal was to allow users new discover new co-working centers, libraries, and cafes, and find the perfect place to work wherever they are.
 
-Our goal is to create a game that is engaging and immersive, allowing players to feel like they are truly part of the game world as they explore virtual locations, solve puzzles, and make decisions that affect the outcome of the game. We hope to achieve this goal by using a range of technologies to provide a unique and interactive gaming experience that will appeal to players of all ages. Ultimately, the goal of the aireio project is to create a game that is both enjoyable and challenging, providing players with an exciting and memorable gaming experience.
+> ## Tech Stack Used
 
-<blockquote className='with-icons'>
-  ## Tech Stack Used
-  <div className='not-prose mt-2'>
-    <TechIcons techs={['swift']} />
-  </div>
-</blockquote>
+<div className='not-prose mt-2'>
+  <TechIcons
+    techs={['nextjs', 'react', 'typescript', 'supabase', 'cloudflarepages']}
+  />
+</div>
 
 The aireio project uses a range of technologies, including:
 
-- SwiftUI: a user interface framework used to design and build the user interface of the aireio app
-- SceneKit: a 3D graphics framework used to manipulate and display 3D assets such as the 3D puzzle box
-- ARKit: a kit for creating augmented reality experiences, used to display the low-poly 3D design of the underworld
-- RealityKit: a kit for creating augmented reality and 3D experiences, used to provide 360-degree views of virtual locations
-- WebKit: a kit for displaying web content within the app, used to display QR codes and other web-based elements
-- Image Recognition: a technology used to identify and classify images, used to allow players to select locations within the Olympus map and trigger other interactive features.
-
-We'll see the feature with the tech stack used in the next section.
+- [NextJS:](https://www.nextjs.org/) a React framework for building web applications, used to create the front-end of the aireio app. I chose NextJS for its speed and ease of use, as well as its support for server-side rendering and static site generation in order to make my site discoverable via SEO.
+- [TypeScript:](https://www.typescriptlang.org/) a statically typed superset of JavaScript, used to add type checking and improve code quality in the aireio app. I chose TypeScript for its ability to catch errors early and improve the overall maintainability of my code.
+- [Supabase:](https://supabase.com/) an open-source Firebase alternative, used to store and manage the data for the aireio app. I chose Supabase for its ease of use and flexibility, as well as its support for real-time data synchronization and user authentication.
+- [Cloudflare Pages:](https://www.cloudflare.com/) a cloud-based platform for deploying and hosting web applications, used to deploy the aireio app. I chose Cloudflare Pages for its speed and reliability, as well as its support for custom domains and SSL certificates.
+- [Google Places API:](https://developers.google.com/maps) a service that provides rich location data for places around the world, used to compile the initial list of cities for the aireio app. I chose the Google Places API for its comprehensive coverage and detailed place data.
+- [Open Street Map API:](https://www.openstreetmap.org/) an open-source map data service. With more niche place information, used to add rich place data to the existing workspaces.
 
 > ## Features
 
-<CustomImg
-  mdx
-  publicId='/projects/aireio/list-of-features_ktxnxi'
-  alt='list-of-features'
-  width={1882}
-  height={1041}
-/>
+Below are some of the key features of the aireio project:
 
-### QR Code Scanning
+### New City Search
+
+<Image
+  src='/images/projects/aireio/aireio-city-search.jpg'
+  alt='new-city-search'
+  width={1280}
+  height={720}
+/>
 
 One of the key features of aireio is the use of QR codes, which players can scan using the aireio app on their phone to unlock various features and look for clues. Scanning the QR code allows players to travel around the Olympus map and access other interactive elements within the game.
 
-### Image Recognition
+### Existing City or Country Selection
+
+<Image
+  src='/images/projects/aireio/aireio-cities-countries.jpg'
+  alt='existing-city-selection'
+  width={1280}
+  height={720}
+/>
 
 The aireio game uses image recognition technology to allow players to select locations within the Olympus map and move to different places. By scanning certain areas of the map, players can trigger events or access new locations within the game.
 
-### Augmented Reality with ARKit
+### Map Location and Radius Selection
+
+<Image
+  src='/images/projects/aireio/aireio-map-filters.jpg'
+  alt='map-location-selection'
+  width={1280}
+  height={720}
+/>
 
 aireio uses ARKit to display a low-poly 3D design of the underworld, providing a creepy atmosphere for players to explore in search of clues. The game's use of ARKit allows players to feel like they are truly part of the game world as they explore the underworld and uncover hidden clues.
 
-### 360 World with RealityKit
+### User Reported Workspace Details
+
+<Image
+  src='/images/projects/aireio/aireio-workspace-page.jpg'
+  alt='workspace-details'
+  width={1280}
+  height={720}
+/>
 
 aireio includes 360 World using RealityKit, which allows players to fully explore virtual locations such as Aphrodite's temple and search for clues. The game's use of RealityKit provides an immersive gaming experience, making players feel like they are truly part of the game world.
 
