@@ -1,48 +1,22 @@
 ---
 title: 'Rise & Shine'
-description: 'Wake up with the sunrise. Rise & Shine is an iOS alarm clock app built with SwiftUI.'
+description: 'Wake up with the sunrise. Rise & Shine is an iOS sunrise alarm clock app built with SwiftUI.'
 category: 'SwiftUI'
 publishedAt: '2021-12-04'
 techs: 'swift,ios'
 banner: '/images/projects/rise-n-shine/rise-n-shine-banner.jpg'
 github: 'https://github.com/lorencouse/rise-and-shine'
-youtube: '#demo-video'
+youtube: 'https://www.youtube.com/watch?v=Ic_ZXkGm4a4'
 ---
 
 > ## Short Explanation
 
-There are **5.25 trillion pieces of plastic waste** estimated to be in our oceans. 269,000 tons float, 4 billion microfibers per km² dwell below the surface. This alarming number of pieces of plastic damages the marine life in our ocean.
+Rise & Shine is an iOS app built with SwiftUI that wakes you up with the sunrise. The app uses your location to determine the time of sunrise and allows you to decide how long before or after sunrise to wake up each day. Users then set a target number of hours of sleep each night. Rise & Shine then calculates the optimal time to sleep and wake you up each morning, ensuring you wake up feeling refreshed and energized and get the most sunlight out of your day.
 
-This platform will help the #TeamSeas initiative started by Mr. Beast and Mark Rober, to be the most-impactful cleanup project of all time. #TeamSeas will work with Ocean Conservancy and its partners to remove millions of pounds of plastic and trash from beaches all around the world. They’ll also send professional crews to clean up some of the most iconic, vulnerable ocean spaces.
+> ## Tech Stack Used
 
-With this already awesome initiative, we create the #SeasForUs platform that will **speed up** the process of finding clean-up events in your local area. We want it to be as easy as possible for people to contribute and help #TeamSeas clean up coastal areas.
-
-You can start by looking at cleanup events in your local area, and join them. You will directly help at your local beaches to clean up all the trash that we can pick during the time of the event. Then, you can post your activity to the post-board so you can share your moments of contribution to the community.
-
-To help you spark up the motivation to come and clean up the events, we also provide a Leaderboard that will rank how many events you've been attending.
-
-> ## Project Goals
-
-This project aims to create a space so people all over the world can join clean-up events based on their nearest beach. This website has several functionalities which are:
-
-- Authentication using Auth0
-- Browse events and provide a filter to help them find one
-- Join the event
-- Post an activity after they did the clean-up
-- Leaderboard to spark up motivation
-
-<blockquote className='with-icons'>
-  ## Tech Stack Used
-  <div className='not-prose mt-2'>
-    <TechIcons techs={['nextjs', 'tailwindcss', 'swr']} />
-  </div>
-</blockquote>
-
-SeasForUs is a web app using Next.js and Laravel as the back-end framework. The frontend was created using Next.js and TypeScript to provide a good developer experience as well as other advantages like static site generation and image optimization. Data from users is sent to the server and stored in a MySQL database.
-
-As a challenge from MLH, we are also using Auth0 for the authentication and use google OAuth for the provider. Auth0 provides us with the name and profile picture which we show on the website and looks really neat.
-
-We also use Zustand & SWR for the store and fetching strategies so we can utilize the stale-while-revalidate which uses cache to make the whole experience feel snappy.
+- [SwiftUI:](https://developer.apple.com/xcode/swiftui/) a modern way to build user interfaces across all Apple platforms, used to create the front-end of the Rise & Shine app. I chose SwiftUI for its ease of use and flexibility, as well as its support for declarative syntax and live previews to help me quickly build and test my UI.
+- [SunriseSunset API:](https://sunrisesunset.io/api/) a free API that provides sunrise and sunset times for any location in the world, used to determine the time of sunrise for the Rise & Shine app. I chose the SunriseSunset API for its comprehensive coverage and accurate sunrise data.
 
 > ## App Demo & Screenshots
 
@@ -150,9 +124,9 @@ We won a $150 cash prize and some swags 🤑. This is actually my first time win
 Here is our submitted video, you can see all of the features here.
 
 <LiteYouTubeEmbed
-  id='YeefWeSYLUQ'
+  id='Ic_ZXkGm4a4'
   poster='maxresdefault'
-  title='Demo Video'
+  title='Rise and Shine Demo Video'
   noCookie={true}
 />
 

@@ -11,7 +11,7 @@ youtube: 'https://youtu.be/hs_xGwHUDAE'
 
 > ## Short Explanation
 
-Aireio is react web app for finding remote work spaces in cities around the globe. Cities are initially compiled using the [Google Places API](https://developers.google.com/maps), with rich place data added via the [Open Street Map API](https://www.openstreetmap.org/). Users are then able to self report details on each workspace, including amenities such as power outlets, wifi, seating, and workspace comfort. This data is then compiled into a 'Deskability' score to help users choose a work space that is right for them.
+Aireio is NextJS web app for finding remote work spaces in cities around the globe. Cities are initially compiled using the [Google Places API](https://developers.google.com/maps), with rich place data added via the [Open Street Map API](https://www.openstreetmap.org/). Users are then able to self report details on each workspace, including amenities such as power outlets, wifi, seating, and workspace comfort. This data is then compiled into a 'Deskability' score to help users choose a work space that is right for them.
 
 > ### Video Demo
 
@@ -103,3 +103,23 @@ On the workspace details page, users can view information about a specific remot
 />
 
 Users are awarded contribution points for reporting workspace details, which are displayed on their profile page. Users can view their contribution history and see how many points they have earned for each report. This feature encourages users to contribute to the app by reporting accurate and up-to-date information about remote work spaces.
+
+> ## Future Features
+
+Some of the features I plan to add to the aireio project in the future include:
+
+- Location pins on the map for each workspace. This will allow users to easily see the location of each workspace on the map, distance, and direction from their current location.
+- User submitted photos and reviews for workspaces. This includes things like photos of the workspace, current prices, and menus.
+- User comments and discussions on workspaces. This will allow users to ask questions and share information about specific workspaces.
+- Shareable workspace lists. Users will be able to create and share lists of their favorite workspaces with friends and colleagues.
+- Freemium model for users to pay for premium features such as advanced search filters, wifi passwords, and special location discounts.
+- Add more social Oath providers for user authentication, such as Facebook, X, and GitHub.
+- Realtime check-in status and meet ups. Users can see how many people are currently working at a workspace and plan to meet up with other users.
+
+> ## Bugs and Optimizations
+
+Some of the bugs and optimizations I plan to address in the aireio project include:
+
+- Speed of loading of location images on initial fetch. Currently, the app fetches images from the Google Places API, and caches them individually, before displaying them, which can slow down the loading time of the app. I plan to optimize this process by adding placeholder images directly from the API on initial fetch.
+- Server timeout when fetching large number of new locations. Currently, the app fetches new locations from the Google Places API in batches of 20, which can cause a server timeout if the number of locations is too large. I plan to optimize this process by increasing the batch size and adding pagination to the fetch request.
+- Points number not updating in real-time in navbar. Currently, the app updates the user's points number only when the user logs in or refreshes the page. I plan to optimize this process by adding real-time updates to the points number when the user reports a new workspace detail.
