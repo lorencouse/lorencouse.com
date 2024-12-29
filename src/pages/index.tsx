@@ -77,8 +77,8 @@ export default function IndexPage({
                   className='mt-3 max-w-xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-4 md:text-lg 2xl:text-xl'
                   data-fade='4'
                 >
-                  First time here? Don't forget to sign my{' '}
-                  <CustomLink href='/guestbook'>guestbook</CustomLink>!
+                  First time here? Don't forget to check out my{' '}
+                  <CustomLink href='/resume'>experience</CustomLink>!
                 </p>
                 <div
                   data-fade='5'
@@ -220,7 +220,7 @@ export default function IndexPage({
                       withUnderline
                       tipChildren={
                         <>
-                          Personal e-commerce bussines with over $650,000 in
+                          Personal e-commerce bussines with over $850,000 in
                           sales
                         </>
                       }
@@ -234,7 +234,7 @@ export default function IndexPage({
                     <strong className='text-gray-700 dark:text-gray-200'>
                       solving problems
                     </strong>{' '}
-                    for my customers and building products that
+                    for my customers and building products that{' '}
                     <strong className='text-gray-700 dark:text-gray-200'>
                       fundamentally
                     </strong>{' '}
@@ -303,7 +303,7 @@ export async function getStaticProps() {
     'canker-core',
     'foldy-friends',
     'maleq',
-    'rise-n-shine',
+    'rise-and-shine',
     'track-duplicate-deleter',
   ]);
 

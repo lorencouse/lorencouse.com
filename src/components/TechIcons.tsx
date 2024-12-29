@@ -21,6 +21,7 @@ import {
   SiTailwindcss,
   SiTypescript,
   SiVercel,
+  SiWoocommerce,
   SiWordpress,
 } from 'react-icons/si';
 
@@ -142,5 +143,9 @@ const techList = {
   python: {
     icon: SiPython,
     name: 'Python',
+  },
+  woocommerce: {
+    icon: SiWoocommerce,
+    name: 'WooCommerce',
   },
 };
