@@ -2,9 +2,9 @@
 title: 'Rise & Shine'
 description: 'Wake up with the sunrise. Rise & Shine is an iOS sunrise alarm clock app built with SwiftUI.'
 category: 'SwiftUI'
-publishedAt: '2021-12-04'
+publishedAt: '2024-02-04'
 techs: 'swift,ios'
-banner: '/images/projects/rise-n-shine/rise-n-shine-banner.jpg'
+banner: '/images/projects/rise-n-shine/rise-and-shine-banner-800.jpg'
 github: 'https://github.com/lorencouse/rise-and-shine'
 youtube: 'https://www.youtube.com/watch?v=Ic_ZXkGm4a4'
 ---
@@ -13,115 +13,34 @@ youtube: 'https://www.youtube.com/watch?v=Ic_ZXkGm4a4'
 
 Rise & Shine is an iOS app built with SwiftUI that wakes you up with the sunrise. The app uses your location to determine the time of sunrise and allows you to decide how long before or after sunrise to wake up each day. Users then set a target number of hours of sleep each night. Rise & Shine then calculates the optimal time to sleep and wake you up each morning, ensuring you wake up feeling refreshed and energized and get the most sunlight out of your day.
 
+> ### Motivations
+
+I created Rise & Shine to solve a problem I had in my own life. I wanted to maximize the amount of natural light I got each day to improve my sleep quality and circadian rhythm. I found that waking up with the sunrise helped me feel more alert and energized throughout the day, and I wanted to share that experience with others. I also wanted to learn SwiftUI and build an app that combined my interests in health and wellness with my interest in learning native iOS development.
+
 > ## Tech Stack Used
 
 - [SwiftUI:](https://developer.apple.com/xcode/swiftui/) a modern way to build user interfaces across all Apple platforms, used to create the front-end of the Rise & Shine app. I chose SwiftUI for its ease of use and flexibility, as well as its support for declarative syntax and live previews to help me quickly build and test my UI.
 - [SunriseSunset API:](https://sunrisesunset.io/api/) a free API that provides sunrise and sunset times for any location in the world, used to determine the time of sunrise for the Rise & Shine app. I chose the SunriseSunset API for its comprehensive coverage and accurate sunrise data.
 
-> ## App Demo & Screenshots
+> ## Features
 
-Pro tip: click the image to make it full screen
+<Image
+  src='/images/projects/rise-n-shine/rise-and-shine-banner.jpg'
+  alt='rise-and-shine-screenshots'
+  width={1280}
+  height={720}
+/>
 
-<SplitImage>
-  <Split>
-    <CustomImg
-      mdx
-      className='!mb-0'
-      publicId='/images/projects/rise-n-shine/landing-page_snz4rm'
-      alt='landing-page'
-      width={800}
-      height={426}
-    />
-    <CustomImg
-      mdx
-      publicId='/images/projects/rise-n-shine/login_cpx0l0'
-      alt='login'
-      width={800}
-      height={424}
-    />
-    <CustomImg
-      mdx
-      publicId='/images/projects/rise-n-shine/join_vljir9'
-      alt='join'
-      width={800}
-      height={424}
-    />
-    <CustomImg
-      mdx
-      publicId='/images/projects/rise-n-shine/myevents_rqfytp'
-      alt='myevents'
-      width={1439}
-      height={767}
-    />
-  </Split>
-  <Split>
-    <CustomImg
-      mdx
-      className='!mb-0'
-      publicId='/images/projects/rise-n-shine/events-page_eoumfe'
-      alt='events-page'
-      width={800}
-      height={397}
-    />
-    <CustomImg
-      mdx
-      publicId='/images/projects/rise-n-shine/filter_hkzi0u'
-      alt='filter'
-      width={800}
-      height={427}
-    />
-    <CustomImg
-      mdx
-      publicId='/images/projects/rise-n-shine/post-activity_r3o9qz'
-      alt='post-activity'
-      width={800}
-      height={425}
-    />
-    <CustomImg
-      mdx
-      publicId='/images/projects/rise-n-shine/leaderboard_wnedjz'
-      alt='leaderboard'
-      width={1441}
-      height={765}
-    />
-  </Split>
-</SplitImage>
-
-> ## Spotlight
-
-### We Won!
-
-<SplitImage>
-  <Split>
-    <CustomImg
-      mdx
-      publicId='/images/projects/rise-n-shine/winner-runnerup_d6n2c1'
-      alt='winner-runnerup'
-      width={1920}
-      height={1080}
-    />
-  </Split>
-  <Split>
-    <CustomImg
-      mdx
-      publicId='/images/projects/rise-n-shine/winner-auth0_xx8wm9'
-      alt='winner-auth0'
-      width={1920}
-      height={1080}
-    />
-  </Split>
-</SplitImage>
-
-We actually won 2 categories which are
-
-- **Sustainability: Runner Up**
-- **Best Use of Auth0**
-
-We won a $150 cash prize and some swags 🤑. This is actually my first time winning a hackathon ([last hackathon](https:///images.com/projects/love4heroes) I only won the Deloitte Challenge), and I'm really happy about it. In the uni, I'm not the type of person that likes to compete in several competitions. Hackathon is an exception, it is super fun to create an application at such a fast pace while still considering the quality
+- **Geolocation**: Automatically determine your location to calculate the time of sunrise each day.
+- **Sunrise Offset**: Choose how long before or after sunrise to wake up each day.
+- **Sleep Calculator**: Set a target number of hours of sleep each night to calculate the optimal time to sleep and wake up.
+- **Wind Down Reminders**: Receive notifications to start winding down before bedtime to improve sleep quality.
+- **Sunset Calander**: View a calendar of sunrise and sunset times for your location to plan your day around natural light.
+- **Custom Alarm Sounds:** Allow users to choose from a variety of alarm sounds to wake up to.
 
 ### Demo Video
 
-Here is our submitted video, you can see all of the features here.
+Here is a short video demo of the Rise & Shine app and its features:
 
 <LiteYouTubeEmbed
   id='Ic_ZXkGm4a4'
@@ -130,21 +49,15 @@ Here is our submitted video, you can see all of the features here.
   noCookie={true}
 />
 
-> ## The Problems and How I Deal With It
+> ### Future Features
 
-Definitely, time is a problem, but Rizqi (front-end) and I, sprinted all of the UI and layout in just about 12 hours, we constantly work in a Zoom call so the process is fairly quick. I also use my [Starter Repo](https://github.com//images/ts-nextjs-tailwind-starter) which helps a lot to get it started.
+- **Sleep Tracking:** Integrate with HealthKit to track sleep patterns and provide insights on how to improve sleep quality.
+- **Sleep History:** Allow users to view their sleep history and track improvements in sleep quality over time.
+- **Sleep Sounds:** Add a library of soothing sounds to help users fall asleep faster and stay asleep longer.
+- **Apple Watch Support:** Create a companion app for Apple Watch to provide sleep tracking and alarm functionality on the go.
+- **Automatic Alarm Permissions:** Currently the user must manually allow the app to play sounds in the background. This could be automated with a system prompt.
+- **UI Improvements:** Add more customization options for the user interface, including themes and color schemes.
 
-We also have some quirks about authentication with Auth0, because it is normally used with Node.js environment, and our backend team is using Laravel, so they need some time to implement the features.
+> ## What I Learned
 
-> ## Lessons Learned
-
-Definitely, time is a problem, but Rizqi (front-end) and I, sprinted all of the UI and layout in just about 12 hours, we constantly work in a Zoom call so the process is fairly quick. I also use my [Starter Repo](https://github.com//images/ts-nextjs-tailwind-starter) which helps a lot to get it started.
-
-We also have some quirks about authentication with Auth0, because it is normally used with Node.js environment, and our backend team is using Laravel, so they need some time to implement the features.
-
-> ## Attribution
-
-- [Theodorus Clarence](https://github.com//images): Front-end and Design
-- [Rizqi Tsani](https://github.com/rizqitsani): Front-end and Design
-- [Ishaq Adhel](https://github.com/ishaqadhel): Back-end and Infrastructure
-- [Muhammad Zhafran](https://github.com/franszhafran): Back-end and Infrastructure
+Building Rise & Shine was a great learning experience for me. I learned how to use SwiftUI to create a modern and intuitive user interface, as well as how to integrate with external APIs to provide real-time data to the user. I achieved my goal of building an app that combined my interests in health and wellness with my interest in learning native iOS development, resulting in an app that I use every day in my own life.

@@ -51,8 +51,8 @@ export default function AboutPage() {
                 </p>
                 <p data-fade='4'>
                   In 2021, I decided to take my web development skills to the
-                  next level and started learning front-end development. I
-                  finished my web development bootcamp at{' '}
+                  next level and started learning React full-stack development.
+                  I finished my web development bootcamp at{' '}
                   <CustomLink href='https://www.appbrewery.com/p/the-complete-web-development-course'>
                     The App Brewery
                   </CustomLink>{' '}

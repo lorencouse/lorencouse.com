@@ -2,147 +2,44 @@
 title: 'Foldy Friends'
 description: 'Origami e-commerce store selling folding kits, paper, and origami supplies.  Find fun and new creative projects for all ages.'
 category: 'NextJS'
-publishedAt: '2021-02-24'
+publishedAt: '2024-06-24'
 techs: 'nextjs,typescript,tailwindcss,firebase,vercel'
 banner: '/images/projects/foldy-friends/foldy-friends-banner.jpg'
 github: 'https://github.com/lorencouse/foldyfreinds'
-youtube: 'https://youtu.be/5WN3ZmU_dZ8'
+youtube: 'https://www.youtube.com/watch?v=sMXhTGMOS0c'
 link: 'https://www.foldyfriends.com'
 ---
 
 > ## Short Explanation
 
-This app was created as a team for uOttaHack, Canada in 36 hours. When
-thinking about how we could make a difference within local communities
-impacted by Covid-19, what came to mind are our frontline workers. Our
-doctors, nurses, grocery store workers, and Covid-19 testing
-volunteers, who have tirelessly been putting themselves and their
-families on the line. They are the backbone and heartbeat of our
-society during these past 10 months and counting. We want them to feel
-the appreciation and gratitude they deserve. With this app, we hope to
-bring moments of positivity and joy to those difficult and trying
-moments of our frontline workers.
+After a visit to China, I noticed a new trend of origami and paper folding kits. There were multiple stores selling ornate finished pieces, and DIY kits that were very popular with tourists. I identified a gap in the market for an online store that sold similar products in the US. I created Foldy Friends to fill that gap, and provide a fun and creative outlet for people of all ages. This also allowed me the perfect opportunity to build a full stack e-commerce site using NextJS, Firebase, and Vercel.
 
 > ## Project Goals
 
-This project was made so the user is able to create a card and can
-save the card as a link, then the user can send the link to their
-loved frontline workers. The frontline workers can also see all of the
-cards on the "Warm Messages" Board.
+## Tech Stack Used
 
-<blockquote className='with-icons'>
-  ## Tech Stack Used
-  <div className='not-prose mt-2'>
-    <TechIcons techs={['react', 'tailwindcss', 'firebase', 'swr']} />
-  </div>
-</blockquote>
-
-This project was built using Next.js, Tailwindcss, SWR, and Firebase.
-Personally, I think using these stacks is a great choice due to the
-lack of time and for simplicity. We only use the firebase for the
-firestore because it is simple to configure. Next.js is also a great
-choice because we can mix and match the rendering type that we are
-using. For the dynamic content such as rendering the card's data from
-firestore, we use client-side rendering and utilizing SWR to cache the
-data.
-
-<SplitImage>
-  <Split>
-    <CustomImg
-      mdx
-      className='!mb-0'
-      publicId='/images/foldy-friends/ss1_jbyadr'
-      alt='ss1'
-      width={800}
-      height={1556}
+    <TechIcons
+      techs={['react', 'tailwindcss', 'firebase', 'nextjs', 'typescript']}
     />
-  </Split>
-  <Split>
-    <CustomImg
-      mdx
-      className='!mb-0'
-      publicId='/images/foldy-friends/ss2_qvyt5u'
-      alt='ss2'
-      width={800}
-      height={426}
-    />
-    <CustomImg
-      mdx
-      publicId='/images/foldy-friends/ss3_rr4edc'
-      alt='ss3'
-      width={800}
-      height={426}
-    />
-    <CustomImg
-      mdx
-      publicId='/images/foldy-friends/ss4_gvawji'
-      alt='ss4'
-      width={800}
-      height={426}
-    />
-  </Split>
-</SplitImage>
 
-> ## Spotlight
+- [NextJS:](https://www.nextjs.org/) I chose NextJS for its speed and ease of use, as well as its support for server-side rendering and static site generation in order to make my site discoverable via SEO.
+- [TypeScript:](https://www.typescriptlang.org/) I chose TypeScript for its type checking and ability to catch errors early, and to improve the overall maintainability of my code.
+- [Firebase:](https://firebase.google.com/) I chose Firebase for its ease of use and flexibility, as well as its support for real-time data synchronization and user authentication.
+- [Vercel:](https://www.vercel.com/) Vercel was a great fit thanks to its speed and reliability, and simple deployment process. As my site is relatively small, with low traffic, Vercel was an easy, cost effective solution.
+- [DaisyUI:](https://daisyui.com/) DaisyUI is a component library for Tailwind CSS that I used to quickly build and style components for the Foldy Friends website. I chose DaisyUI for its ease of use and flexibility, as well as its support for a wide range of components and utilities.
+- [Stripe API:](https://stripe.com) Stripe was an easy fit for my project as a payment processing platform that allows me to accept payments. I chose Stripe for its ease of use and flexibility, as well as its support for secure payment processing and fraud prevention.
 
-### First Hackathon With 12 Hour Time-Zone Difference & Tight Time
+> ## Features
 
-In this project, I collaborated with 3 other teams that live in
-America. It's quite a challenge for me to fit in into their timezone
-so we can still work together. Also, there are only 36 hours to finish
-a functioning full-stack application.
+Below are some of the key features of the Foldy Friends project:
 
-<CustomImg
-  mdx
-  publicId='/images/foldy-friends/team_frd6g5'
-  alt='team'
-  width={1000}
-  height={608}
+> ## Demo Video
+
+Here is a short video demo of the Foldy Friends website and its features:
+
+<LiteYouTubeEmbed
+  id='sMXhTGMOS0c'
+  poster='maxresdefault'
+  title='Foldy Friends Demo'
+  noCookie={true}
 />
-
-### Consideration for UX
-
-We incorporated a library to simulate flipping cards, but sometimes
-the user didn't open it while editing. So we decided to make a UX
-improvement by opening it when user starts filling out the form.
-
-<CustomImg
-  mdx
-  publicId='/images/foldy-friends/foldy-friendsux_d9cica'
-  alt='foldy-friendsux'
-  width={640}
-  height={329}
-/>
-
-> ## The Problems and How I Deal With It
-
-During this project the largest problem is time management because we
-need to map out everything we need on the website, then develop it in
-just a short time. So during the creation of the application, we
-divide the project into little parts so it is still manageable.
-
-There is also a tricky part when I was building a like button. I need
-to get the latest data on the likes from the database, then increment
-it. Also, I need to make a condition where each person can only like
-once. In the end, it was successful by utilizing local storage to
-store the state.
-
-<CustomImg
-  mdx
-  publicId='/images/foldy-friends/likebutton_ikdrje'
-  alt='likebutton'
-  width={210}
-  height={149}
-/>
-
-> ## Lessons Learned
-
-After this project, I felt more comfortable working with firebase.
-Before, it seems jarring to set up firebase and firestore connection.
-But turns out it was not that hard, also Next.js has a built-in API
-route so I can implement SWR caching without the use of another
-library.
-
-Because the rest of my team is American, I actually get to practice my
-English in this project. It was definitely harder explaining a code
-with another language 😁.

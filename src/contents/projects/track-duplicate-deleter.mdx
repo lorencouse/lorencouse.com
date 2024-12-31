@@ -11,194 +11,21 @@ link: 'https://dtd.thcl.dev'
 
 > ## Short Explanation
 
-Duplicate Track Deleter is a MacOS utility made with SwiftUI for cleaning up your digital audio library. Support for the most populate audio files, including MP3, AAC, & WAV.
+Track Duplicate Deleter is a MacOS utility made with SwiftUI for cleaning up your digital audio library. It supports for the most popular audio files, including MP3, AAC, & WAV.
 
-Some features including:
+> ## Motivations
 
-- ⚡ Unlimited branded links (use your own domain!)
-- ☝ Self-hostable with Vercel
-- 💨 Fast redirect using Next.js Middleware Functions
-- 🌑 Awesome CMS using Notion
-- ➕ See click count statistics
-- 💠 Zero config, all customizable via env
-- 💅 Numerous themes
+As someone who love to listen to music, I have a lot of audio files on my computer. I often find myself with duplicate audio tracks that take up unnecessary space. The problem is that these tracks often have slight name differences, or varying audio bit-rates. I wanted to create a tool that could help me identify and delete these duplicate tracks and help me organize my audio library.
 
-> ## Project Goals
+I did this project originally for my personal use. My goal is to create a comprehensive tool that others can also use to help manage their audio library.
 
-I did this project originally for my personal use. Shortening links is easier for me to remember than having to search through numerous bookmarks. I can just pick a short slug—which usually is not an option when you are using a free service—and remember it.
+> ## Tech Stack Used
 
-<blockquote className='with-icons'>
-  ## Tech Stack Used
-  <div className='not-prose mt-2'>
-    <TechIcons techs={['nextjs', 'tailwindcss', 'notion']} />
-  </div>
-</blockquote>
+<TechIcons techs={['swift', 'macos']} />
 
-dtd is a full-stack application built using Next.js and Notion API. I chose notion because of the easy-to-use UI. All links are served as a table inside the notion and can be edited whenever you want.
+- **SwiftUI:** a modern way to build user interfaces across all Apple platforms, used to create the front-end of the Track Duplicate Deleter app. I chose SwiftUI for its ease of use and flexibility, as well as its support for declarative syntax and live previews to help me quickly build and test my UI.
+- **CoreAudio:** a framework for working with digital audio data in macOS, used to read and analyze audio files in the Track Duplicate Deleter app. I chose CoreAudio for its comprehensive support for audio file formats and its ability to extract metadata and audio properties from audio files.
 
 > ## Features
 
-### Notion CMS
-
-All links are customizable via notion
-
-<CustomImg
-  mdx
-  publicId='/images/projects/dtd/notion-table_br6ebb'
-  alt='notion-table'
-  width={1339}
-  height={875}
-/>
-
-### Link Tree Page
-
-You can easily configure it on the notion database
-
-<CustomImg
-  mdx
-  publicId='/images/projects/dtd/linktree_kbtwts'
-  alt='linktree'
-  width={605}
-  height={706}
-/>
-
-### Add New Link
-
-Route: `/new`
-
-You can add link straight from the website for easy access, don't worry **this is protected with login page** so no one will mess with your links
-
-<CustomImg
-  mdx
-  publicId='/images/projects/dtd/shorten-new-link_tkinse'
-  alt='shorten-new-link'
-  width={632}
-  height={567}
-/>
-
-### Link Details & Count
-
-You can see the statistics with `/:slug/detail` route
-
-<CustomImg
-  mdx
-  publicId='/images/projects/dtd/link-details-and-count_ae7x2e'
-  alt='link-details-and-count'
-  width={682}
-  height={672}
-/>
-
-### Categorized Tree
-
-Every category will be made into a standalone tree on `/c/:category` route
-
-<CustomImg
-  mdx
-  publicId='/images/projects/dtd/categorized-tree_aeottm'
-  alt='categorized-tree'
-  width={567}
-  height={563}
-/>
-
-### Themes
-
-Themes you can choose
-
-<small>Pro tip: click the image to make it full screen</small>
-
-<SplitImage>
-  <Split>
-    <div className='not-prose space-y-2'>
-      <CustomImg
-        mdx
-        publicId='/images/projects/dtd/theme-dark_sspfwt'
-        alt='theme-dark'
-        width={648}
-        height={622}
-      />
-      <p className='text-center text-sm font-medium'>Dark</p>
-    </div>
-    <div className='not-prose space-y-2'>
-      <CustomImg
-        mdx
-        publicId='/images/projects/dtd/theme-street_nx7i4f'
-        alt='theme-street'
-        width={648}
-        height={622}
-      />
-      <p className='text-center text-sm font-medium'>Street</p>
-    </div>
-    <div className='not-prose space-y-2'>
-      <CustomImg
-        mdx
-        publicId='/images/projects/dtd/theme-milky_z60zsu'
-        alt='theme-milky'
-        width={648}
-        height={622}
-      />
-      <p className='text-center text-sm font-medium'>Milky</p>
-    </div>
-  </Split>
-  <Split>
-    <div className='not-prose space-y-2'>
-      <CustomImg
-        mdx
-        publicId='/images/projects/dtd/theme-light_pmkjnq'
-        alt='theme-light'
-        width={648}
-        height={622}
-      />
-      <p className='text-center text-sm font-medium'>Light</p>
-    </div>
-    <div className='not-prose space-y-2'>
-      <CustomImg
-        mdx
-        publicId='/images/projects/dtd/theme-monokai_ndz8rx'
-        alt='theme-monokai'
-        width={648}
-        height={622}
-      />
-      <p className='text-center text-sm font-medium'>Monokai</p>
-    </div>
-  </Split>
-</SplitImage>
-
-> ## Spotlight
-
-### Creating An Easy To Deploy App
-
-I aim for this project to be easy to fork and deploy. Therefore, every configuration is done via environment variables.
-
-### Installation Guide
-
-I made an [installation guide](https://www.notion.so/dtd-Installation-Guide-3d038711cd5141109f56137d0195aad0) that is easy for people to follow. Even non-developers can do it too!
-
-<CustomImg
-  mdx
-  publicId='/images/projects/dtd/dtd-installation-guide_hcgett'
-  alt='dtd-installation-guide'
-  width={785}
-  height={645}
-/>
-
-### Launching on ProductHunt
-
-I launched the app on [ProductHunt](https://www.producthunt.com/products/dtd), and the review is quite positive!
-
-<CustomImg
-  mdx
-  publicId='/images/projects/dtd/producthunt_boyaq5'
-  alt='producthunt'
-  width={449}
-  height={344}
-/>
-
-> ## The Problems and How I Deal With It
-
-Optimizing the repository so it is fairly customizable is hard. I created some features which users can customize and have to account for whether the feature will be hard to implement or set up. However, it was a thought-provoking activity that I enjoyed.
-
-> ## Try it out!
-
-Deploy one of your own!
-
-<GithubCard repo='/images/dtd' />
+Below are some of the key features of the Track Duplicate Deleter project:

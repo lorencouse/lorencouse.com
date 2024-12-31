@@ -108,7 +108,7 @@ const workHistory: ExperienceProps[] = [
     city: 'Remote',
     role: 'Founder & CEO',
     description:
-      'Drove revenue growth: Built and managed an e-commerce business generating over $850K in sales.\nManaged global team: Led a diverse team of writers and employees across 5 countries, expanding user base to Chinese and Spanish speaking markets.\nOptimized content strategy: Directed SEO-focused content creation, increasing website traffic and organic sales.',
+      'Drove revenue growth: Built and managed an e-commerce business generating over $1.1 million in sales.\nManaged global team: Led a diverse team of writers and employees across 5 countries, expanding user base to Chinese and Spanish speaking markets.\nOptimized content strategy: Directed SEO-focused content creation, increasing website traffic and organic sales.',
     img: '/images/resume/mq-logo-2.png',
   },
   {

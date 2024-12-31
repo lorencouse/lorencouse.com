@@ -25,11 +25,11 @@ const ExperienceBlock = ({
       {img && alt && (
         <div className='timeline-image ml-16 -my-2'>
           <Image
-            height={36}
+            height={20}
             width={300}
             src={img}
             alt={alt}
-            className='rounded-sm max-h-36 w-auto'
+            className='rounded-sm max-h-24 w-auto'
           />
         </div>
       )}
