@@ -3,7 +3,7 @@ title: 'Aireio'
 description: 'A crowd-sourced database of remote work spaces in cities around the globe.  Discover new co-working centers, libraries, and cafes.'
 category: 'NextJS'
 publishedAt: '2024-10-21'
-techs: 'nextjs,typescript,tailwindcss,supabase,cloudflarepages'
+techs: 'nextjs,react,typescript,tailwindcss,supabase,cloudflarepages'
 banner: '/images/projects/aireio/aireio-banner.jpg'
 link: 'https://www.aireio.com'
 youtube: 'https://youtu.be/hs_xGwHUDAE'
@@ -15,39 +15,48 @@ Aireio is NextJS web app for finding remote work spaces in cities around the glo
 
 > ### Video Demo
 
-Here is a short video demo of the aireio and its features:
+Here is a short video demo of the Aireio and its features:
 
 <LiteYouTubeEmbed
   id='hs_xGwHUDAE'
   poster='maxresdefault'
-  title='aireio Demo'
+  title='Aireio Demo'
   noCookie={true}
 />
 
 > ## Project Goals
 
-As someone who is constantly traveling for work, I often find myself in need of a quiet place to work. Whether I'm in a new city or just looking for a change of scenery, I want to be able to easily find a remote work space that meets my needs. That's why I created aireio. My goal was to allow users new discover new co-working centers, libraries, and cafes, and find the perfect place to work wherever they are.
+As someone who is constantly traveling for work, I often find myself in need of a quiet place to work. Whether I'm in a new city or just looking for a change of scenery, I want to be able to easily find a remote work space that meets my needs. That's why I created Aireio. My goal was to allow users new discover new co-working centers, libraries, and cafes, and find the perfect place to work wherever they are.
 
 > ## Tech Stack Used
 
 <div className='not-prose mt-2'>
   <TechIcons
-    techs={['nextjs', 'react', 'typescript', 'supabase', 'cloudflarepages']}
+    techs={[
+      'nextjs',
+      'react',
+      'typescript',
+      'tailwindcss',
+      'supabase',
+      'cloudflarepages',
+    ]}
   />
 </div>
 
-The aireio project uses a range of technologies, including:
+The Aireio project uses a range of technologies, including:
 
-- [NextJS:](https://www.nextjs.org/) a React framework for building web applications, used to create the front-end of the aireio app. I chose NextJS for its speed and ease of use, as well as its support for server-side rendering and static site generation in order to make my site discoverable via SEO.
-- [TypeScript:](https://www.typescriptlang.org/) a statically typed superset of JavaScript, used to add type checking and improve code quality in the aireio app. I chose TypeScript for its ability to catch errors early and improve the overall maintainability of my code.
-- [Supabase:](https://supabase.com/) an open-source Firebase alternative, used to store and manage the data for the aireio app. I chose Supabase for its ease of use and flexibility, as well as its support for real-time data synchronization and user authentication.
-- [Cloudflare Pages:](https://www.cloudflare.com/) a cloud-based platform for deploying and hosting web applications, used to deploy the aireio app. I chose Cloudflare Pages for its speed and reliability, as well as its support for custom domains and SSL certificates.
-- [Google Places API:](https://developers.google.com/maps) a service that provides rich location data for places around the world, used to compile the initial list of cities for the aireio app. I chose the Google Places API for its comprehensive coverage and detailed place data.
+- [NextJS:](https://www.nextjs.org/) a React framework for building web applications, used to create the front-end of the Aireio app. I chose NextJS for its speed and ease of use, as well as its support for server-side rendering and static site generation in order to make my site discoverable via SEO.
+- [TypeScript:](https://www.typescriptlang.org/) a statically typed superset of JavaScript, used to add type checking and improve code quality in the Aireio app. I chose TypeScript for its ability to catch errors early and improve the overall maintainability of my code.
+- [Tailwind CSS:](https://tailwindcss.com/) a utility-first CSS framework, used to style the components and layout of the Aireio app. I chose Tailwind CSS for its ease of use and flexibility, as well as its support for responsive design and custom theming.
+- [ShadCN]:(https://shadcn.com) a react component library with a large number of components and utilities. I chose ShadCN for its ease of use and flexibility, as well as its support for Tailwind CSS and TypeScript.
+- [Supabase:](https://supabase.com/) an open-source Firebase alternative, used to store and manage the data for the Aireio app. I chose Supabase for its ease of use and flexibility, as well as its support for real-time data synchronization and user authentication.
+- [Cloudflare Pages:](https://www.cloudflare.com/) a cloud-based platform for deploying and hosting web applications, used to deploy the Aireio app. I chose Cloudflare Pages for its speed and reliability, as well as its support for custom domains and SSL certificates.
+- [Google Places API:](https://developers.google.com/maps) a service that provides rich location data for places around the world, used to compile the initial list of cities for the Aireio app. I chose the Google Places API for its comprehensive coverage and detailed place data.
 - [Open Street Map API:](https://www.openstreetmap.org/) an open-source map data service. With more niche place information, used to add rich place data to the existing workspaces.
 
 > ## Features
 
-Below are some of the key features of the aireio project:
+Below are some of the key features of the Aireio project:
 
 > ### New City Search
 
@@ -58,7 +67,7 @@ Below are some of the key features of the aireio project:
   height={720}
 />
 
-Using the Google Places API and autocomplete city suggestions, aireio allows users to search for new cities and discover remote work spaces in those areas. When a user searches a new city that does not exist in the database, the app will automatically fetch the city's data from the Google Places API and create workspaces for that city.
+Using the Google Places API and autocomplete city suggestions, Aireio allows users to search for new cities and discover remote work spaces in those areas. When a user searches a new city that does not exist in the database, the app will automatically fetch the city's data from the Google Places API and create workspaces for that city.
 
 > ### Existing City or Country Selection
 
@@ -106,7 +115,7 @@ Users are awarded contribution points for reporting workspace details, which are
 
 > ## Future Features
 
-Some of the features I plan to add to the aireio project in the future include:
+Some of the features I plan to add to the Aireio project in the future include:
 
 - Location pins on the map for each workspace. This will allow users to easily see the location of each workspace on the map, distance, and direction from their current location.
 - User submitted photos and reviews for workspaces. This includes things like photos of the workspace, current prices, and menus.
@@ -118,7 +127,7 @@ Some of the features I plan to add to the aireio project in the future include:
 
 > ## Bugs and Optimizations
 
-Some of the bugs and optimizations I plan to address in the aireio project include:
+Some of the bugs and optimizations I plan to address in Aireio include:
 
 - Speed of loading of location images on initial fetch. Currently, the app fetches images from the Google Places API, and caches them individually, before displaying them, which can slow down the loading time of the app. I plan to optimize this process by adding placeholder images directly from the API on initial fetch.
 - Server timeout when fetching large number of new locations. Currently, the app fetches new locations from the Google Places API in batches of 20, which can cause a server timeout if the number of locations is too large. I plan to optimize this process by increasing the batch size and adding pagination to the fetch request.

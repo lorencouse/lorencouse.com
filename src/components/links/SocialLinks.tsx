@@ -106,7 +106,7 @@ const socials: Social[] = [
     ),
   },
   {
-    href: 'https://www.youtube.com/@loodanlive/videos',
+    href: 'https://www.youtube.com/@lorencouse',
     icon: SiYoutube,
     id: 'Youtube',
     text: (
