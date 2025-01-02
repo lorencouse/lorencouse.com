@@ -18,6 +18,8 @@ import LC from '@/components/LC';
 import ButtonLink from '@/components/links/ButtonLink';
 import CustomLink from '@/components/links/CustomLink';
 import UnstyledLink from '@/components/links/UnstyledLink';
+import ContactBlock from '@/components/resume/ContactBlock';
+import ResumeBlock from '@/components/resume/ResumeBlock';
 import Seo from '@/components/Seo';
 import Tooltip from '@/components/Tooltip';
 
@@ -288,6 +290,20 @@ export default function IndexPage({
             </section>
           )}
         </InView>
+        <InView triggerOnce rootMargin='-20% 0px'>
+          {({ ref, inView }) => (
+            <section
+              ref={ref}
+              className={clsx('py-20', inView && 'fade-in-start')}
+            >
+              <ResumeBlock />
+            </section>
+          )}
+        </InView>
+
+        <section>
+          <ContactBlock />
+        </section>
       </main>
     </>
   );
