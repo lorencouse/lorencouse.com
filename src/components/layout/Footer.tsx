@@ -50,11 +50,6 @@ function FooterLinks() {
       tooltip: 'lorencouse.com color palette',
     },
     {
-      href: '/statistics',
-      text: 'Stats',
-      tooltip: 'Blog, Projects, and Library Statistics',
-    },
-    {
       href: '/subscribe',
       text: 'Subscribe',
       tooltip: 'Get an email whenever I post, no spam',

@@ -11,7 +11,6 @@ import useContentMeta from '@/hooks/useContentMeta';
 import useScrollSpy from '@/hooks/useScrollspy';
 
 import Comment from '@/components/content/Comment';
-import LikeButton from '@/components/content/LikeButton';
 import MDXComponents from '@/components/content/MDXComponents';
 import TableOfContents, {
   HeadingScrollSpy,
@@ -174,9 +173,6 @@ export default function SingleProjectPage({ code, frontmatter }: ProjectType) {
                     minLevel={minLevel}
                     activeSection={activeSection}
                   />
-                  <div className='flex items-center justify-center py-8'>
-                    <LikeButton slug={contentSlug} />
-                  </div>
                 </div>
               </aside>
             </section>
