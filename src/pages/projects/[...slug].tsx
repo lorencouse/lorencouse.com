@@ -183,9 +183,9 @@ export default function SingleProjectPage({ code, frontmatter }: ProjectType) {
 
             <div className='mt-8 flex flex-col items-start gap-4 md:flex-row-reverse md:justify-between'>
               <CustomLink
-                href={`https://github.com/theodorusclarence/theodorusclarence.com/blob/main/src/contents/projects/${frontmatter.slug}.mdx`}
+                href={`https://github.com/lorencouse/${frontmatter.slug}`}
               >
-                Edit this on GitHub
+                View this project on GitHub
               </CustomLink>
               <CustomLink href='/projects'>← Back to projects</CustomLink>
             </div>
