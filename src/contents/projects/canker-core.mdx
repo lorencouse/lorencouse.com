@@ -1,6 +1,6 @@
 ---
 title: 'Canker Core'
-description: 'A React web app for logging and tracking canker sores. Track, treat, and manage your oral health in one easy place.'
+description: 'A NextJS web app for logging and tracking canker sores. Track, treat, and manage your oral health in one easy place.'
 category: 'NextJS'
 publishedAt: '2024-09-01'
 techs: 'nextjs,react,typescript,tailwindcss,supabase,vercel'
@@ -11,106 +11,50 @@ github: 'https://github.com/lorencouse/canker-tracker'
 
 > ## Short Explanation
 
-Canker Core is a React based webapp for logging and tracking canker sores. Built with NextJS, Firebase, and Vercel.
+Canker Core is a NextJS based webapp designed for logging and tracking canker sores. Users create a personal account to track, treat, and manage their oral health in one easy place. The app features a simple and intuitive interface that allows users to log their canker sores, on a visual diagram of the mouth, and track the size, pain level, and location or sores over time.
 
 > ## Project Goals
 
-This project objective is to give information and guide the user to
-register for the competitions and the other pre-event through google
-forms. There are four kinds that are developed in the website which
-are Landing Page to give the user general knowledge about the event.
-Then, there are 7 competitions that were made into different routes
-each one. Lastly is the pre-event such as the talk show.
-
 > ## Tech Stack Used
+
 <div className='not-prose mt-2'>
-    <TechIcons
-      techs={[
-        'nextjs',
-        'react',
-        'typescript',
-        'tailwindcss',
-        'supabase',
-        'vercel',
-      ]}
-    />
+  <TechIcons
+    techs={[
+      'nextjs',
+      'react',
+      'typescript',
+      'tailwindcss',
+      'supabase',
+      'vercel',
+    ]}
+  />
 </div>
 
-This project was made using Next.js and Tailwindcss. Although this is
-fairly only a static website that didn't really need much complexity,
-using Next.js really simplifies the routing of the website and help me
-make reusable components. I usually use tailwindcss when using the
-Next.js framework to increase productivity.
+- **NextJS:** I chose NextJS for its speed and ease of use, as well as its support for server-side rendering and static site generation in order to make my site discoverable via SEO.
+- **TypeScript:** I chose TypeScript for its type checking and ability to catch errors early, and to improve the overall maintainability of my code.
+- **TailwindCSS:** I chose TailwindCSS for its utility-first approach to styling, as well as its support for responsive design and custom theming.
+- **Supabase:** I chose Supabase for its ease of use and flexibility, as well as its support for real-time data synchronization and user authentication.
+- **Vercel:** Vercel was a great fit thanks to its speed and reliability, and simple deployment process. As my site is relatively small, with low traffic, Vercel was an easy, cost effective solution.
 
-<SplitImage>
-  <Split>
-    <CustomImg
-      mdx
-      className='!mb-0'
-      publicId='/images/projects/canker-core/ss1_pvyttb.png'
-      width={800}
-      height={2366}
-      alt='Web Screenshot'
-    />
-  </Split>
-  <Split>
-    <CustomImg
-      mdx
-      className='!mb-0'
-      publicId='/images/projects/canker-core/ss2_fpine4.png'
-      width={800}
-      height={2782}
-      alt='Web Screenshot'
-    />
-  </Split>
-</SplitImage>
+> ## Features
 
-> ## Spotlight
+Below are some of the key features of the Canker Core project:
 
-### Open Graph & SEO Optimization
+> ## Demo Video
 
-The spotlight on this project that I spend some time on SEO and I got
-into opengraph where you can get a link preview with a custom
-description and opengraph image.
+Here is a short video demo of the Canker Core website and its features:
 
-<CustomImg
-  mdx
-  publicId='/images/projects/canker-core/opengraph_prie5d'
-  alt='opengraph'
-  width={315}
-  height={227}
+<LiteYouTubeEmbed
+  id='sMXhTGMOS0c'
+  poster='maxresdefault'
+  title='Canker Core Demo'
+  noCookie={true}
 />
 
-### Animation
+> ## Future Plans
 
-I also implemented some animation on this website using the GSAP
-library. It was my first time using GSAP on React projects.
+- **Treatment Recommendations:** add support for providing treatment recommendations based on the size, pain level, and location of canker sores.
+- **Blog and Community Forum:** add a blog and community forum to the app to provide users with additional resources and support for managing their oral health.
+- **Online Store:** add an online store to the app to allow users to purchase oral health products, remedies, and treatments directly from the app.
 
-> ## The Problems and How I Deal With It
-
-In this project, the problem that I found was that the domain that was
-given and needed to use its old and kind of hard to configure.
-Eventually, I only host the static files and ditch out the Image
-Optimization feature from Next.js. It was not ideal, because I need to
-optimize images that are being used to increase loading speed.
-
-I also struggled with implementing ScrollTrigger with GSAP because
-there are not many blogs or tutorials on Google, so I take the chance
-on reading the documentation to make it work.
-
-> ## Lessons Learned
-
-This is my first website for an event so I really consider a lot how
-to do a great practice on SEO, I discovered a library called
-[next-seo](https://github.com/garmeeh/next-seo)
-that helped a lot on configuring SEO using Next.js.
-
-In this project, I anticipated that there will be many revisions
-because that is what usually happens, so I try to reduce writing HTML
-and make everything based on the data, so I store the data in a
-javascript file and just map it out to the layout. This makes revising
-much quicker and easier.
-
-This project really taught me a lot about making a cleaner code and
-make the development process more effective by using some library that
-helps.
+Users can also add notes, photos, and treatments to each entry, and view detailed statistics and trends to help them better understand their oral health.

@@ -1,17 +1,17 @@
 ---
-title: 'Track Duplicate Deleter'
+title: 'Duplicate Track Deleter'
 description: 'A MacOS utility made with SiftUI for identifying and deleting duplicate audio tracks.'
 category: 'Personal Project'
 publishedAt: '2022-07-23'
 techs: 'swift,macos'
-banner: '/images/projects/track-duplicate-deleter/track-duplicate-deleter-banner.jpg'
+banner: '/images/projects/track-duplicate-deleter/duplicate-track-deleter-banner.jpg'
 github: 'https://github.com//images/dtd'
 link: 'https://dtd.thcl.dev'
 ---
 
 > ## Short Explanation
 
-Track Duplicate Deleter is a MacOS utility made with SwiftUI for cleaning up your digital audio library. It supports for the most popular audio files, including MP3, AAC, & WAV.
+Duplicate Track Deleter is a MacOS utility made with SwiftUI for cleaning up your digital audio library. It supports for the most popular audio files, including MP3, AAC, & WAV.
 
 > ## Motivations
 
@@ -25,9 +25,24 @@ I did this project originally for my personal use. My goal is to create a compre
   <TechIcons techs={['swift', 'macos']} />
 </div>
 
-- **SwiftUI:** a modern way to build user interfaces across all Apple platforms, used to create the front-end of the Track Duplicate Deleter app. I chose SwiftUI for its ease of use and flexibility, as well as its support for declarative syntax and live previews to help me quickly build and test my UI.
-- **CoreAudio:** a framework for working with digital audio data in macOS, used to read and analyze audio files in the Track Duplicate Deleter app. I chose CoreAudio for its comprehensive support for audio file formats and its ability to extract metadata and audio properties from audio files.
+- **SwiftUI:** a modern way to build user interfaces across all Apple platforms, used to create the front-end of the Duplicate Track Deleter app. I chose SwiftUI for its ease of use and flexibility, as well as its support for declarative syntax and live previews to help me quickly build and test my UI.
 
 > ## Features
 
-Below are some of the key features of the Track Duplicate Deleter project:
+<Image
+  src='/images/projects/track-duplicate-deleter/duplicate-track-deleter-demo.jpg'
+  alt='Duplicate Track Deleter Demo'
+  width={1440}
+  height={792}
+/>
+
+- **Drag-and-Drop Interface:** allows users to easily add audio files to the app by dragging and dropping them onto the app window.
+- **Duplicate Detection:** scans audio files for duplicates based on audio properties such as file name, duration, and bit-rate.
+- **Preview and Delete:** allows users to preview duplicate tracks and select which tracks to delete from their library.
+- **Customizable Settings:** lets users customize the duplicate detection criteria and choose which audio properties to compare when identifying duplicates.
+
+> ## Future Plans
+
+- **Update Missing Meta Data:** add support for updating missing metadata in audio files, such as artist, album, and genre information.
+- **UI Improvements:** improve the user interface with more interactive elements and visual feedback to make the app more user-friendly.
+- **Windows and Linux Support:** expand the app to support Windows and Linux platforms to reach a wider audience of users.
