@@ -46,7 +46,7 @@ export default function ProjectsPage({
 }
 
 export async function getStaticProps() {
-  const projects = await getAllFilesFrontmatter('projects');
+  const projects = (await getAllFilesFrontmatter('projects')).reverse();
   // const projects = sortByDate(files);
 
   return { props: { projects } };
