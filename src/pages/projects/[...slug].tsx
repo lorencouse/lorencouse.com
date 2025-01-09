@@ -98,7 +98,7 @@ export default function SingleProjectPage({ code, frontmatter }: ProjectType) {
                     href={frontmatter.github}
                     className='mt-1'
                   >
-                    Repository
+                    Git Repo
                   </CustomLink>
                 </div>
               )}

@@ -7,38 +7,85 @@ banner: '/images/projects/python-automation/python-banner.png'
 link: '/projects/side-projects'
 ---
 
-Here is my collection of Python projects. These
-
-<blockquote className='with-icons'>
-  <div className='not-prose mt-2'>
-    <TechIcons techs={['python']} />
-  </div>
-</blockquote>
+Python is one of my favorite programming languages for automation. I have built several Python utilities to automate my workflow and increase productivity.
 
 > ## Short Explanation
 
 These are some simple Python utilities I built to automate my workflow and increase productivity. I use these tools to automate repetitive tasks, such as resizing and formatting product images, formatting product tracking csv files, generating rich product descriptions, and product recommendation articles. I also use these tools to interact with APIs, such as the WooCommerce, WordPress Posts, and ChatGPT APIs. These tools have saved me countless hours of manual work and have helped me to focus on more important tasks.
 
-> ## Product Image Formatter and Resizer
-
-This python script resizes and formats product images for use on my e-commerce website. It takes a product ID and automatically fetches all images from the supplier database API. It then resizes images to the correct 1:1 dimensions and formats them on a white background for use on the MQ Store. The tool also generates rich meta data for the images, such as alt text, title text, and caption text, to help with SEO.
-
-**Time Saved:** 1 hour per product
+<Image
+  src='/images/projects/python-automation/woocommerce-api.jpg'
+  alt='woocommerce api'
+  width={1080}
+  height={608}
+/>
 
 > ## Product Page Generator
 
+**2 Hours Saved** per product.
+
+<GitRepoLink
+  title='Product Page Generator'
+  repoName='woo-product-page-generator'
+/>
+
 This python script generates rich product pages for use on my e-commerce website. It takes a product ID and automatically fetches all product data from the supplier database API. It then generates a rich product description with the ChatGPT API, including product name, price, description, features, and specifications. The tool also generates a product recommendation article based on the product data, to help with cross-selling and upselling. It can also utilize the Product Image Formatter and Resizer tool to automatically generate and format product images for use on the website. It then builds a complete product description with images and headings, ready for use on the product page.
 
-**Time Saved:** 2 hours per product
+<Image
+  src='/images/projects/python-automation/image-formatter.jpg'
+  alt='image formatter'
+  width={897}
+  height={539}
+/>
+
+> ## Product Image Formatter and Resizer
+
+**1 Hour Saved** per product.
+
+<GitRepoLink
+  title='Product Image Formatter and Resizer'
+  repoName='product-image-formatter'
+/>
+
+This python script resizes and formats product images for use on my e-commerce website. It takes a product ID and automatically fetches all images from the supplier database API. It then resizes images to the correct 1:1 dimensions and formats them on a white background for use on the MQ Store. The tool also generates rich meta data for the images, such as alt text, title text, and caption text, to help with SEO.
 
 > ## Product Tracking CSV Formatter
 
+**2 Hours Saved** per week.
+
+<GitRepoLink
+  title='Product Tracking CSV Formatter'
+  repoName='tracking-info-formatter'
+/>
+
 This python script formats product tracking csv files for use on my e-commerce website. It fetches the most recent product tracking data from the supplier database API and formats it into a csv file that can be uploaded to WooCommerce, and automatically send tracking updates to the customer.
 
-**Time Saved:** 2 hours per week
+<Image
+  src='/images/projects/python-automation/wp-rest-api.jpg'
+  alt='WordPress Rest API'
+  width={1311}
+  height={600}
+/>
 
 > ## WordPress Post Generator
 
+**8 Hours Saved** per post.
+
+<GitRepoLink title='WordPress Post Generator' repoName='generate-wp-post' />
+
 This python script uses ChatGPT to generate rich blog posts for my WordPress website. First, the user enters a target SEO keyword, and a list of product IDs. The script then fetches the product data from the supplier database API and uses the ChatGPT API to generate a rich blog post that includes the target SEO keyword, product descriptions, features, and specifications. The script then generates a complete blog post with headings, images, and WooCommerce product links, ready for use on the website. This script helped to reduce the time it takes to generate blog posts from an average of 8 hours to just minutes.
 
-**Time Saved:** 8 hours per post
+<Image
+  src='/images/projects/python-automation/chatgpt-api.jpg'
+  alt='ChatGPT API'
+  width={1268}
+  height={708}
+/>
+
+> ## Article Translator
+
+**6 Hours Saved:** per post.
+
+<GitRepoLink title='Article Translator' repoName='/translate-wp-post' />
+
+This python script uses the ChatGPT API to translate articles from English to any target language. The user enters the target language and the post ID. The script then fetches the post data from the WordPress API and uses the ChatGPT API to translate the article into the target language while keeping the original formatting and images. Using this method gave an SEO advantage over a typical translation plugin, as the translated articles to create unique content that is indexed by search engines. This script helped to reduce the time it takes to translate articles from an average of 6 hours to just minutes.

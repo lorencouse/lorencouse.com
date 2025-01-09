@@ -8,6 +8,7 @@ import CustomImg from '@/components/images/CustomImg';
 import CustomLink from '@/components/links/CustomLink';
 import TechIcons from '@/components/TechIcons';
 
+import GitRepoLink from './projects/GitRepoLink';
 import TimeLineBlock from '../blog/TimeLineBlock';
 
 const MDXComponents = {
@@ -21,6 +22,7 @@ const MDXComponents = {
   TechIcons,
   Quiz,
   TimeLineBlock,
+  GitRepoLink,
 };
 
 export default MDXComponents;
