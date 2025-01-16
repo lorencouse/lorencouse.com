@@ -320,7 +320,7 @@ export async function getStaticProps() {
     'foldy-friends',
     'maleq',
     'rise-and-shine',
-    'track-duplicate-deleter',
+    'workflow-automation-tools',
   ]);
 
   return {

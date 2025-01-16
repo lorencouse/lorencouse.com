@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://www.lorencouse.com</loc><lastmod>2025-01-09T06:16:06.691Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.lorencouse.com/about</loc><lastmod>2025-01-09T06:16:06.692Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.lorencouse.com/blog</loc><lastmod>2025-01-09T06:16:06.692Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.lorencouse.com/design</loc><lastmod>2025-01-09T06:16:06.692Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.lorencouse.com/projects</loc><lastmod>2025-01-09T06:16:06.692Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.lorencouse.com/resume</loc><lastmod>2025-01-09T06:16:06.692Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.lorencouse.com/subscribe</loc><lastmod>2025-01-09T06:16:06.692Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.lorencouse.com/projects/aireio</loc><lastmod>2025-01-09T06:16:06.692Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.lorencouse.com/projects/canker-core</loc><lastmod>2025-01-09T06:16:06.692Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.lorencouse.com/projects/foldy-friends</loc><lastmod>2025-01-09T06:16:06.692Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.lorencouse.com/projects/maleq</loc><lastmod>2025-01-09T06:16:06.692Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.lorencouse.com/projects/rise-and-shine</loc><lastmod>2025-01-09T06:16:06.692Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.lorencouse.com/projects/track-duplicate-deleter</loc><lastmod>2025-01-09T06:16:06.692Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.lorencouse.com/projects/workflow-automation-tools</loc><lastmod>2025-01-09T06:16:06.692Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.lorencouse.com</loc><lastmod>2025-01-09T06:28:17.895Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.lorencouse.com/about</loc><lastmod>2025-01-09T06:28:17.896Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.lorencouse.com/design</loc><lastmod>2025-01-09T06:28:17.896Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.lorencouse.com/projects</loc><lastmod>2025-01-09T06:28:17.896Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.lorencouse.com/resume</loc><lastmod>2025-01-09T06:28:17.896Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.lorencouse.com/subscribe</loc><lastmod>2025-01-09T06:28:17.896Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.lorencouse.com/projects/aireio</loc><lastmod>2025-01-09T06:28:17.896Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.lorencouse.com/projects/canker-core</loc><lastmod>2025-01-09T06:28:17.896Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.lorencouse.com/projects/foldy-friends</loc><lastmod>2025-01-09T06:28:17.896Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.lorencouse.com/projects/maleq</loc><lastmod>2025-01-09T06:28:17.896Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.lorencouse.com/projects/rise-and-shine</loc><lastmod>2025-01-09T06:28:17.896Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.lorencouse.com/projects/track-duplicate-deleter</loc><lastmod>2025-01-09T06:28:17.896Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.lorencouse.com/projects/workflow-automation-tools</loc><lastmod>2025-01-09T06:28:17.896Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>
