@@ -19,6 +19,8 @@ export default function AboutPage() {
       <main>
         <section className={clsx(isLoaded && 'fade-in-start')}>
           <ResumeBlock />
+
+
         </section>
 
         <section>

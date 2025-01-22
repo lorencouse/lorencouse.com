@@ -207,7 +207,7 @@ export default function IndexPage({
                       withUnderline
                       tipChildren={
                         <>
-                          Personal e-commerce bussines with over $850,000 in
+                          Personal e-commerce bussines with over $1 Million in
                           sales
                         </>
                       }

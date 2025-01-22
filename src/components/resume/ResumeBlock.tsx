@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Accent from '@/components/Accent';
+import CustomLink from '@/components/links/CustomLink';
 import ExperienceBlock from '@/components/resume/ExperienceBlock';
 
 const ResumeBlock = () => {
@@ -29,6 +30,13 @@ const ResumeBlock = () => {
               {educationHistory.map((education, index) => (
                 <ExperienceBlock key={index} {...education} />
               ))}
+
+              <CustomLink
+                href='https://drive.google.com/file/d/1JCPUgShAUj3j9OhulsR0YFPhlXnu4bK9/view?usp=sharing'
+                className='mt-4'
+              >
+                Download Resume PDF
+              </CustomLink>
             </article>
           </div>
         </div>
