@@ -63,7 +63,7 @@ const educationHistory: ExperienceProps[] = [
     city: 'Tainan, Taiwan',
     role: 'MBA - Information Technology',
     description:
-      'Coursework in IT, cybersecurity, statistics, & data analytics.\nIT project management and database management systems.\nThesis Research: Efficacy of e-commerce digital marketing methods.',
+      'Relevant Coursework: IT project management, cybersecurity, data analytics.\nThesis Research: Eﬃcacy of digital marketing methods in e-commerce.\nMandarin Chinese (Business Level).',
     img: '/images/resume/ncku-logo.jpeg',
   },
   {
@@ -73,7 +73,7 @@ const educationHistory: ExperienceProps[] = [
     city: 'Boston, MA',
     role: 'Bachelor of Arts - Minor in Computer Science',
     description:
-      'Major in Japanese with 1 year study in Kyoto, Japan\nCS Coursework in Java, C++, Python, SQL Databases\nWeb Development, HTLM, JS, CSS, and Data Structures',
+      'Relevant Coursework: Java, Python, SQL, Data Structures.\nWeb Development, HTML, JavaScript, CSS, React, Node.js.\nJapanese Language (Proficient).',
     img: '/images/resume/umass-boston.png',
   },
 ];
@@ -86,7 +86,7 @@ const workHistory: ExperienceProps[] = [
     city: 'Remote',
     role: 'Founder & CEO',
     description:
-      'Drove revenue growth: Built and managed an e-commerce business generating over $1.1 million in sales.\nManaged global team: Led a diverse team of writers and employees across 5 countries, expanding user base to Chinese and Spanish speaking markets.\nOptimized content strategy: Directed SEO-focused content creation, increasing website traffic and organic sales.',
+      'Established and scaled a WordPress e-commerce business which surpassed $1 million in sales.\nLed a diverse team across 5 countries, expanding to global markets and improving operational eﬃciency.\nTripled organic traﬃc by optimizing competitive "Best" and "How to" keywords, securing multiple first-page search rankings and boosting sales.\nImplemented Python process automation to reduce order fulfillment time by 75%, and sped up content creation by 8x utilizing LLM APIs.',
     img: '/images/resume/mq-logo-2.png',
   },
   {
@@ -96,7 +96,7 @@ const workHistory: ExperienceProps[] = [
     role: 'Market Research Coordinator',
     city: 'Melbourne, Australia',
     description:
-      'Managed research field teams of 3-5 people, effectively executing research projects.\nOversaw field data collection, quality control, and project progress.\nAnalyzed market trends to align research insights with client goals.\nConducted new employee training and monthly performance evaluations.',
+      'Executed comprehensive client research projects, overseeing teams of 5–7 personnel.\nManaged field data collection processes, ensuring high quality standards and adherence to project deadlines.\nImplemented training protocols for new hires and team performance evaluations, significantly improving onboarding eﬃciency.',
     img: '/images/resume/ey-logo.jpg',
   },
   {
@@ -106,7 +106,7 @@ const workHistory: ExperienceProps[] = [
     city: 'Kaohsiung, Taiwan',
     role: 'Startup Advisor',
     description:
-      'Provide strategic guidance on business development strategies, market positioning, and current trends.\nSet goals and timelines to meet project targets and investment partner expectations.\nMentored effective leadership, and scalable team structures.\nFacilitated networking events for investor introductions, government grants, and outside corporate collaborations.',
+      'Advised startups on digital marketing strategies, including SEO and content marketing, to improve visibility and audience engagement.\nMentored founders on implementing scalable team structures and effective leadership practices.\nEstablished strategic timelines to meet project deadlines, ensuring alignment with investor expectations.',
     img: '/images/resume/dakuo-logo.jpeg',
   },
 ];
