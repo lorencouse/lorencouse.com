@@ -4,12 +4,12 @@ import { useRouter } from 'next/router';
 import { openGraph } from '@/lib/helper.client';
 
 const defaultMeta = {
-  title: 'Lorén Couse',
-  siteName: 'Lorén Couse',
+  title: 'Loren Couse',
+  siteName: 'Loren Couse',
   description:
-    'An online portfolio and blog by Lorén Couse. Showcase of my projects, and some of my thoughts about website development.',
+    'An online portfolio of Loren Couse. A showcase of my projects, and some of my thoughts about website development.',
   url: 'https://www.lorencouse.com',
-  image: 'https://www.lorencouse.com/favicon/large-og.jpg',
+  image: 'https://www.lorencouse.com/favicon/logo-1.png',
   type: 'website',
   robots: 'follow, index',
 };
