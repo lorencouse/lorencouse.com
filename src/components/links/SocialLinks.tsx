@@ -95,7 +95,7 @@ const socials: Social[] = [
     ),
   },
   {
-    href: 'https://www.instagram.com/cousethemouse/',
+    href: 'https://www.instagram.com/lorencouse/',
     icon: SiInstagram,
     id: 'Instagram',
     text: (

@@ -32,7 +32,7 @@ const ResumeBlock = () => {
               ))}
 
               <CustomLink
-                href='https://drive.google.com/file/d/1JCPUgShAUj3j9OhulsR0YFPhlXnu4bK9/view?usp=sharing'
+                href='https://drive.google.com/file/d/1QRjCgSfOvuGfBCevUS8mBYBxfodLZYOG/view?usp=sharing'
                 className='mt-4'
               >
                 Download Resume PDF
@@ -81,12 +81,12 @@ const educationHistory: ExperienceProps[] = [
 const workHistory: ExperienceProps[] = [
   {
     year: '2011-2024',
-    location: 'MaleQ.com Adult Store',
+    location: 'MaleQ',
     locationLink: '/projects/maleq/',
     city: 'Remote',
-    role: 'Founder & CEO',
+    role: 'Founder & SEO Growth Engineer Lead',
     description:
-      'Established and scaled a WordPress e-commerce business which surpassed $1 million in sales.\nLed a diverse team across 5 countries, expanding to global markets and improving operational eﬃciency.\nTripled organic traﬃc by optimizing competitive "Best" and "How to" keywords, securing multiple first-page search rankings and boosting sales.\nImplemented Python process automation to reduce order fulfillment time by 75%, and sped up content creation by 8x utilizing LLM APIs.',
+      'Established, scaled, and sold a WordPress e-commerce business which surpassed $1 million in sales through data-driven SEM and SEO growth strategies.\nIncreased organic traffic and sales by 10x by optimizing competitive keywords using Google Search Console, SEMrush, and Ahrefs.\nLed a diverse team across 5 countries, expanding to global markets, resulting in a further 2x increase in site traffic.\nImplemented Python process automation which sped up search engine optimized content creation by 8x utilizing artificial intelligence LLM APIs.',
     img: '/images/resume/mq-logo-2.png',
   },
   {
@@ -96,7 +96,7 @@ const workHistory: ExperienceProps[] = [
     role: 'Market Research Coordinator',
     city: 'Melbourne, Australia',
     description:
-      'Executed comprehensive client research projects, overseeing teams of 5–7 personnel.\nManaged field data collection processes, ensuring high quality standards and adherence to project deadlines.\nImplemented training protocols for new hires and team performance evaluations, significantly improving onboarding eﬃciency.',
+      'Managed end-to-end market research projects for Fortune 500 clients in the retail and technology, delivering insights that informed multi-million dollar marketing strategies.\nDeveloped and implemented data collection protocols, reducing errors by 5% and improving data accuracy for client reports.\nTrained and mentored teams of 5–7 personnel, improving onboarding efficiency and team performance by 20%.',
     img: '/images/resume/ey-logo.jpg',
   },
   {
@@ -106,7 +106,7 @@ const workHistory: ExperienceProps[] = [
     city: 'Kaohsiung, Taiwan',
     role: 'Startup Advisor',
     description:
-      'Advised startups on digital marketing strategies, including SEO and content marketing, to improve visibility and audience engagement.\nMentored founders on implementing scalable team structures and effective leadership practices.\nEstablished strategic timelines to meet project deadlines, ensuring alignment with investor expectations.',
+      'Advised startups on growth marketing strategies, including SEO, product marketing and A/B testing, resulting in 25% monthly increases in customer acquisition.\nMentored founders on implementing scalable team structures and effective leadership practices.\nEstablished strategic timelines moving from concept to revenue generation within 1 year, ensuring alignment with investor expectations.',
     img: '/images/resume/dakuo-logo.jpeg',
   },
 ];
