@@ -50,7 +50,7 @@ export default function IndexPage({
                   className='mt-1 text-3xl md:text-5xl 2xl:text-6xl'
                   data-fade='2'
                 >
-                  My name is <Accent>Lorén</Accent>
+                  My name is <Accent>Loren</Accent>
                 </h1>
                 <p
                   className='mt-2 max-w-xl leading-relaxed text-gray-700 dark:text-gray-200 md:mt-3 text-sm md:text-base 2xl:text-lg'
@@ -70,9 +70,8 @@ export default function IndexPage({
                   data-fade='3'
                 >
                   I am a freelance entrepreneur working in the React Ecosystem.
-                  My strength is building tools and solving problems with React
-                  and Next.js. I am also a big fan of TypeScript and
-                  TailwindCSS.
+                  I specialize in SEO and love solving problems with React and
+                  Next.js.
                 </p>
 
                 <p

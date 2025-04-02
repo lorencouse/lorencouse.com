@@ -26,12 +26,12 @@ export default function AboutPage() {
           <div className='layout pt-12'>
             <h2 data-fade='0'>About</h2>
             <h1 className='mt-1' data-fade='1'>
-              <Accent>Lorén Couse</Accent>
+              <Accent>Loren Couse</Accent>
             </h1>
             <div className='md:mt-4 mt-0' data-fade='2'>
               <CustomImg
                 className='float-right ml-6 w-56 md:w-96 rounded-full -mt-14'
-                publicId='/images/loren-couse-blue-500.jpg'
+                publicId='/images/loren-couse-tan-500.jpg'
                 width='500'
                 height='500'
                 alt='Photo of me looking really professional and can definitely impress your boss'
@@ -106,7 +106,8 @@ export default function AboutPage() {
                         onClick={() =>
                           trackEvent('Now: Mentor Thread', { type: 'link' })
                         }
-                        href='/seo-consulting'
+                        href='https://www.dotdasher.com/'
+                        target='_blank'
                       >
                         Book Now↗
                       </CustomLink>
