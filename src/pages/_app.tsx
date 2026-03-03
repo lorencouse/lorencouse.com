@@ -1,7 +1,8 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import { AnimatePresence, motion } from 'framer-motion';
 import { AppProps } from 'next/app';
-import Router from 'next/router';
+import Router, { useRouter } from 'next/router';
 import { ThemeProvider } from 'next-themes';
 import nProgress from 'nprogress';
 import * as React from 'react';
@@ -15,6 +16,7 @@ import '@/styles/nprogress.css';
 
 import { getFromLocalStorage } from '@/lib/helper.client';
 
+import ErrorBoundary from '@/components/layout/ErrorBoundary';
 import Layout from '@/components/layout/Layout';
 
 import { blockDomainMeta } from '@/constants/env';
@@ -26,6 +28,8 @@ Router.events.on('routeChangeComplete', nProgress.done);
 const queryClient = new QueryClient();
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const router = useRouter();
+
   React.useEffect(() => {
     // Don't increment views if not on main domain
     if (
@@ -45,7 +49,19 @@ function MyApp({ Component, pageProps }: AppProps) {
     <ThemeProvider attribute='class' defaultTheme='dark' enableSystem={false}>
       <QueryClientProvider client={queryClient}>
         <Layout>
-          <Component {...pageProps} />
+          <ErrorBoundary>
+            <AnimatePresence mode='wait'>
+              <motion.div
+                key={router.asPath}
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 8 }}
+                transition={{ duration: 0.2, ease: 'easeOut' }}
+              >
+                <Component {...pageProps} />
+              </motion.div>
+            </AnimatePresence>
+          </ErrorBoundary>
         </Layout>
         <ReactQueryDevtools />
       </QueryClientProvider>

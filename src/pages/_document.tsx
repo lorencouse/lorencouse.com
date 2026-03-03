@@ -25,10 +25,17 @@ class MyDocument extends Document {
           />
           <script
             async
-            defer
-            data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID || ''}
-            src='https://umami.thcl.dev/script.js'
-            data-domains='theodorusclarence.com'
+            src='https://www.googletagmanager.com/gtag/js?id=G-VQW0YQQ87V'
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-VQW0YQQ87V');
+              `,
+            }}
           />
         </Head>
         <body className='bg-white antialiased transition-colors dark:bg-dark dark:text-white'>

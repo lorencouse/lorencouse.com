@@ -15,7 +15,7 @@ export default function DesignPage() {
 
   return (
     <>
-      <Seo templateTitle='Design' />
+      <Seo templateTitle='Design' description='The color palette and design system behind lorencouse.com.' />
       <main>
         <section className={clsx(isLoaded && 'fade-in-start')}>
           <div className='layout py-12'>

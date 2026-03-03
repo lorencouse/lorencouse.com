@@ -6,8 +6,8 @@ type TrackEvent = (
   event_data?: { type?: EventType } & { [key: string]: string | number }
 ) => void;
 
-export const trackEvent: TrackEvent = (...args) => {
-  if (window.umami && typeof window.umami.track === 'function') {
-    window.umami.track(...args);
+export const trackEvent: TrackEvent = (event_name, event_data) => {
+  if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+    window.gtag('event', event_name, event_data ?? {});
   }
 };

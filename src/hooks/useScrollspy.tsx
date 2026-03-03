@@ -1,4 +1,3 @@
-import throttle from 'lodash/throttle';
 import * as React from 'react';
 
 // originally based on
@@ -8,48 +7,65 @@ export default function useScrollSpy() {
   const [activeSection, setActiveSection] = React.useState<string | null>(null);
   const throttleMs = 100;
 
-  const actionSectionScrollSpy = throttle(() => {
-    const sections = document.getElementsByClassName('hash-anchor');
+  const lastCall = React.useRef(0);
+  const timer = React.useRef<ReturnType<typeof setTimeout> | null>(null);
 
-    let prevBBox = null;
-    let currentSectionId = activeSection;
+  const actionSectionScrollSpy = React.useCallback(() => {
+    const now = Date.now();
+    const remaining = throttleMs - (now - lastCall.current);
 
-    for (let i = 0; i < sections.length; ++i) {
-      const section = sections[i];
+    const execute = () => {
+      lastCall.current = Date.now();
+      const sections = document.getElementsByClassName('hash-anchor');
 
-      if (!currentSectionId) {
-        currentSectionId = section.getAttribute('href')?.split('#')[1] ?? null;
+      let prevBBox = null;
+      let currentSectionId: string | null = null;
+
+      for (let i = 0; i < sections.length; ++i) {
+        const section = sections[i];
+
+        if (!currentSectionId) {
+          currentSectionId =
+            section.getAttribute('href')?.split('#')[1] ?? null;
+        }
+
+        const bbox = section.getBoundingClientRect();
+        const prevHeight = prevBBox ? bbox.top - prevBBox.bottom : 0;
+        const offset = Math.max(200, prevHeight / 4);
+
+        if (bbox.top - offset < 0) {
+          currentSectionId =
+            section.getAttribute('href')?.split('#')[1] ?? null;
+          prevBBox = bbox;
+          continue;
+        }
+
+        break;
       }
 
-      const bbox = section.getBoundingClientRect();
-      const prevHeight = prevBBox ? bbox.top - prevBBox.bottom : 0;
-      const offset = Math.max(200, prevHeight / 4);
+      setActiveSection(currentSectionId);
+    };
 
-      // GetBoundingClientRect returns values relative to viewport
-      if (bbox.top - offset < 0) {
-        currentSectionId = section.getAttribute('href')?.split('#')[1] ?? null;
-
-        prevBBox = bbox;
-        continue;
-      }
-
-      // No need to continue loop, if last element has been detected
-      break;
+    if (remaining <= 0) {
+      if (timer.current) clearTimeout(timer.current);
+      execute();
+    } else if (!timer.current) {
+      timer.current = setTimeout(() => {
+        timer.current = null;
+        execute();
+      }, remaining);
     }
-
-    setActiveSection(currentSectionId);
-  }, throttleMs);
+  }, []);
 
   React.useEffect(() => {
     window.addEventListener('scroll', actionSectionScrollSpy);
-
     actionSectionScrollSpy();
 
     return () => {
       window.removeEventListener('scroll', actionSectionScrollSpy);
+      if (timer.current) clearTimeout(timer.current);
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [actionSectionScrollSpy]);
 
   return activeSection;
 }

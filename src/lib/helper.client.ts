@@ -1,7 +1,3 @@
-export function classNames(...classes: string[]): string {
-  return classes.filter(Boolean).join(' ');
-}
-
 type OpenGraphType = {
   siteName: string;
   description: string;
@@ -50,18 +46,8 @@ export const cleanBlogPrefix = (slug: string) => {
   }
 };
 
-/**
- * Access session storage on browser
- */
-export function getFromSessionStorage(key: string) {
-  if (typeof sessionStorage !== 'undefined') {
-    return sessionStorage.getItem(key);
-  }
-  return null;
-}
-
 export function getFromLocalStorage(key: string) {
-  if (typeof localStorage !== 'undefined') {
+  if (typeof window !== 'undefined' && typeof localStorage !== 'undefined') {
     return localStorage.getItem(key);
   }
   return null;

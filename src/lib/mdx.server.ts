@@ -122,9 +122,11 @@ export async function getRecommendations(currSlug: string) {
     .filter((fm) => !fm.slug.startsWith('id-') && fm.slug !== currSlug)
     .sort(() => Math.random() - 0.5);
 
+  if (!currentFm) return otherFms.slice(0, 3);
+
   // Find with similar tags
   const _recommendations = otherFms.filter((op) =>
-    op.tags.split(',').some((p) => currentFm?.tags.split(',').includes(p)),
+    op.tags.split(',').some((p) => currentFm.tags.split(',').includes(p)),
   );
   const recommendations = sortByDate(_recommendations);
 

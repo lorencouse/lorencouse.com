@@ -36,10 +36,18 @@ export default function IndexPage({
       <main>
         <section
           className={clsx(
-            'min-h-main mb-20 flex flex-col justify-center',
+            'min-h-main relative mb-20 flex flex-col justify-center overflow-hidden',
             isLoaded && 'fade-in-start',
           )}
         >
+          <div
+            aria-hidden='true'
+            className={clsx(
+              'pointer-events-none absolute inset-0 -z-10',
+              'bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(8,190,220,0.15),transparent)]',
+              'dark:bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(8,190,220,0.08),transparent)]',
+            )}
+          />
           <article className='layout'>
             <div className='flex flex-row justify-between flex-wrap-reverse gap-8 items-center'>
               <div className='intro-text'>
@@ -187,46 +195,72 @@ export default function IndexPage({
                     </Accent>
                   </h2>
                   <div className='mt-4 text-base text-gray-600 dark:text-gray-300 md:text-lg'>
-                    I have a 12 year track record building{' '}
-                    <strong>SEO optimized</strong> web applications that
-                    generate{' '}
-                    <Tooltip
-                      withUnderline
-                      tipChildren={
-                        <>
-                          Consistent, organic, SEO traffic with over 5,000
-                          active daily users on MaleQ.org
-                        </>
-                      }
-                    >
-                      <span>real traffic</span>
-                    </Tooltip>{' '}
-                    , earn{' '}
-                    <Tooltip
-                      withUnderline
-                      tipChildren={
-                        <>
-                          Personal e-commerce bussines with over $1 Million in
-                          sales
-                        </>
-                      }
-                    >
-                      <span>real revenue</span>
-                    </Tooltip>{' '}
-                    , and bring real-world results.
-                    <br />
-                    <br />
-                    My specialty is{' '}
-                    <strong className='text-gray-700 dark:text-gray-200'>
-                      solving problems
-                    </strong>{' '}
-                    for my customers and building products that{' '}
-                    <strong className='text-gray-700 dark:text-gray-200'>
-                      fundamentally
-                    </strong>{' '}
-                    improve quality of life. In my blog, I'm sharing how I
-                    approach something and how my mental model affect my
-                    learning about a certain topic.
+                    <p>
+                      I have a 12 year track record building{' '}
+                      <strong>SEO optimized</strong> web applications that
+                      generate{' '}
+                      <Tooltip
+                        withUnderline
+                        tipChildren={
+                          <>
+                            Consistent, organic, SEO traffic with over 5,000
+                            active daily users on MaleQ.org
+                          </>
+                        }
+                      >
+                        <span>real traffic</span>
+                      </Tooltip>{' '}
+                      , earn{' '}
+                      <Tooltip
+                        withUnderline
+                        tipChildren={
+                          <>
+                            Personal e-commerce business with over $1 Million in
+                            sales
+                          </>
+                        }
+                      >
+                        <span>real revenue</span>
+                      </Tooltip>{' '}
+                      , and bring real-world results.
+                    </p>
+                    <div className='mt-6 grid grid-cols-3 gap-4'>
+                      <div>
+                        <p className='text-2xl font-bold text-gray-800 dark:text-white md:text-3xl'>
+                          $1M<span className='text-primary-300'>+</span>
+                        </p>
+                        <p className='text-xs text-gray-500 dark:text-gray-400 md:text-sm'>
+                          Revenue Generated
+                        </p>
+                      </div>
+                      <div>
+                        <p className='text-2xl font-bold text-gray-800 dark:text-white md:text-3xl'>
+                          10K<span className='text-primary-300'>+</span>
+                        </p>
+                        <p className='text-xs text-gray-500 dark:text-gray-400 md:text-sm'>
+                          Monthly Visitors
+                        </p>
+                      </div>
+                      <div>
+                        <p className='text-2xl font-bold text-gray-800 dark:text-white md:text-3xl'>
+                          12<span className='text-primary-300'>+</span>
+                        </p>
+                        <p className='text-xs text-gray-500 dark:text-gray-400 md:text-sm'>
+                          Years Experience
+                        </p>
+                      </div>
+                    </div>
+                    <p className='mt-6'>
+                      My specialty is{' '}
+                      <strong className='text-gray-700 dark:text-gray-200'>
+                        solving problems
+                      </strong>{' '}
+                      for my customers and building products that{' '}
+                      <strong className='text-gray-700 dark:text-gray-200'>
+                        fundamentally
+                      </strong>{' '}
+                      improve quality of life.
+                    </p>
                   </div>
                   <LC
                     className={clsx(
@@ -257,7 +291,7 @@ export default function IndexPage({
                   React, Next.js, and SwiftUi applications, all built by me.
                 </p>
                 <ul className='mt-4 grid gap-4 sm:grid-cols-2 xl:grid-cols-3'>
-                  {populatedProjects.map((project, i) => (
+                  {populatedProjects.map((project) => (
                     <ProjectCard key={project.slug} project={project} />
                   ))}
                 </ul>

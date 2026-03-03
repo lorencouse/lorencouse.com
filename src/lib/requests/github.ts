@@ -14,7 +14,12 @@ export interface GithubRepo {
 }
 
 export async function getGithubRepo({ repo }: { repo: string }) {
-  return axios
-    .get<GithubRepo>(`https://api.github.com/repos/${repo}`)
-    .then((res) => res.data);
+  try {
+    const res = await axios.get<GithubRepo>(
+      `https://api.github.com/repos/${repo}`
+    );
+    return res.data;
+  } catch {
+    return null;
+  }
 }

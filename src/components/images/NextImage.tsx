@@ -48,8 +48,8 @@ export default function NextImage({
         width={width}
         height={height}
         alt={alt}
-        onLoadingComplete={() => setStatus('complete')}
-        layout='responsive'
+        onLoad={() => setStatus('complete')}
+        style={{ width: '100%', height: 'auto' }}
         {...rest}
       />
     </figure>

@@ -22,6 +22,7 @@ export default function ThemeButton({ className, ...rest }: ThemeButtonProps) {
         className
       )}
       {...rest}
+      aria-label={theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode'}
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
     >
       {mounted ? <>{theme === 'light' ? <FiMoon /> : <FiSun />}</> : <FiSun />}

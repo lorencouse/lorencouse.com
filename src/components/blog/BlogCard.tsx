@@ -78,12 +78,15 @@ export default function BlogCard({
             </div>
           </div>
           <p className='mb-2 mt-4 text-sm text-gray-600 dark:text-gray-300'>
-            <span className='font-bold text-gray-800 dark:text-gray-100'>
+            <time
+              dateTime={new Date(post.lastUpdated ?? post.publishedAt).toISOString()}
+              className='font-bold text-gray-800 dark:text-gray-100'
+            >
               {format(
                 new Date(post.lastUpdated ?? post.publishedAt),
                 'MMMM dd, yyyy',
               )}
-            </span>
+            </time>
           </p>
           <p className='text-sm text-gray-700 dark:text-gray-300'>
             {post.description}

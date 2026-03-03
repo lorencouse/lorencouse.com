@@ -32,7 +32,7 @@ const ResumeBlock = () => {
               ))}
 
               <CustomLink
-                href='https://drive.google.com/file/d/1QRjCgSfOvuGfBCevUS8mBYBxfodLZYOG/view?usp=sharing'
+                href='/files/resume.pdf'
                 className='mt-4'
               >
                 Download Resume PDF

@@ -34,6 +34,7 @@ export default function SocialLinks() {
           }
         >
           <button
+            aria-label='Copy email address'
             onClick={() => {
               copy('contact@lorencouse.com').then(() => {
                 setCopyStatus('copied');
@@ -55,6 +56,7 @@ export default function SocialLinks() {
           <UnstyledLink
             className='inline-flex items-center justify-center rounded-sm focus:outline-none focus-visible:ring focus-visible:ring-primary-300'
             href={social.href}
+            aria-label={social.id}
             onClick={() => {
               trackEvent(`Footer Link: ${social.id}`, { type: 'link' });
             }}

@@ -1,8 +1,3 @@
-import countBy from 'lodash/countBy';
-import map from 'lodash/map';
-import sortBy from 'lodash/sortBy';
-import toPairs from 'lodash/toPairs';
-
 import {
   Frontmatter,
   FrontmatterWithDate,
@@ -42,5 +37,14 @@ export function getTags<T extends Array<FrontmatterWithTags>>(contents: T) {
     []
   );
 
-  return map(sortBy(toPairs(countBy(tags)), 1), 0).reverse();
+  // Count occurrences of each tag
+  const counts: Record<string, number> = {};
+  for (const tag of tags) {
+    counts[tag] = (counts[tag] || 0) + 1;
+  }
+
+  // Sort by count descending, return tag names
+  return Object.entries(counts)
+    .sort((a, b) => b[1] - a[1])
+    .map(([tag]) => tag);
 }

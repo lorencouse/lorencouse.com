@@ -182,11 +182,11 @@ export default function SingleProjectPage({ code, frontmatter }: ProjectType) {
             </figure>
 
             <div className='mt-8 flex flex-col items-start gap-4 md:flex-row-reverse md:justify-between'>
-              <CustomLink
-                href={`https://github.com/lorencouse/${frontmatter.slug}`}
-              >
-                View this project on GitHub
-              </CustomLink>
+              {frontmatter.github && (
+                <CustomLink href={frontmatter.github}>
+                  View this project on GitHub
+                </CustomLink>
+              )}
               <CustomLink href='/projects'>← Back to projects</CustomLink>
             </div>
           </div>
